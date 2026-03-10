@@ -1,6 +1,7 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
 
+import Dispatch
 import HTTPTypes
 @preconcurrency import OkHttp
 import OpenAPIRuntime
@@ -13,11 +14,29 @@ import SwiftJava
 #endif
 
 public struct OkHttpClientTransport: ClientTransport {
-    private let client: OkHttpClient
 
-    public init(client: OkHttpClient) {
-        self.client = client
+    /// A set of configuration values for the OkHttp transport.
+    public struct Configuration: Sendable {
+        /// The OkHttp client used to perform HTTP operations.
+        public let client: OkHttpClient
+
+        public init(client: OkHttpClient = OkHttpClient()) {
+            self.client = client
+        }
     }
+
+    /// A dispatch queue used to run network requests on, to prevent blocking Swift Concurrency's thread pool.
+    private let dispatchQueue = DispatchQueue(
+        label: "com.madsodgaard.swift-openapi-client.okhttp-client-transport",
+        attributes: .concurrent
+    )
+
+    /// A set of configuration values used by the transport.
+    public var configuration: Configuration
+
+    /// Creates a new URLSession-based transport.
+    /// - Parameter configuration: A set of configuration values used by the transport.
+    public init(configuration: Configuration = .init()) { self.configuration = configuration }
 
     public func send(
         _ request: HTTPRequest,
@@ -26,39 +45,48 @@ public struct OkHttpClientTransport: ClientTransport {
         operationID: String
     ) async throws -> (HTTPResponse, HTTPBody?) {
         let httpRequest = try await Self.convertRequest(request, body: body, baseURL: baseURL)
-        let response = try await withCheckedThrowingContinuation { continuation in
-            let callback = ResponseHandlerStore.shared.save { (response, exception) in
-                if let response {
-                    continuation.resume(returning: response)
-                } else if let exception {
-                    continuation.resume(throwing: exception)
-                } else {
-//                    continuation.resume(throwing: JavaNilError.self)
+        let call = self.configuration.client.newCall(httpRequest)
+        return try await withTaskCancellationHandler {
+            return try await withCheckedThrowingContinuation { continuation in
+                dispatchQueue.async {
+                    do {
+                        guard let response = try self.configuration.client.newCall(httpRequest).execute() else {
+                            continuation.resume(throwing: Error.javaNilError)
+                            return
+                        }
+
+                        let result = try Self.convertResponse(method: request.method, httpResponse: response)
+                        continuation.resume(returning: result)
+                    } catch {
+                        continuation.resume(throwing: error)
+                    }
                 }
             }
-            client.newCall(httpRequest).enqueue(callback)
+        } onCancel: {
+            call?.cancel()
         }
-        return try Self.convertResponse(method: request.method, httpResponse: response)
     }
 
     // MARK: Internal
 
     /// Specialized error thrown by the transport.
-    internal enum Error: Swift.Error, CustomStringConvertible, LocalizedError {
+    enum Error: Swift.Error, CustomStringConvertible, LocalizedError {
 
         /// Invalid URL composed from base URL and received request.
         case invalidRequestURL(request: HTTPRequest, baseURL: URL)
 
-        case networkError(String)
+        /// An object returned by Java was unexpectedly nil
+        case javaNilError
 
         // MARK: CustomStringConvertible
 
         var description: String {
             switch self {
             case .invalidRequestURL(let request, let baseURL):
-                return "Invalid request URL from request path: \(request.path ?? "<nil>") relative to base URL: \(baseURL.absoluteString)"
-            case .networkError(let message):
-                return "Network error: \(message)"
+                return
+                    "Invalid request URL from request path: \(request.path ?? "<nil>") relative to base URL: \(baseURL.absoluteString)"
+            case .javaNilError:
+                return "An object returned by Java was nil"
             }
         }
 
@@ -68,7 +96,7 @@ public struct OkHttpClientTransport: ClientTransport {
     }
 
     /// Converts the shared Request type into URLRequest.
-    internal static func convertRequest(_ request: HTTPRequest, body: HTTPBody?, baseURL: URL) async throws -> Request {
+    static func convertRequest(_ request: HTTPRequest, body: HTTPBody?, baseURL: URL) async throws -> Request {
         guard var baseUrlComponents = URLComponents(string: baseURL.absoluteString),
             let requestUrlComponents = URLComponents(string: request.path ?? "")
         else { throw Error.invalidRequestURL(request: request, baseURL: baseURL) }
@@ -86,7 +114,8 @@ public struct OkHttpClientTransport: ClientTransport {
         var requestBody: RequestBody? = nil
         if let body {
             let bytes = try await Array(collecting: body, upTo: .max)
-            requestBody = try JavaClass<RequestBody>().create(bytes.map { Int8(bitPattern: $0) })
+            // TODO: Is this force-cast safe?
+            requestBody = try JavaClass<RequestBody>().create(bytes as! [Int8])
         }
 
         requestBuilder = requestBuilder?.method(request.method.rawValue, requestBody)
@@ -95,7 +124,7 @@ public struct OkHttpClientTransport: ClientTransport {
     }
 
     /// Converts the received URLResponse into the shared Response.
-    internal static func convertResponse(method: HTTPRequest.Method, httpResponse: Response) throws -> (
+    static func convertResponse(method: HTTPRequest.Method, httpResponse: Response) throws -> (
         HTTPResponse, HTTPBody?
     ) {
         var headerFields: HTTPFields = [:]
@@ -106,35 +135,17 @@ public struct OkHttpClientTransport: ClientTransport {
             headerFields[.init(headerName)!] = headerValue
         }
 
-        let length: HTTPBody.Length
-        if let lengthHeaderString = headerFields[.contentLength], let lengthHeader = Int64(lengthHeaderString) {
-            length = .known(lengthHeader)
-        } else {
-            length = .unknown
-        }
-
-        let body: HTTPBody?
+        var body: HTTPBody?
         switch method {
         case .head, .connect, .trace: body = nil
         default:
-            body = HTTPBody(
-                AsyncThrowingStream { continuation in
-                    let inputStream = httpResponse.body().byteStream()
-                    var buffer = [Int8](repeating: 0, count: 8192)
-                    do {
-                        while let bytesRead = try inputStream?.read(buffer), bytesRead > 0 {
-                            print("read buffer: \(bytesRead)")
-                            fflush(stdout)
-                            continuation.yield(buffer.map(UInt8.init(bitPattern:))[..<Int(bytesRead)])
-                            buffer.removeAll(keepingCapacity: true)
-                        }
-                    } catch {
-                        continuation.finish(throwing: error)
-                    }
-                    continuation.finish()
-                },
-                length: length
-            )
+            let bytes = try httpResponse.body().bytes()
+            bytes.withUnsafeBufferPointer { buffer in
+                buffer.withMemoryRebound(to: UInt8.self) { buffer in
+                    // Unfortunate copy...
+                    body = HTTPBody([UInt8](buffer))
+                }
+            }
         }
 
         let response = HTTPResponse(status: .init(code: Int(httpResponse.code())), headerFields: headerFields)

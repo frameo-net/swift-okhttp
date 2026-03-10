@@ -12,7 +12,6 @@ public class App {
         System.out.println("Lib loaded, calling Swift...");
 
         com.madsodgaard.samplelib.SampleLib.run().get();
-
         System.out.println("All done!");
     }
 }
