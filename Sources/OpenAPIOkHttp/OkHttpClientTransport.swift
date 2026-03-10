@@ -115,7 +115,13 @@ public struct OkHttpClientTransport: ClientTransport {
         if let body {
             let bytes = try await Array(collecting: body, upTo: .max)
             // TODO: Is this force-cast safe?
-            requestBody = try JavaClass<RequestBody>().create(bytes as! [Int8])
+            requestBody = try JavaClass<RequestBody>().create(
+                bytes.withUnsafeBufferPointer { buffer in
+                    buffer.withMemoryRebound(to: Int8.self) {
+                        [Int8]($0)
+                    }
+                }
+            )
         }
 
         requestBuilder = requestBuilder?.method(request.method.rawValue, requestBody)
