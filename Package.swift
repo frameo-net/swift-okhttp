@@ -143,7 +143,7 @@ let package = Package(
         .library(name: "OkHttp", targets: ["OkHttp"])
     ],
     dependencies: [
-        .package(url: "https://github.com/swiftlang/swift-java", branch: "main"),
+        .package(url: "https://github.com/swiftlang/swift-java", revision: "52841fcb865d36ec8565bcbd29fd663c3df7c7db"),
         .package(url: "https://github.com/apple/swift-openapi-runtime", from: "1.11.0", traits: [])
     ],
     targets: [
