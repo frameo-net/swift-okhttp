@@ -292,15 +292,6 @@ public struct BufferedSource {
 @JavaMethod
   public func close() throws
 
-  /// Java method `close`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract void java.nio.channels.Channel.close() throws java.io.IOException
-  /// ```
-@JavaMethod
-  public func close() throws
-
   /// Java method `read`.
   ///
   /// ### Java method signature

@@ -415,25 +415,3 @@ open class OkHttpClient: JavaObject {
   @JavaMethod
   open override func clone() -> JavaObject!
 }
-extension JavaClass<OkHttpClient> {
-  @JavaStaticField(isFinal: true)
-  public var Companion: OkHttpClient.Companion!
-
-    /// Java method `access$getDEFAULT_CONNECTION_SPECS$cp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public static final java.util.List okhttp3.OkHttpClient.access$getDEFAULT_CONNECTION_SPECS$cp()
-    /// ```
-  @JavaStaticMethod
-  public func access$getDEFAULT_CONNECTION_SPECS$cp() -> List!
-
-    /// Java method `access$getDEFAULT_PROTOCOLS$cp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public static final java.util.List okhttp3.OkHttpClient.access$getDEFAULT_PROTOCOLS$cp()
-    /// ```
-  @JavaStaticMethod
-  public func access$getDEFAULT_PROTOCOLS$cp() -> List!
-}
