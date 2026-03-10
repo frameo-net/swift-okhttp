@@ -5,6 +5,9 @@ import SwiftJavaJNICore
 extension ResponseBody {
   @JavaClass("okhttp3.ResponseBody$BomAwareReader")
   open class BomAwareReader: JavaObject {
+  @JavaMethod
+  @_nonoverride public convenience init(_ arg0: BufferedSource?, _ arg1: Charset?, environment: JNIEnvironment? = nil)
+
     /// Java method `close`.
     ///
     /// ### Java method signature

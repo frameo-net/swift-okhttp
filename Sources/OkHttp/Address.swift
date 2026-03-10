@@ -4,41 +4,14 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.Address")
 open class Address: JavaObject {
-  /// Java method `-deprecated_proxyAuthenticator`.
+  /// Java method `-deprecated_url`.
   ///
   /// ### Java method signature
   /// ```java
-  /// public final okhttp3.Authenticator okhttp3.Address.-deprecated_proxyAuthenticator()
+  /// public final okhttp3.HttpUrl okhttp3.Address.-deprecated_url()
   /// ```
 @JavaMethod
-  open func `-deprecated_proxyAuthenticator`() -> Authenticator!
-
-  /// Java method `-deprecated_connectionSpecs`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.util.List<okhttp3.ConnectionSpec> okhttp3.Address.-deprecated_connectionSpecs()
-  /// ```
-@JavaMethod
-  open func `-deprecated_connectionSpecs`() -> List<ConnectionSpec>!
-
-  /// Java method `-deprecated_certificatePinner`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.CertificatePinner okhttp3.Address.-deprecated_certificatePinner()
-  /// ```
-@JavaMethod
-  open func `-deprecated_certificatePinner`() -> CertificatePinner!
-
-  /// Java method `equalsNonHost$okhttp`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.Address.equalsNonHost$okhttp(okhttp3.Address)
-  /// ```
-@JavaMethod
-  open func equalsNonHost$okhttp(_ arg0: Address?) -> Bool
+  open func `-deprecated_url`() -> HttpUrl!
 
   /// Java method `dns`.
   ///
@@ -76,15 +49,6 @@ open class Address: JavaObject {
 @JavaMethod
   open func certificatePinner() -> CertificatePinner!
 
-  /// Java method `-deprecated_url`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.HttpUrl okhttp3.Address.-deprecated_url()
-  /// ```
-@JavaMethod
-  open func `-deprecated_url`() -> HttpUrl!
-
   /// Java method `-deprecated_dns`.
   ///
   /// ### Java method signature
@@ -93,6 +57,42 @@ open class Address: JavaObject {
   /// ```
 @JavaMethod
   open func `-deprecated_dns`() -> Dns!
+
+  /// Java method `-deprecated_proxyAuthenticator`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final okhttp3.Authenticator okhttp3.Address.-deprecated_proxyAuthenticator()
+  /// ```
+@JavaMethod
+  open func `-deprecated_proxyAuthenticator`() -> Authenticator!
+
+  /// Java method `-deprecated_connectionSpecs`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final java.util.List<okhttp3.ConnectionSpec> okhttp3.Address.-deprecated_connectionSpecs()
+  /// ```
+@JavaMethod
+  open func `-deprecated_connectionSpecs`() -> List<ConnectionSpec>!
+
+  /// Java method `-deprecated_certificatePinner`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final okhttp3.CertificatePinner okhttp3.Address.-deprecated_certificatePinner()
+  /// ```
+@JavaMethod
+  open func `-deprecated_certificatePinner`() -> CertificatePinner!
+
+  /// Java method `equalsNonHost$okhttp`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final boolean okhttp3.Address.equalsNonHost$okhttp(okhttp3.Address)
+  /// ```
+@JavaMethod
+  open func equalsNonHost$okhttp(_ arg0: Address?) -> Bool
 
   /// Java method `equals`.
   ///

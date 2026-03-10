@@ -16,24 +16,6 @@ open class ConnectionSpec: JavaObject {
   @JavaMethod
   open func supportsTlsExtensions() -> Bool
 
-    /// Java method `-deprecated_cipherSuites`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.util.List<okhttp3.CipherSuite> okhttp3.ConnectionSpec.-deprecated_cipherSuites()
-    /// ```
-  @JavaMethod
-  open func `-deprecated_cipherSuites`() -> List<CipherSuite>!
-
-    /// Java method `-deprecated_supportsTlsExtensions`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final boolean okhttp3.ConnectionSpec.-deprecated_supportsTlsExtensions()
-    /// ```
-  @JavaMethod
-  open func `-deprecated_supportsTlsExtensions`() -> Bool
-
     /// Java method `cipherSuites`.
     ///
     /// ### Java method signature
@@ -51,6 +33,24 @@ open class ConnectionSpec: JavaObject {
     /// ```
   @JavaMethod
   open func isTls() -> Bool
+
+    /// Java method `-deprecated_cipherSuites`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.util.List<okhttp3.CipherSuite> okhttp3.ConnectionSpec.-deprecated_cipherSuites()
+    /// ```
+  @JavaMethod
+  open func `-deprecated_cipherSuites`() -> List<CipherSuite>!
+
+    /// Java method `-deprecated_supportsTlsExtensions`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final boolean okhttp3.ConnectionSpec.-deprecated_supportsTlsExtensions()
+    /// ```
+  @JavaMethod
+  open func `-deprecated_supportsTlsExtensions`() -> Bool
 
     /// Java method `equals`.
     ///

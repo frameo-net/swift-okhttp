@@ -7,24 +7,6 @@ open class Dispatcher: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
-    /// Java method `getMaxRequestsPerHost`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final synchronized int okhttp3.Dispatcher.getMaxRequestsPerHost()
-    /// ```
-  @JavaMethod
-  open func getMaxRequestsPerHost() -> Int32
-
-    /// Java method `setMaxRequestsPerHost`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.Dispatcher.setMaxRequestsPerHost(int)
-    /// ```
-  @JavaMethod
-  open func setMaxRequestsPerHost(_ arg0: Int32)
-
     /// Java method `getMaxRequests`.
     ///
     /// ### Java method signature
@@ -78,6 +60,24 @@ open class Dispatcher: JavaObject {
     /// ```
   @JavaMethod
   open func queuedCallsCount() -> Int32
+
+    /// Java method `getMaxRequestsPerHost`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final synchronized int okhttp3.Dispatcher.getMaxRequestsPerHost()
+    /// ```
+  @JavaMethod
+  open func getMaxRequestsPerHost() -> Int32
+
+    /// Java method `setMaxRequestsPerHost`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.Dispatcher.setMaxRequestsPerHost(int)
+    /// ```
+  @JavaMethod
+  open func setMaxRequestsPerHost(_ arg0: Int32)
 
     /// Java method `cancelAll`.
     ///

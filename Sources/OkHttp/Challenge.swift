@@ -7,6 +7,15 @@ open class Challenge: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: String, _ arg1: String, environment: JNIEnvironment? = nil)
 
+    /// Java method `-deprecated_scheme`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.lang.String okhttp3.Challenge.-deprecated_scheme()
+    /// ```
+  @JavaMethod
+  open func `-deprecated_scheme`() -> String
+
     /// Java method `-deprecated_charset`.
     ///
     /// ### Java method signature
@@ -33,15 +42,6 @@ open class Challenge: JavaObject {
     /// ```
   @JavaMethod
   open func withCharset(_ arg0: Charset?) -> Challenge!
-
-    /// Java method `-deprecated_scheme`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.lang.String okhttp3.Challenge.-deprecated_scheme()
-    /// ```
-  @JavaMethod
-  open func `-deprecated_scheme`() -> String
 
     /// Java method `-deprecated_realm`.
     ///

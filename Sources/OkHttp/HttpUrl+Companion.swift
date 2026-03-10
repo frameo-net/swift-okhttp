@@ -5,6 +5,33 @@ import SwiftJavaJNICore
 extension HttpUrl {
   @JavaClass("okhttp3.HttpUrl$Companion")
   open class Companion: JavaObject {
+    /// Java method `-deprecated_get`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.HttpUrl okhttp3.HttpUrl$Companion.-deprecated_get(java.lang.String)
+    /// ```
+  @JavaMethod
+  open func `-deprecated_get`(_ arg0: String) -> HttpUrl!
+
+    /// Java method `defaultPort`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.HttpUrl$Companion.defaultPort(java.lang.String)
+    /// ```
+  @JavaMethod
+  open func defaultPort(_ arg0: String) -> Int32
+
+    /// Java method `-deprecated_parse`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.HttpUrl okhttp3.HttpUrl$Companion.-deprecated_parse(java.lang.String)
+    /// ```
+  @JavaMethod
+  open func `-deprecated_parse`(_ arg0: String) -> HttpUrl!
+
     /// Java method `toQueryNamesAndValues$okhttp`.
     ///
     /// ### Java method signature
@@ -31,33 +58,6 @@ extension HttpUrl {
     /// ```
   @JavaMethod
   open func canonicalize$okhttp(_ arg0: String, _ arg1: Int32, _ arg2: Int32, _ arg3: String, _ arg4: Bool, _ arg5: Bool, _ arg6: Bool, _ arg7: Bool, _ arg8: Charset?) -> String
-
-    /// Java method `defaultPort`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final int okhttp3.HttpUrl$Companion.defaultPort(java.lang.String)
-    /// ```
-  @JavaMethod
-  open func defaultPort(_ arg0: String) -> Int32
-
-    /// Java method `-deprecated_get`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.HttpUrl okhttp3.HttpUrl$Companion.-deprecated_get(java.lang.String)
-    /// ```
-  @JavaMethod
-  open func `-deprecated_get`(_ arg0: String) -> HttpUrl!
-
-    /// Java method `-deprecated_parse`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.HttpUrl okhttp3.HttpUrl$Companion.-deprecated_parse(java.lang.String)
-    /// ```
-  @JavaMethod
-  open func `-deprecated_parse`(_ arg0: String) -> HttpUrl!
 
     /// Java method `get`.
     ///

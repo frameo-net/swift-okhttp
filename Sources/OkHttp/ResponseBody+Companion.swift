@@ -18,6 +18,24 @@ extension ResponseBody {
     ///
     /// ### Java method signature
     /// ```java
+    /// public final okhttp3.ResponseBody okhttp3.ResponseBody$Companion.create(okhttp3.MediaType,long,okio.BufferedSource)
+    /// ```
+  @JavaMethod
+  open func create(_ arg0: MediaType?, _ arg1: Int64, _ arg2: BufferedSource?) -> ResponseBody!
+
+    /// Java method `create`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.ResponseBody okhttp3.ResponseBody$Companion.create(okio.BufferedSource,okhttp3.MediaType,long)
+    /// ```
+  @JavaMethod
+  open func create(_ arg0: BufferedSource?, _ arg1: MediaType?, _ arg2: Int64) -> ResponseBody!
+
+    /// Java method `create`.
+    ///
+    /// ### Java method signature
+    /// ```java
     /// public final okhttp3.ResponseBody okhttp3.ResponseBody$Companion.create(byte[],okhttp3.MediaType)
     /// ```
   @JavaMethod
@@ -60,4 +78,13 @@ extension JavaClass<ResponseBody.Companion> {
   /// ```
 @JavaStaticMethod
   public func create$default(_ arg0: ResponseBody.Companion?, _ arg1: String, _ arg2: MediaType?, _ arg3: Int32, _ arg4: JavaObject?) -> ResponseBody!
+
+  /// Java method `create$default`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public static okhttp3.ResponseBody okhttp3.ResponseBody$Companion.create$default(okhttp3.ResponseBody$Companion,okio.BufferedSource,okhttp3.MediaType,long,int,java.lang.Object)
+  /// ```
+@JavaStaticMethod
+  public func create$default(_ arg0: ResponseBody.Companion?, _ arg1: BufferedSource?, _ arg2: MediaType?, _ arg3: Int64, _ arg4: Int32, _ arg5: JavaObject?) -> ResponseBody!
 }

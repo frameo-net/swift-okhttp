@@ -7,6 +7,24 @@ open class HttpUrl: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: String, _ arg1: String, _ arg2: String, _ arg3: String, _ arg4: Int32, _ arg5: List<JavaString>?, _ arg6: List<JavaString>?, _ arg7: String, _ arg8: String, environment: JNIEnvironment? = nil)
 
+    /// Java method `username`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.lang.String okhttp3.HttpUrl.username()
+    /// ```
+  @JavaMethod
+  open func username() -> String
+
+    /// Java method `password`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.lang.String okhttp3.HttpUrl.password()
+    /// ```
+  @JavaMethod
+  open func password() -> String
+
     /// Java method `encodedPathSegments`.
     ///
     /// ### Java method signature
@@ -160,6 +178,33 @@ open class HttpUrl: JavaObject {
   @JavaMethod
   open func `-deprecated_fragment`() -> String
 
+    /// Java method `newBuilder`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl.newBuilder()
+    /// ```
+  @JavaMethod
+  open func newBuilder() -> HttpUrl.Builder!
+
+    /// Java method `newBuilder`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl.newBuilder(java.lang.String)
+    /// ```
+  @JavaMethod
+  open func newBuilder(_ arg0: String) -> HttpUrl.Builder!
+
+    /// Java method `pathSegments`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.util.List<java.lang.String> okhttp3.HttpUrl.pathSegments()
+    /// ```
+  @JavaMethod
+  open func pathSegments() -> List<JavaString>!
+
     /// Java method `isHttps`.
     ///
     /// ### Java method signature
@@ -187,41 +232,14 @@ open class HttpUrl: JavaObject {
   @JavaMethod
   open func encodedPassword() -> String
 
-    /// Java method `encodedFragment`.
+    /// Java method `pathSize`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public final java.lang.String okhttp3.HttpUrl.encodedFragment()
+    /// public final int okhttp3.HttpUrl.pathSize()
     /// ```
   @JavaMethod
-  open func encodedFragment() -> String
-
-    /// Java method `username`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.lang.String okhttp3.HttpUrl.username()
-    /// ```
-  @JavaMethod
-  open func username() -> String
-
-    /// Java method `password`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.lang.String okhttp3.HttpUrl.password()
-    /// ```
-  @JavaMethod
-  open func password() -> String
-
-    /// Java method `pathSegments`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.util.List<java.lang.String> okhttp3.HttpUrl.pathSegments()
-    /// ```
-  @JavaMethod
-  open func pathSegments() -> List<JavaString>!
+  open func pathSize() -> Int32
 
     /// Java method `encodedPath`.
     ///
@@ -240,42 +258,6 @@ open class HttpUrl: JavaObject {
     /// ```
   @JavaMethod
   open func encodedQuery() -> String
-
-    /// Java method `newBuilder`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl.newBuilder(java.lang.String)
-    /// ```
-  @JavaMethod
-  open func newBuilder(_ arg0: String) -> HttpUrl.Builder!
-
-    /// Java method `newBuilder`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl.newBuilder()
-    /// ```
-  @JavaMethod
-  open func newBuilder() -> HttpUrl.Builder!
-
-    /// Java method `-deprecated_scheme`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.lang.String okhttp3.HttpUrl.-deprecated_scheme()
-    /// ```
-  @JavaMethod
-  open func `-deprecated_scheme`() -> String
-
-    /// Java method `pathSize`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final int okhttp3.HttpUrl.pathSize()
-    /// ```
-  @JavaMethod
-  open func pathSize() -> Int32
 
     /// Java method `querySize`.
     ///
@@ -304,6 +286,15 @@ open class HttpUrl: JavaObject {
   @JavaMethod
   open func queryParameterName(_ arg0: Int32) -> String
 
+    /// Java method `encodedFragment`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.lang.String okhttp3.HttpUrl.encodedFragment()
+    /// ```
+  @JavaMethod
+  open func encodedFragment() -> String
+
     /// Java method `redact`.
     ///
     /// ### Java method signature
@@ -321,6 +312,15 @@ open class HttpUrl: JavaObject {
     /// ```
   @JavaMethod
   open func topPrivateDomain() -> String
+
+    /// Java method `-deprecated_scheme`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.lang.String okhttp3.HttpUrl.-deprecated_scheme()
+    /// ```
+  @JavaMethod
+  open func `-deprecated_scheme`() -> String
 
     /// Java method `-deprecated_host`.
     ///

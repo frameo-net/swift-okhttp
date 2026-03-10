@@ -4,15 +4,6 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.Headers")
 open class Headers: JavaObject {
-  /// Java method `byteCount`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final long okhttp3.Headers.byteCount()
-  /// ```
-@JavaMethod
-  open func byteCount() -> Int64
-
   /// Java method `-deprecated_size`.
   ///
   /// ### Java method signature
@@ -21,6 +12,15 @@ open class Headers: JavaObject {
   /// ```
 @JavaMethod
   open func `-deprecated_size`() -> Int32
+
+  /// Java method `byteCount`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final long okhttp3.Headers.byteCount()
+  /// ```
+@JavaMethod
+  open func byteCount() -> Int64
 
   /// Java method `newBuilder`.
   ///

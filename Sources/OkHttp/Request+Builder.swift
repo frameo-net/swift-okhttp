@@ -6,19 +6,46 @@ extension Request {
   @JavaClass("okhttp3.Request$Builder")
   open class Builder: JavaObject {
   @JavaMethod
-  @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
-
-  @JavaMethod
   @_nonoverride public convenience init(_ arg0: Request?, environment: JNIEnvironment? = nil)
 
-    /// Java method `headers`.
+  @JavaMethod
+  @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
+
+    /// Java method `getUrl$okhttp`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public okhttp3.Request$Builder okhttp3.Request$Builder.headers(okhttp3.Headers)
+    /// public final okhttp3.HttpUrl okhttp3.Request$Builder.getUrl$okhttp()
     /// ```
   @JavaMethod
-  open func headers(_ arg0: Headers?) -> Request.Builder!
+  open func getUrl$okhttp() -> HttpUrl!
+
+    /// Java method `setUrl$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.Request$Builder.setUrl$okhttp(okhttp3.HttpUrl)
+    /// ```
+  @JavaMethod
+  open func setUrl$okhttp(_ arg0: HttpUrl?)
+
+    /// Java method `getMethod$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.lang.String okhttp3.Request$Builder.getMethod$okhttp()
+    /// ```
+  @JavaMethod
+  open func getMethod$okhttp() -> String
+
+    /// Java method `setMethod$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.Request$Builder.setMethod$okhttp(java.lang.String)
+    /// ```
+  @JavaMethod
+  open func setMethod$okhttp(_ arg0: String)
 
     /// Java method `getHeaders$okhttp`.
     ///
@@ -28,6 +55,15 @@ extension Request {
     /// ```
   @JavaMethod
   open func getHeaders$okhttp() -> Headers.Builder!
+
+    /// Java method `headers`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public okhttp3.Request$Builder okhttp3.Request$Builder.headers(okhttp3.Headers)
+    /// ```
+  @JavaMethod
+  open func headers(_ arg0: Headers?) -> Request.Builder!
 
     /// Java method `setHeaders$okhttp`.
     ///
@@ -82,42 +118,6 @@ extension Request {
     /// ```
   @JavaMethod
   open func cacheControl(_ arg0: CacheControl?) -> Request.Builder!
-
-    /// Java method `getUrl$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.HttpUrl okhttp3.Request$Builder.getUrl$okhttp()
-    /// ```
-  @JavaMethod
-  open func getUrl$okhttp() -> HttpUrl!
-
-    /// Java method `setUrl$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.Request$Builder.setUrl$okhttp(okhttp3.HttpUrl)
-    /// ```
-  @JavaMethod
-  open func setUrl$okhttp(_ arg0: HttpUrl?)
-
-    /// Java method `getMethod$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.lang.String okhttp3.Request$Builder.getMethod$okhttp()
-    /// ```
-  @JavaMethod
-  open func getMethod$okhttp() -> String
-
-    /// Java method `setMethod$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.Request$Builder.setMethod$okhttp(java.lang.String)
-    /// ```
-  @JavaMethod
-  open func setMethod$okhttp(_ arg0: String)
 
     /// Java method `get`.
     ///

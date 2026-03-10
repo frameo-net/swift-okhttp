@@ -22,14 +22,14 @@ open class Request: JavaObject {
 @JavaMethod
   open func `-deprecated_cacheControl`() -> CacheControl!
 
-  /// Java method `isHttps`.
+  /// Java method `newBuilder`.
   ///
   /// ### Java method signature
   /// ```java
-  /// public final boolean okhttp3.Request.isHttps()
+  /// public final okhttp3.Request$Builder okhttp3.Request.newBuilder()
   /// ```
 @JavaMethod
-  open func isHttps() -> Bool
+  open func newBuilder() -> Request.Builder!
 
   /// Java method `headers`.
   ///
@@ -49,6 +49,24 @@ open class Request: JavaObject {
 @JavaMethod
   open func headers() -> Headers!
 
+  /// Java method `cacheControl`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final okhttp3.CacheControl okhttp3.Request.cacheControl()
+  /// ```
+@JavaMethod
+  open func cacheControl() -> CacheControl!
+
+  /// Java method `isHttps`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final boolean okhttp3.Request.isHttps()
+  /// ```
+@JavaMethod
+  open func isHttps() -> Bool
+
   /// Java method `-deprecated_url`.
   ///
   /// ### Java method signature
@@ -66,24 +84,6 @@ open class Request: JavaObject {
   /// ```
 @JavaMethod
   open func `-deprecated_body`() -> RequestBody!
-
-  /// Java method `newBuilder`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.Request$Builder okhttp3.Request.newBuilder()
-  /// ```
-@JavaMethod
-  open func newBuilder() -> Request.Builder!
-
-  /// Java method `cacheControl`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.CacheControl okhttp3.Request.cacheControl()
-  /// ```
-@JavaMethod
-  open func cacheControl() -> CacheControl!
 
   /// Java method `-deprecated_method`.
   ///

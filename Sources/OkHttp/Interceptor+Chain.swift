@@ -5,15 +5,6 @@ import SwiftJavaJNICore
 extension Interceptor {
   @JavaInterface("okhttp3.Interceptor$Chain")
   public struct Chain {
-    /// Java method `connectTimeoutMillis`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public abstract int okhttp3.Interceptor$Chain.connectTimeoutMillis()
-    /// ```
-  @JavaMethod
-  public func connectTimeoutMillis() -> Int32
-
     /// Java method `readTimeoutMillis`.
     ///
     /// ### Java method signature
@@ -31,6 +22,15 @@ extension Interceptor {
     /// ```
   @JavaMethod
   public func writeTimeoutMillis() -> Int32
+
+    /// Java method `connectTimeoutMillis`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public abstract int okhttp3.Interceptor$Chain.connectTimeoutMillis()
+    /// ```
+  @JavaMethod
+  public func connectTimeoutMillis() -> Int32
 
     /// Java method `proceed`.
     ///

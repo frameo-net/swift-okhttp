@@ -7,6 +7,15 @@ open class FormBody: RequestBody {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: List<JavaString>?, _ arg1: List<JavaString>?, environment: JNIEnvironment? = nil)
 
+    /// Java method `-deprecated_size`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.FormBody.-deprecated_size()
+    /// ```
+  @JavaMethod
+  open func `-deprecated_size`() -> Int32
+
     /// Java method `contentType`.
     ///
     /// ### Java method signature
@@ -24,15 +33,6 @@ open class FormBody: RequestBody {
     /// ```
   @JavaMethod
   open override func contentLength() -> Int64
-
-    /// Java method `-deprecated_size`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final int okhttp3.FormBody.-deprecated_size()
-    /// ```
-  @JavaMethod
-  open func `-deprecated_size`() -> Int32
 
     /// Java method `encodedName`.
     ///

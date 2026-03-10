@@ -43,6 +43,15 @@ open class ResponseBody: JavaObject {
   @JavaMethod
   open func bytes() throws -> [Int8]
 
+    /// Java method `source`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public abstract okio.BufferedSource okhttp3.ResponseBody.source()
+    /// ```
+  @JavaMethod
+  open func source() -> BufferedSource!
+
     /// Java method `close`.
     ///
     /// ### Java method signature
@@ -87,6 +96,15 @@ extension JavaClass<ResponseBody> {
     ///
     /// ### Java method signature
     /// ```java
+    /// public static final okhttp3.ResponseBody okhttp3.ResponseBody.create(okhttp3.MediaType,long,okio.BufferedSource)
+    /// ```
+  @JavaStaticMethod
+  public func create(_ arg0: MediaType?, _ arg1: Int64, _ arg2: BufferedSource?) -> ResponseBody!
+
+    /// Java method `create`.
+    ///
+    /// ### Java method signature
+    /// ```java
     /// public static final okhttp3.ResponseBody okhttp3.ResponseBody.create(java.lang.String,okhttp3.MediaType)
     /// ```
   @JavaStaticMethod
@@ -100,4 +118,13 @@ extension JavaClass<ResponseBody> {
     /// ```
   @JavaStaticMethod
   public func create(_ arg0: [Int8], _ arg1: MediaType?) -> ResponseBody!
+
+    /// Java method `create`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public static final okhttp3.ResponseBody okhttp3.ResponseBody.create(okio.BufferedSource,okhttp3.MediaType,long)
+    /// ```
+  @JavaStaticMethod
+  public func create(_ arg0: BufferedSource?, _ arg1: MediaType?, _ arg2: Int64) -> ResponseBody!
 }

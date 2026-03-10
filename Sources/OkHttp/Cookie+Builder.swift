@@ -26,6 +26,15 @@ extension Cookie {
   @JavaMethod
   open func domain(_ arg0: String) -> Cookie.Builder!
 
+    /// Java method `hostOnlyDomain`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Cookie$Builder okhttp3.Cookie$Builder.hostOnlyDomain(java.lang.String)
+    /// ```
+  @JavaMethod
+  open func hostOnlyDomain(_ arg0: String) -> Cookie.Builder!
+
     /// Java method `secure`.
     ///
     /// ### Java method signature
@@ -43,15 +52,6 @@ extension Cookie {
     /// ```
   @JavaMethod
   open func httpOnly() -> Cookie.Builder!
-
-    /// Java method `hostOnlyDomain`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.Cookie$Builder okhttp3.Cookie$Builder.hostOnlyDomain(java.lang.String)
-    /// ```
-  @JavaMethod
-  open func hostOnlyDomain(_ arg0: String) -> Cookie.Builder!
 
     /// Java method `name`.
     ///

@@ -4,14 +4,14 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.Response", implements: Closeable.self)
 open class Response: JavaObject {
-  /// Java method `-deprecated_headers`.
+  /// Java method `-deprecated_receivedResponseAtMillis`.
   ///
   /// ### Java method signature
   /// ```java
-  /// public final okhttp3.Headers okhttp3.Response.-deprecated_headers()
+  /// public final long okhttp3.Response.-deprecated_receivedResponseAtMillis()
   /// ```
 @JavaMethod
-  open func `-deprecated_headers`() -> Headers!
+  open func `-deprecated_receivedResponseAtMillis`() -> Int64
 
   /// Java method `sentRequestAtMillis`.
   ///
@@ -30,15 +30,6 @@ open class Response: JavaObject {
   /// ```
 @JavaMethod
   open func receivedResponseAtMillis() -> Int64
-
-  /// Java method `-deprecated_cacheControl`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.CacheControl okhttp3.Response.-deprecated_cacheControl()
-  /// ```
-@JavaMethod
-  open func `-deprecated_cacheControl`() -> CacheControl!
 
   /// Java method `-deprecated_request`.
   ///
@@ -67,6 +58,15 @@ open class Response: JavaObject {
 @JavaMethod
   open func `-deprecated_handshake`() -> Handshake!
 
+  /// Java method `-deprecated_headers`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final okhttp3.Headers okhttp3.Response.-deprecated_headers()
+  /// ```
+@JavaMethod
+  open func `-deprecated_headers`() -> Headers!
+
   /// Java method `-deprecated_networkResponse`.
   ///
   /// ### Java method signature
@@ -94,6 +94,15 @@ open class Response: JavaObject {
 @JavaMethod
   open func `-deprecated_priorResponse`() -> Response!
 
+  /// Java method `-deprecated_cacheControl`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final okhttp3.CacheControl okhttp3.Response.-deprecated_cacheControl()
+  /// ```
+@JavaMethod
+  open func `-deprecated_cacheControl`() -> CacheControl!
+
   /// Java method `-deprecated_sentRequestAtMillis`.
   ///
   /// ### Java method signature
@@ -102,6 +111,24 @@ open class Response: JavaObject {
   /// ```
 @JavaMethod
   open func `-deprecated_sentRequestAtMillis`() -> Int64
+
+  /// Java method `handshake`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final okhttp3.Handshake okhttp3.Response.handshake()
+  /// ```
+@JavaMethod
+  open func handshake() -> Handshake!
+
+  /// Java method `newBuilder`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final okhttp3.Response$Builder okhttp3.Response.newBuilder()
+  /// ```
+@JavaMethod
+  open func newBuilder() -> Response.Builder!
 
   /// Java method `headers`.
   ///
@@ -121,14 +148,14 @@ open class Response: JavaObject {
 @JavaMethod
   open func headers() -> Headers!
 
-  /// Java method `-deprecated_body`.
+  /// Java method `cacheControl`.
   ///
   /// ### Java method signature
   /// ```java
-  /// public final okhttp3.ResponseBody okhttp3.Response.-deprecated_body()
+  /// public final okhttp3.CacheControl okhttp3.Response.cacheControl()
   /// ```
 @JavaMethod
-  open func `-deprecated_body`() -> ResponseBody!
+  open func cacheControl() -> CacheControl!
 
   /// Java method `networkResponse`.
   ///
@@ -138,15 +165,6 @@ open class Response: JavaObject {
   /// ```
 @JavaMethod
   open func networkResponse() -> Response!
-
-  /// Java method `handshake`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.Handshake okhttp3.Response.handshake()
-  /// ```
-@JavaMethod
-  open func handshake() -> Handshake!
 
   /// Java method `cacheResponse`.
   ///
@@ -165,24 +183,6 @@ open class Response: JavaObject {
   /// ```
 @JavaMethod
   open func priorResponse() -> Response!
-
-  /// Java method `newBuilder`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.Response$Builder okhttp3.Response.newBuilder()
-  /// ```
-@JavaMethod
-  open func newBuilder() -> Response.Builder!
-
-  /// Java method `cacheControl`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.CacheControl okhttp3.Response.cacheControl()
-  /// ```
-@JavaMethod
-  open func cacheControl() -> CacheControl!
 
   /// Java method `-deprecated_code`.
   ///
@@ -220,6 +220,15 @@ open class Response: JavaObject {
 @JavaMethod
   open func peekBody(_ arg0: Int64) throws -> ResponseBody!
 
+  /// Java method `-deprecated_body`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final okhttp3.ResponseBody okhttp3.Response.-deprecated_body()
+  /// ```
+@JavaMethod
+  open func `-deprecated_body`() -> ResponseBody!
+
   /// Java method `isRedirect`.
   ///
   /// ### Java method signature
@@ -237,15 +246,6 @@ open class Response: JavaObject {
   /// ```
 @JavaMethod
   open func challenges() -> List<Challenge>!
-
-  /// Java method `-deprecated_receivedResponseAtMillis`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final long okhttp3.Response.-deprecated_receivedResponseAtMillis()
-  /// ```
-@JavaMethod
-  open func `-deprecated_receivedResponseAtMillis`() -> Int64
 
   /// Java method `toString`.
   ///

@@ -5,6 +5,9 @@ import SwiftJavaJNICore
 extension MultipartReader {
   @JavaClass("okhttp3.MultipartReader$Part", implements: Closeable.self)
   open class Part: JavaObject {
+  @JavaMethod
+  @_nonoverride public convenience init(_ arg0: Headers?, _ arg1: BufferedSource?, environment: JNIEnvironment? = nil)
+
     /// Java method `headers`.
     ///
     /// ### Java method signature
@@ -22,5 +25,14 @@ extension MultipartReader {
     /// ```
   @JavaMethod
   open func close()
+
+    /// Java method `body`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okio.BufferedSource okhttp3.MultipartReader$Part.body()
+    /// ```
+  @JavaMethod
+  open func body() -> BufferedSource!
   }
 }

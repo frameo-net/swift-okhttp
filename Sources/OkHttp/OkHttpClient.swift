@@ -10,32 +10,14 @@ open class OkHttpClient: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
-    /// Java method `-deprecated_proxyAuthenticator`.
+    /// Java method `-deprecated_retryOnConnectionFailure`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public final okhttp3.Authenticator okhttp3.OkHttpClient.-deprecated_proxyAuthenticator()
+    /// public final boolean okhttp3.OkHttpClient.-deprecated_retryOnConnectionFailure()
     /// ```
   @JavaMethod
-  open func `-deprecated_proxyAuthenticator`() -> Authenticator!
-
-    /// Java method `-deprecated_connectionSpecs`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.util.List<okhttp3.ConnectionSpec> okhttp3.OkHttpClient.-deprecated_connectionSpecs()
-    /// ```
-  @JavaMethod
-  open func `-deprecated_connectionSpecs`() -> List<ConnectionSpec>!
-
-    /// Java method `-deprecated_certificatePinner`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.CertificatePinner okhttp3.OkHttpClient.-deprecated_certificatePinner()
-    /// ```
-  @JavaMethod
-  open func `-deprecated_certificatePinner`() -> CertificatePinner!
+  open func `-deprecated_retryOnConnectionFailure`() -> Bool
 
     /// Java method `networkInterceptors`.
     ///
@@ -64,14 +46,185 @@ open class OkHttpClient: JavaObject {
   @JavaMethod
   open func retryOnConnectionFailure() -> Bool
 
-    /// Java method `minWebSocketMessageToCompress`.
+    /// Java method `newBuilder`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public final long okhttp3.OkHttpClient.minWebSocketMessageToCompress()
+    /// public okhttp3.OkHttpClient$Builder okhttp3.OkHttpClient.newBuilder()
     /// ```
   @JavaMethod
-  open func minWebSocketMessageToCompress() -> Int64
+  open func newBuilder() -> OkHttpClient.Builder!
+
+    /// Java method `dispatcher`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Dispatcher okhttp3.OkHttpClient.dispatcher()
+    /// ```
+  @JavaMethod
+  open func dispatcher() -> Dispatcher!
+
+    /// Java method `connectionPool`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.ConnectionPool okhttp3.OkHttpClient.connectionPool()
+    /// ```
+  @JavaMethod
+  open func connectionPool() -> ConnectionPool!
+
+    /// Java method `interceptors`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.util.List<okhttp3.Interceptor> okhttp3.OkHttpClient.interceptors()
+    /// ```
+  @JavaMethod
+  open func interceptors() -> List<Interceptor>!
+
+    /// Java method `authenticator`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Authenticator okhttp3.OkHttpClient.authenticator()
+    /// ```
+  @JavaMethod
+  open func authenticator() -> Authenticator!
+
+    /// Java method `followRedirects`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final boolean okhttp3.OkHttpClient.followRedirects()
+    /// ```
+  @JavaMethod
+  open func followRedirects() -> Bool
+
+    /// Java method `followSslRedirects`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final boolean okhttp3.OkHttpClient.followSslRedirects()
+    /// ```
+  @JavaMethod
+  open func followSslRedirects() -> Bool
+
+    /// Java method `cookieJar`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.CookieJar okhttp3.OkHttpClient.cookieJar()
+    /// ```
+  @JavaMethod
+  open func cookieJar() -> CookieJar!
+
+    /// Java method `dns`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Dns okhttp3.OkHttpClient.dns()
+    /// ```
+  @JavaMethod
+  open func dns() -> Dns!
+
+    /// Java method `proxyAuthenticator`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Authenticator okhttp3.OkHttpClient.proxyAuthenticator()
+    /// ```
+  @JavaMethod
+  open func proxyAuthenticator() -> Authenticator!
+
+    /// Java method `connectionSpecs`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.util.List<okhttp3.ConnectionSpec> okhttp3.OkHttpClient.connectionSpecs()
+    /// ```
+  @JavaMethod
+  open func connectionSpecs() -> List<ConnectionSpec>!
+
+    /// Java method `callTimeoutMillis`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.OkHttpClient.callTimeoutMillis()
+    /// ```
+  @JavaMethod
+  open func callTimeoutMillis() -> Int32
+
+    /// Java method `readTimeoutMillis`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.OkHttpClient.readTimeoutMillis()
+    /// ```
+  @JavaMethod
+  open func readTimeoutMillis() -> Int32
+
+    /// Java method `writeTimeoutMillis`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.OkHttpClient.writeTimeoutMillis()
+    /// ```
+  @JavaMethod
+  open func writeTimeoutMillis() -> Int32
+
+    /// Java method `pingIntervalMillis`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.OkHttpClient.pingIntervalMillis()
+    /// ```
+  @JavaMethod
+  open func pingIntervalMillis() -> Int32
+
+    /// Java method `certificatePinner`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.CertificatePinner okhttp3.OkHttpClient.certificatePinner()
+    /// ```
+  @JavaMethod
+  open func certificatePinner() -> CertificatePinner!
+
+    /// Java method `newCall`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public okhttp3.Call okhttp3.OkHttpClient.newCall(okhttp3.Request)
+    /// ```
+  @JavaMethod
+  open func newCall(_ arg0: Request?) -> Call!
+
+    /// Java method `newWebSocket`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public okhttp3.WebSocket okhttp3.OkHttpClient.newWebSocket(okhttp3.Request,okhttp3.WebSocketListener)
+    /// ```
+  @JavaMethod
+  open func newWebSocket(_ arg0: Request?, _ arg1: WebSocketListener?) -> WebSocket!
+
+    /// Java method `-deprecated_cache`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Cache okhttp3.OkHttpClient.-deprecated_cache()
+    /// ```
+  @JavaMethod
+  open func `-deprecated_cache`() -> Cache!
+
+    /// Java method `-deprecated_dns`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Dns okhttp3.OkHttpClient.-deprecated_dns()
+    /// ```
+  @JavaMethod
+  open func `-deprecated_dns`() -> Dns!
 
     /// Java method `connectTimeoutMillis`.
     ///
@@ -81,6 +234,15 @@ open class OkHttpClient: JavaObject {
     /// ```
   @JavaMethod
   open func connectTimeoutMillis() -> Int32
+
+    /// Java method `minWebSocketMessageToCompress`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final long okhttp3.OkHttpClient.minWebSocketMessageToCompress()
+    /// ```
+  @JavaMethod
+  open func minWebSocketMessageToCompress() -> Int64
 
     /// Java method `-deprecated_dispatcher`.
     ///
@@ -163,6 +325,33 @@ open class OkHttpClient: JavaObject {
   @JavaMethod
   open func `-deprecated_cookieJar`() -> CookieJar!
 
+    /// Java method `-deprecated_proxyAuthenticator`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Authenticator okhttp3.OkHttpClient.-deprecated_proxyAuthenticator()
+    /// ```
+  @JavaMethod
+  open func `-deprecated_proxyAuthenticator`() -> Authenticator!
+
+    /// Java method `-deprecated_connectionSpecs`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.util.List<okhttp3.ConnectionSpec> okhttp3.OkHttpClient.-deprecated_connectionSpecs()
+    /// ```
+  @JavaMethod
+  open func `-deprecated_connectionSpecs`() -> List<ConnectionSpec>!
+
+    /// Java method `-deprecated_certificatePinner`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.CertificatePinner okhttp3.OkHttpClient.-deprecated_certificatePinner()
+    /// ```
+  @JavaMethod
+  open func `-deprecated_certificatePinner`() -> CertificatePinner!
+
     /// Java method `-deprecated_callTimeoutMillis`.
     ///
     /// ### Java method signature
@@ -208,195 +397,6 @@ open class OkHttpClient: JavaObject {
   @JavaMethod
   open func `-deprecated_pingIntervalMillis`() -> Int32
 
-    /// Java method `newCall`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public okhttp3.Call okhttp3.OkHttpClient.newCall(okhttp3.Request)
-    /// ```
-  @JavaMethod
-  open func newCall(_ arg0: Request?) -> Call!
-
-    /// Java method `dns`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.Dns okhttp3.OkHttpClient.dns()
-    /// ```
-  @JavaMethod
-  open func dns() -> Dns!
-
-    /// Java method `proxyAuthenticator`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.Authenticator okhttp3.OkHttpClient.proxyAuthenticator()
-    /// ```
-  @JavaMethod
-  open func proxyAuthenticator() -> Authenticator!
-
-    /// Java method `connectionSpecs`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.util.List<okhttp3.ConnectionSpec> okhttp3.OkHttpClient.connectionSpecs()
-    /// ```
-  @JavaMethod
-  open func connectionSpecs() -> List<ConnectionSpec>!
-
-    /// Java method `certificatePinner`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.CertificatePinner okhttp3.OkHttpClient.certificatePinner()
-    /// ```
-  @JavaMethod
-  open func certificatePinner() -> CertificatePinner!
-
-    /// Java method `-deprecated_dns`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.Dns okhttp3.OkHttpClient.-deprecated_dns()
-    /// ```
-  @JavaMethod
-  open func `-deprecated_dns`() -> Dns!
-
-    /// Java method `dispatcher`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.Dispatcher okhttp3.OkHttpClient.dispatcher()
-    /// ```
-  @JavaMethod
-  open func dispatcher() -> Dispatcher!
-
-    /// Java method `connectionPool`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.ConnectionPool okhttp3.OkHttpClient.connectionPool()
-    /// ```
-  @JavaMethod
-  open func connectionPool() -> ConnectionPool!
-
-    /// Java method `interceptors`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.util.List<okhttp3.Interceptor> okhttp3.OkHttpClient.interceptors()
-    /// ```
-  @JavaMethod
-  open func interceptors() -> List<Interceptor>!
-
-    /// Java method `authenticator`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.Authenticator okhttp3.OkHttpClient.authenticator()
-    /// ```
-  @JavaMethod
-  open func authenticator() -> Authenticator!
-
-    /// Java method `followRedirects`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final boolean okhttp3.OkHttpClient.followRedirects()
-    /// ```
-  @JavaMethod
-  open func followRedirects() -> Bool
-
-    /// Java method `followSslRedirects`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final boolean okhttp3.OkHttpClient.followSslRedirects()
-    /// ```
-  @JavaMethod
-  open func followSslRedirects() -> Bool
-
-    /// Java method `cookieJar`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.CookieJar okhttp3.OkHttpClient.cookieJar()
-    /// ```
-  @JavaMethod
-  open func cookieJar() -> CookieJar!
-
-    /// Java method `callTimeoutMillis`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final int okhttp3.OkHttpClient.callTimeoutMillis()
-    /// ```
-  @JavaMethod
-  open func callTimeoutMillis() -> Int32
-
-    /// Java method `readTimeoutMillis`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final int okhttp3.OkHttpClient.readTimeoutMillis()
-    /// ```
-  @JavaMethod
-  open func readTimeoutMillis() -> Int32
-
-    /// Java method `writeTimeoutMillis`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final int okhttp3.OkHttpClient.writeTimeoutMillis()
-    /// ```
-  @JavaMethod
-  open func writeTimeoutMillis() -> Int32
-
-    /// Java method `pingIntervalMillis`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final int okhttp3.OkHttpClient.pingIntervalMillis()
-    /// ```
-  @JavaMethod
-  open func pingIntervalMillis() -> Int32
-
-    /// Java method `newBuilder`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public okhttp3.OkHttpClient$Builder okhttp3.OkHttpClient.newBuilder()
-    /// ```
-  @JavaMethod
-  open func newBuilder() -> OkHttpClient.Builder!
-
-    /// Java method `newWebSocket`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public okhttp3.WebSocket okhttp3.OkHttpClient.newWebSocket(okhttp3.Request,okhttp3.WebSocketListener)
-    /// ```
-  @JavaMethod
-  open func newWebSocket(_ arg0: Request?, _ arg1: WebSocketListener?) -> WebSocket!
-
-    /// Java method `-deprecated_cache`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.Cache okhttp3.OkHttpClient.-deprecated_cache()
-    /// ```
-  @JavaMethod
-  open func `-deprecated_cache`() -> Cache!
-
-    /// Java method `-deprecated_retryOnConnectionFailure`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final boolean okhttp3.OkHttpClient.-deprecated_retryOnConnectionFailure()
-    /// ```
-  @JavaMethod
-  open func `-deprecated_retryOnConnectionFailure`() -> Bool
-
     /// Java method `cache`.
     ///
     /// ### Java method signature
@@ -418,4 +418,22 @@ open class OkHttpClient: JavaObject {
 extension JavaClass<OkHttpClient> {
   @JavaStaticField(isFinal: true)
   public var Companion: OkHttpClient.Companion!
+
+    /// Java method `access$getDEFAULT_CONNECTION_SPECS$cp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public static final java.util.List okhttp3.OkHttpClient.access$getDEFAULT_CONNECTION_SPECS$cp()
+    /// ```
+  @JavaStaticMethod
+  public func access$getDEFAULT_CONNECTION_SPECS$cp() -> List!
+
+    /// Java method `access$getDEFAULT_PROTOCOLS$cp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public static final java.util.List okhttp3.OkHttpClient.access$getDEFAULT_PROTOCOLS$cp()
+    /// ```
+  @JavaStaticMethod
+  public func access$getDEFAULT_PROTOCOLS$cp() -> List!
 }

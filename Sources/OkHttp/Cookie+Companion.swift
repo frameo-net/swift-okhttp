@@ -5,15 +5,6 @@ import SwiftJavaJNICore
 extension Cookie {
   @JavaClass("okhttp3.Cookie$Companion")
   open class Companion: JavaObject {
-    /// Java method `parseAll`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.util.List<okhttp3.Cookie> okhttp3.Cookie$Companion.parseAll(okhttp3.HttpUrl,okhttp3.Headers)
-    /// ```
-  @JavaMethod
-  open func parseAll(_ arg0: HttpUrl?, _ arg1: Headers?) -> List<Cookie>!
-
     /// Java method `parse$okhttp`.
     ///
     /// ### Java method signature
@@ -22,6 +13,15 @@ extension Cookie {
     /// ```
   @JavaMethod
   open func parse$okhttp(_ arg0: Int64, _ arg1: HttpUrl?, _ arg2: String) -> Cookie!
+
+    /// Java method `parseAll`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.util.List<okhttp3.Cookie> okhttp3.Cookie$Companion.parseAll(okhttp3.HttpUrl,okhttp3.Headers)
+    /// ```
+  @JavaMethod
+  open func parseAll(_ arg0: HttpUrl?, _ arg1: Headers?) -> List<Cookie>!
 
     /// Java method `parse`.
     ///

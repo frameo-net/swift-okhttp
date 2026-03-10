@@ -7,42 +7,6 @@ open class EventListener: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
-    /// Java method `requestHeadersStart`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public void okhttp3.EventListener.requestHeadersStart(okhttp3.Call)
-    /// ```
-  @JavaMethod
-  open func requestHeadersStart(_ arg0: Call?)
-
-    /// Java method `responseHeadersStart`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public void okhttp3.EventListener.responseHeadersStart(okhttp3.Call)
-    /// ```
-  @JavaMethod
-  open func responseHeadersStart(_ arg0: Call?)
-
-    /// Java method `satisfactionFailure`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public void okhttp3.EventListener.satisfactionFailure(okhttp3.Call,okhttp3.Response)
-    /// ```
-  @JavaMethod
-  open func satisfactionFailure(_ arg0: Call?, _ arg1: Response?)
-
-    /// Java method `cacheConditionalHit`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public void okhttp3.EventListener.cacheConditionalHit(okhttp3.Call,okhttp3.Response)
-    /// ```
-  @JavaMethod
-  open func cacheConditionalHit(_ arg0: Call?, _ arg1: Response?)
-
     /// Java method `callStart`.
     ///
     /// ### Java method signature
@@ -195,6 +159,42 @@ open class EventListener: JavaObject {
     /// ```
   @JavaMethod
   open func cacheMiss(_ arg0: Call?)
+
+    /// Java method `requestHeadersStart`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void okhttp3.EventListener.requestHeadersStart(okhttp3.Call)
+    /// ```
+  @JavaMethod
+  open func requestHeadersStart(_ arg0: Call?)
+
+    /// Java method `responseHeadersStart`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void okhttp3.EventListener.responseHeadersStart(okhttp3.Call)
+    /// ```
+  @JavaMethod
+  open func responseHeadersStart(_ arg0: Call?)
+
+    /// Java method `satisfactionFailure`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void okhttp3.EventListener.satisfactionFailure(okhttp3.Call,okhttp3.Response)
+    /// ```
+  @JavaMethod
+  open func satisfactionFailure(_ arg0: Call?, _ arg1: Response?)
+
+    /// Java method `cacheConditionalHit`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void okhttp3.EventListener.cacheConditionalHit(okhttp3.Call,okhttp3.Response)
+    /// ```
+  @JavaMethod
+  open func cacheConditionalHit(_ arg0: Call?, _ arg1: Response?)
 }
 extension JavaClass<EventListener> {
   @JavaStaticField(isFinal: true)

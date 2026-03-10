@@ -7,6 +7,9 @@ open class MultipartReader: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: ResponseBody?, environment: JNIEnvironment? = nil) throws
 
+  @JavaMethod
+  @_nonoverride public convenience init(_ arg0: BufferedSource?, _ arg1: String, environment: JNIEnvironment? = nil) throws
+
     /// Java method `boundary`.
     ///
     /// ### Java method signature
@@ -46,4 +49,13 @@ extension JavaClass<MultipartReader> {
     /// ```
   @JavaStaticMethod
   public func access$currentPartBytesRemaining(_ arg0: MultipartReader?, _ arg1: Int64) -> Int64
+
+    /// Java method `access$getSource$p`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public static final okio.BufferedSource okhttp3.MultipartReader.access$getSource$p(okhttp3.MultipartReader)
+    /// ```
+  @JavaStaticMethod
+  public func access$getSource$p(_ arg0: MultipartReader?) -> BufferedSource!
 }

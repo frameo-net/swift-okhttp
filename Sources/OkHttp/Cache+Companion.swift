@@ -5,14 +5,23 @@ import SwiftJavaJNICore
 extension Cache {
   @JavaClass("okhttp3.Cache$Companion")
   open class Companion: JavaObject {
-    /// Java method `hasVaryAll`.
+    /// Java method `readInt$okhttp`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public final boolean okhttp3.Cache$Companion.hasVaryAll(okhttp3.Response)
+    /// public final int okhttp3.Cache$Companion.readInt$okhttp(okio.BufferedSource) throws java.io.IOException
     /// ```
   @JavaMethod
-  open func hasVaryAll(_ arg0: Response?) -> Bool
+  open func readInt$okhttp(_ arg0: BufferedSource?) throws -> Int32
+
+    /// Java method `varyHeaders`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Headers okhttp3.Cache$Companion.varyHeaders(okhttp3.Response)
+    /// ```
+  @JavaMethod
+  open func varyHeaders(_ arg0: Response?) -> Headers!
 
     /// Java method `varyMatches`.
     ///
@@ -23,14 +32,14 @@ extension Cache {
   @JavaMethod
   open func varyMatches(_ arg0: Response?, _ arg1: Headers?, _ arg2: Request?) -> Bool
 
-    /// Java method `varyHeaders`.
+    /// Java method `hasVaryAll`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public final okhttp3.Headers okhttp3.Cache$Companion.varyHeaders(okhttp3.Response)
+    /// public final boolean okhttp3.Cache$Companion.hasVaryAll(okhttp3.Response)
     /// ```
   @JavaMethod
-  open func varyHeaders(_ arg0: Response?) -> Headers!
+  open func hasVaryAll(_ arg0: Response?) -> Bool
 
     /// Java method `key`.
     ///

@@ -7,24 +7,6 @@ open class Cache: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: File?, _ arg1: Int64, environment: JNIEnvironment? = nil)
 
-    /// Java method `getWriteSuccessCount$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final int okhttp3.Cache.getWriteSuccessCount$okhttp()
-    /// ```
-  @JavaMethod
-  open func getWriteSuccessCount$okhttp() -> Int32
-
-    /// Java method `setWriteSuccessCount$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.Cache.setWriteSuccessCount$okhttp(int)
-    /// ```
-  @JavaMethod
-  open func setWriteSuccessCount$okhttp(_ arg0: Int32)
-
     /// Java method `getWriteAbortCount$okhttp`.
     ///
     /// ### Java method signature
@@ -42,6 +24,24 @@ open class Cache: JavaObject {
     /// ```
   @JavaMethod
   open func setWriteAbortCount$okhttp(_ arg0: Int32)
+
+    /// Java method `getWriteSuccessCount$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.Cache.getWriteSuccessCount$okhttp()
+    /// ```
+  @JavaMethod
+  open func getWriteSuccessCount$okhttp() -> Int32
+
+    /// Java method `setWriteSuccessCount$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.Cache.setWriteSuccessCount$okhttp(int)
+    /// ```
+  @JavaMethod
+  open func setWriteSuccessCount$okhttp(_ arg0: Int32)
 
     /// Java method `-deprecated_directory`.
     ///

@@ -8,15 +8,6 @@ extension CertificatePinner {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: String, _ arg1: String, environment: JNIEnvironment? = nil)
 
-    /// Java method `getPattern`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.lang.String okhttp3.CertificatePinner$Pin.getPattern()
-    /// ```
-  @JavaMethod
-  open func getPattern() -> String
-
     /// Java method `getHashAlgorithm`.
     ///
     /// ### Java method signature
@@ -34,6 +25,15 @@ extension CertificatePinner {
     /// ```
   @JavaMethod
   open func matchesHostname(_ arg0: String) -> Bool
+
+    /// Java method `getPattern`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.lang.String okhttp3.CertificatePinner$Pin.getPattern()
+    /// ```
+  @JavaMethod
+  open func getPattern() -> String
 
     /// Java method `equals`.
     ///

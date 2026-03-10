@@ -4,6 +4,96 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.CacheControl")
 open class CacheControl: JavaObject {
+  /// Java method `immutable`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final boolean okhttp3.CacheControl.immutable()
+  /// ```
+@JavaMethod
+  open func immutable() -> Bool
+
+  /// Java method `noCache`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final boolean okhttp3.CacheControl.noCache()
+  /// ```
+@JavaMethod
+  open func noCache() -> Bool
+
+  /// Java method `noStore`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final boolean okhttp3.CacheControl.noStore()
+  /// ```
+@JavaMethod
+  open func noStore() -> Bool
+
+  /// Java method `maxAgeSeconds`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final int okhttp3.CacheControl.maxAgeSeconds()
+  /// ```
+@JavaMethod
+  open func maxAgeSeconds() -> Int32
+
+  /// Java method `sMaxAgeSeconds`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final int okhttp3.CacheControl.sMaxAgeSeconds()
+  /// ```
+@JavaMethod
+  open func sMaxAgeSeconds() -> Int32
+
+  /// Java method `mustRevalidate`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final boolean okhttp3.CacheControl.mustRevalidate()
+  /// ```
+@JavaMethod
+  open func mustRevalidate() -> Bool
+
+  /// Java method `maxStaleSeconds`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final int okhttp3.CacheControl.maxStaleSeconds()
+  /// ```
+@JavaMethod
+  open func maxStaleSeconds() -> Int32
+
+  /// Java method `minFreshSeconds`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final int okhttp3.CacheControl.minFreshSeconds()
+  /// ```
+@JavaMethod
+  open func minFreshSeconds() -> Int32
+
+  /// Java method `onlyIfCached`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final boolean okhttp3.CacheControl.onlyIfCached()
+  /// ```
+@JavaMethod
+  open func onlyIfCached() -> Bool
+
+  /// Java method `noTransform`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final boolean okhttp3.CacheControl.noTransform()
+  /// ```
+@JavaMethod
+  open func noTransform() -> Bool
+
   /// Java method `-deprecated_noCache`.
   ///
   /// ### Java method signature
@@ -93,96 +183,6 @@ open class CacheControl: JavaObject {
   /// ```
 @JavaMethod
   open func `-deprecated_immutable`() -> Bool
-
-  /// Java method `noCache`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.CacheControl.noCache()
-  /// ```
-@JavaMethod
-  open func noCache() -> Bool
-
-  /// Java method `noStore`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.CacheControl.noStore()
-  /// ```
-@JavaMethod
-  open func noStore() -> Bool
-
-  /// Java method `maxAgeSeconds`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final int okhttp3.CacheControl.maxAgeSeconds()
-  /// ```
-@JavaMethod
-  open func maxAgeSeconds() -> Int32
-
-  /// Java method `sMaxAgeSeconds`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final int okhttp3.CacheControl.sMaxAgeSeconds()
-  /// ```
-@JavaMethod
-  open func sMaxAgeSeconds() -> Int32
-
-  /// Java method `mustRevalidate`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.CacheControl.mustRevalidate()
-  /// ```
-@JavaMethod
-  open func mustRevalidate() -> Bool
-
-  /// Java method `maxStaleSeconds`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final int okhttp3.CacheControl.maxStaleSeconds()
-  /// ```
-@JavaMethod
-  open func maxStaleSeconds() -> Int32
-
-  /// Java method `minFreshSeconds`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final int okhttp3.CacheControl.minFreshSeconds()
-  /// ```
-@JavaMethod
-  open func minFreshSeconds() -> Int32
-
-  /// Java method `onlyIfCached`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.CacheControl.onlyIfCached()
-  /// ```
-@JavaMethod
-  open func onlyIfCached() -> Bool
-
-  /// Java method `noTransform`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.CacheControl.noTransform()
-  /// ```
-@JavaMethod
-  open func noTransform() -> Bool
-
-  /// Java method `immutable`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.CacheControl.immutable()
-  /// ```
-@JavaMethod
-  open func immutable() -> Bool
 
   /// Java method `toString`.
   ///
