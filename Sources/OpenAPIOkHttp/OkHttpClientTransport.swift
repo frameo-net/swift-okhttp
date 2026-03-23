@@ -50,7 +50,7 @@ public struct OkHttpClientTransport: ClientTransport {
             return try await withCheckedThrowingContinuation { continuation in
                 dispatchQueue.async {
                     do {
-                        guard let response = try self.configuration.client.newCall(httpRequest).execute() else {
+                        guard let response = try call?.execute() else {
                             continuation.resume(throwing: Error.javaNilError)
                             return
                         }
@@ -104,6 +104,15 @@ public struct OkHttpClientTransport: ClientTransport {
         baseUrlComponents.percentEncodedQuery = requestUrlComponents.percentEncodedQuery
         guard let url = baseUrlComponents.url else { throw Error.invalidRequestURL(request: request, baseURL: baseURL) }
 
+        var extractedBodyBytes: [Int8]? = nil
+        if let body {
+            let bytes = try await Array(collecting: body, upTo: .max)
+
+            extractedBodyBytes = bytes.withUnsafeBufferPointer { buffer in
+                buffer.withMemoryRebound(to: Int8.self) { Array($0) }
+            }
+        }
+
         var requestBuilder = Request.Builder()
             .url(url.absoluteString)
 
@@ -112,15 +121,8 @@ public struct OkHttpClientTransport: ClientTransport {
         }
 
         var requestBody: RequestBody? = nil
-        if let body {
-            let bytes = try await Array(collecting: body, upTo: .max)
-            requestBody = try JavaClass<RequestBody>().create(
-                bytes.withUnsafeBufferPointer { buffer in
-                    buffer.withMemoryRebound(to: Int8.self) {
-                        [Int8]($0)
-                    }
-                }
-            )
+        if let extractedBodyBytes {
+            requestBody = try JavaClass<RequestBody>().create(extractedBodyBytes)
         } else if request.method == .post {
             // OkHttp requires body for POST
             requestBody = try JavaClass<RequestBody>().create("", nil)
