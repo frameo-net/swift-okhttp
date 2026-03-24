@@ -26,7 +26,7 @@ public struct OkHttpClientTransport: ClientTransport {
     }
 
     /// A dispatch queue used to run network requests on, to prevent blocking Swift Concurrency's thread pool.
-    private let dispatchQueue = DispatchQueue(
+    private static let dispatchQueue = DispatchQueue(
         label: "com.madsodgaard.swift-openapi-client.okhttp-client-transport",
         attributes: .concurrent
     )
@@ -48,7 +48,7 @@ public struct OkHttpClientTransport: ClientTransport {
         let call = self.configuration.client.newCall(httpRequest)
         return try await withTaskCancellationHandler {
             return try await withCheckedThrowingContinuation { continuation in
-                dispatchQueue.async {
+                Self.dispatchQueue.async {
                     do {
                         guard let response = try call?.execute() else {
                             continuation.resume(throwing: Error.javaNilError)
@@ -129,7 +129,6 @@ public struct OkHttpClientTransport: ClientTransport {
         }
 
         requestBuilder = requestBuilder?.method(request.method.rawValue, requestBody)
-
         return requestBuilder!.build()
     }
 
@@ -137,28 +136,34 @@ public struct OkHttpClientTransport: ClientTransport {
     static func convertResponse(method: HTTPRequest.Method, httpResponse: Response) throws -> (
         HTTPResponse, HTTPBody?
     ) {
-        var headerFields: HTTPFields = [:]
-        let headers = httpResponse.headers()!
-        for i in 0..<headers.size() {
-            let headerName = headers.name(i)
-            let headerValue = headers.value(i)
-            headerFields[.init(headerName)!] = headerValue
-        }
+        let environment = try JavaVirtualMachine.shared().environment()
 
-        var body: HTTPBody?
-        switch method {
-        case .head, .connect, .trace: body = nil
-        default:
-            let bytes = try httpResponse.body().bytes()
-            bytes.withUnsafeBufferPointer { buffer in
-                buffer.withMemoryRebound(to: UInt8.self) { buffer in
-                    // Unfortunate copy...
-                    body = HTTPBody([UInt8](buffer))
+        return try environment.withLocalFrame {
+            var headerFields: HTTPFields = [:]
+            let headers = httpResponse.headers()!
+            for i in 0..<headers.size() {
+                try environment.withLocalFrame(capacity: 4) {
+                    let headerName = headers.name(i)
+                    let headerValue = headers.value(i)
+                    headerFields[.init(headerName)!] = headerValue
                 }
             }
-        }
 
-        let response = HTTPResponse(status: .init(code: Int(httpResponse.code())), headerFields: headerFields)
-        return (response, body)
+            var body: HTTPBody?
+            switch method {
+            case .head, .connect, .trace: body = nil
+            default:
+                let bytes = try httpResponse.body().bytes()
+                bytes.withUnsafeBufferPointer { buffer in
+                    buffer.withMemoryRebound(to: UInt8.self) { buffer in
+                        // Unfortunate copy...
+                        body = HTTPBody([UInt8](buffer))
+                    }
+                }
+            }
+
+            let response = HTTPResponse(status: .init(code: Int(httpResponse.code())), headerFields: headerFields)
+            return (response, body)
+        }
     }
 }
