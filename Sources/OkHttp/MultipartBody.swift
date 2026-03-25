@@ -4,42 +4,6 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.MultipartBody")
 open class MultipartBody: RequestBody {
-  /// Java method `-deprecated_type`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.MediaType okhttp3.MultipartBody.-deprecated_type()
-  /// ```
-@JavaMethod
-  open func `-deprecated_type`() -> MediaType!
-
-  /// Java method `-deprecated_parts`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.util.List<okhttp3.MultipartBody$Part> okhttp3.MultipartBody.-deprecated_parts()
-  /// ```
-@JavaMethod
-  open func `-deprecated_parts`() -> List<MultipartBody.Part>!
-
-  /// Java method `-deprecated_boundary`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.lang.String okhttp3.MultipartBody.-deprecated_boundary()
-  /// ```
-@JavaMethod
-  open func `-deprecated_boundary`() -> String
-
-  /// Java method `-deprecated_size`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final int okhttp3.MultipartBody.-deprecated_size()
-  /// ```
-@JavaMethod
-  open func `-deprecated_size`() -> Int32
-
   /// Java method `contentType`.
   ///
   /// ### Java method signature
@@ -66,6 +30,42 @@ open class MultipartBody: RequestBody {
   /// ```
 @JavaMethod
   open func boundary() -> String
+
+  /// Java method `-deprecated_type`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final okhttp3.MediaType okhttp3.MultipartBody.-deprecated_type()
+  /// ```
+@JavaMethod
+  open func `-deprecated_type`() -> MediaType!
+
+  /// Java method `-deprecated_size`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final int okhttp3.MultipartBody.-deprecated_size()
+  /// ```
+@JavaMethod
+  open func `-deprecated_size`() -> Int32
+
+  /// Java method `-deprecated_parts`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final java.util.List<okhttp3.MultipartBody$Part> okhttp3.MultipartBody.-deprecated_parts()
+  /// ```
+@JavaMethod
+  open func `-deprecated_parts`() -> List<MultipartBody.Part>!
+
+  /// Java method `-deprecated_boundary`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final java.lang.String okhttp3.MultipartBody.-deprecated_boundary()
+  /// ```
+@JavaMethod
+  open func `-deprecated_boundary`() -> String
 
   /// Java method `size`.
   ///

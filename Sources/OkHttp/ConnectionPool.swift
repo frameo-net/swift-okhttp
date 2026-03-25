@@ -7,15 +7,6 @@ open class ConnectionPool: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
-    /// Java method `connectionCount`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final int okhttp3.ConnectionPool.connectionCount()
-    /// ```
-  @JavaMethod
-  open func connectionCount() -> Int32
-
     /// Java method `evictAll`.
     ///
     /// ### Java method signature
@@ -24,6 +15,15 @@ open class ConnectionPool: JavaObject {
     /// ```
   @JavaMethod
   open func evictAll()
+
+    /// Java method `connectionCount`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.ConnectionPool.connectionCount()
+    /// ```
+  @JavaMethod
+  open func connectionCount() -> Int32
 
     /// Java method `idleConnectionCount`.
     ///

@@ -7,69 +7,6 @@ open class Cache: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: File?, _ arg1: Int64, environment: JNIEnvironment? = nil)
 
-    /// Java method `evictAll`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.Cache.evictAll() throws java.io.IOException
-    /// ```
-  @JavaMethod
-  open func evictAll() throws
-
-    /// Java method `getWriteAbortCount$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final int okhttp3.Cache.getWriteAbortCount$okhttp()
-    /// ```
-  @JavaMethod
-  open func getWriteAbortCount$okhttp() -> Int32
-
-    /// Java method `setWriteAbortCount$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.Cache.setWriteAbortCount$okhttp(int)
-    /// ```
-  @JavaMethod
-  open func setWriteAbortCount$okhttp(_ arg0: Int32)
-
-    /// Java method `getWriteSuccessCount$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final int okhttp3.Cache.getWriteSuccessCount$okhttp()
-    /// ```
-  @JavaMethod
-  open func getWriteSuccessCount$okhttp() -> Int32
-
-    /// Java method `setWriteSuccessCount$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.Cache.setWriteSuccessCount$okhttp(int)
-    /// ```
-  @JavaMethod
-  open func setWriteSuccessCount$okhttp(_ arg0: Int32)
-
-    /// Java method `-deprecated_directory`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.io.File okhttp3.Cache.-deprecated_directory()
-    /// ```
-  @JavaMethod
-  open func `-deprecated_directory`() -> File!
-
-    /// Java method `trackConditionalCacheHit$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final synchronized void okhttp3.Cache.trackConditionalCacheHit$okhttp()
-    /// ```
-  @JavaMethod
-  open func trackConditionalCacheHit$okhttp()
-
     /// Java method `writeSuccessCount`.
     ///
     /// ### Java method signature
@@ -124,6 +61,15 @@ open class Cache: JavaObject {
   @JavaMethod
   open func update$okhttp(_ arg0: Response?, _ arg1: Response?)
 
+    /// Java method `evictAll`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.Cache.evictAll() throws java.io.IOException
+    /// ```
+  @JavaMethod
+  open func evictAll() throws
+
     /// Java method `requestCount`.
     ///
     /// ### Java method signature
@@ -150,6 +96,60 @@ open class Cache: JavaObject {
     /// ```
   @JavaMethod
   open func hitCount() -> Int32
+
+    /// Java method `getWriteSuccessCount$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.Cache.getWriteSuccessCount$okhttp()
+    /// ```
+  @JavaMethod
+  open func getWriteSuccessCount$okhttp() -> Int32
+
+    /// Java method `setWriteSuccessCount$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.Cache.setWriteSuccessCount$okhttp(int)
+    /// ```
+  @JavaMethod
+  open func setWriteSuccessCount$okhttp(_ arg0: Int32)
+
+    /// Java method `getWriteAbortCount$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.Cache.getWriteAbortCount$okhttp()
+    /// ```
+  @JavaMethod
+  open func getWriteAbortCount$okhttp() -> Int32
+
+    /// Java method `setWriteAbortCount$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.Cache.setWriteAbortCount$okhttp(int)
+    /// ```
+  @JavaMethod
+  open func setWriteAbortCount$okhttp(_ arg0: Int32)
+
+    /// Java method `-deprecated_directory`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.io.File okhttp3.Cache.-deprecated_directory()
+    /// ```
+  @JavaMethod
+  open func `-deprecated_directory`() -> File!
+
+    /// Java method `trackConditionalCacheHit$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final synchronized void okhttp3.Cache.trackConditionalCacheHit$okhttp()
+    /// ```
+  @JavaMethod
+  open func trackConditionalCacheHit$okhttp()
 
     /// Java method `size`.
     ///

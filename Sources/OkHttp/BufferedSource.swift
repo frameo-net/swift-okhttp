@@ -22,6 +22,15 @@ public struct BufferedSource {
 @JavaMethod
   public func readUtf8(_ arg0: Int64) throws -> String
 
+  /// Java method `exhausted`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public abstract boolean okio.BufferedSource.exhausted() throws java.io.IOException
+  /// ```
+@JavaMethod
+  public func exhausted() throws -> Bool
+
   /// Java method `readDecimalLong`.
   ///
   /// ### Java method signature
@@ -31,14 +40,41 @@ public struct BufferedSource {
 @JavaMethod
   public func readDecimalLong() throws -> Int64
 
-  /// Java method `readByteArray`.
+  /// Java method `readUtf8LineStrict`.
   ///
   /// ### Java method signature
   /// ```java
-  /// public abstract byte[] okio.BufferedSource.readByteArray() throws java.io.IOException
+  /// public abstract java.lang.String okio.BufferedSource.readUtf8LineStrict() throws java.io.IOException
   /// ```
 @JavaMethod
-  public func readByteArray() throws -> [Int8]
+  public func readUtf8LineStrict() throws -> String
+
+  /// Java method `readUtf8LineStrict`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public abstract java.lang.String okio.BufferedSource.readUtf8LineStrict(long) throws java.io.IOException
+  /// ```
+@JavaMethod
+  public func readUtf8LineStrict(_ arg0: Int64) throws -> String
+
+  /// Java method `inputStream`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public abstract java.io.InputStream okio.BufferedSource.inputStream()
+  /// ```
+@JavaMethod
+  public func inputStream() -> InputStream!
+
+  /// Java method `require`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public abstract void okio.BufferedSource.require(long) throws java.io.IOException
+  /// ```
+@JavaMethod
+  public func require(_ arg0: Int64) throws
 
   /// Java method `readByteArray`.
   ///
@@ -48,6 +84,15 @@ public struct BufferedSource {
   /// ```
 @JavaMethod
   public func readByteArray(_ arg0: Int64) throws -> [Int8]
+
+  /// Java method `readByteArray`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public abstract byte[] okio.BufferedSource.readByteArray() throws java.io.IOException
+  /// ```
+@JavaMethod
+  public func readByteArray() throws -> [Int8]
 
   /// Java method `readShortLe`.
   ///
@@ -102,42 +147,6 @@ public struct BufferedSource {
   /// ```
 @JavaMethod
   public func readHexadecimalUnsignedLong() throws -> Int64
-
-  /// Java method `require`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract void okio.BufferedSource.require(long) throws java.io.IOException
-  /// ```
-@JavaMethod
-  public func require(_ arg0: Int64) throws
-
-  /// Java method `readUtf8LineStrict`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract java.lang.String okio.BufferedSource.readUtf8LineStrict(long) throws java.io.IOException
-  /// ```
-@JavaMethod
-  public func readUtf8LineStrict(_ arg0: Int64) throws -> String
-
-  /// Java method `readUtf8LineStrict`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract java.lang.String okio.BufferedSource.readUtf8LineStrict() throws java.io.IOException
-  /// ```
-@JavaMethod
-  public func readUtf8LineStrict() throws -> String
-
-  /// Java method `exhausted`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract boolean okio.BufferedSource.exhausted() throws java.io.IOException
-  /// ```
-@JavaMethod
-  public func exhausted() throws -> Bool
 
   /// Java method `indexOf`.
   ///

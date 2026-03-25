@@ -25,6 +25,15 @@ extension Headers {
   }
 }
 extension JavaClass<Headers.Companion> {
+  /// Java method `access$get`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public static final java.lang.String okhttp3.Headers$Companion.access$get(okhttp3.Headers$Companion,java.lang.String[],java.lang.String)
+  /// ```
+@JavaStaticMethod
+  public func access$get(_ arg0: Headers.Companion?, _ arg1: [String], _ arg2: String) -> String
+
   /// Java method `access$checkName`.
   ///
   /// ### Java method signature
@@ -42,13 +51,4 @@ extension JavaClass<Headers.Companion> {
   /// ```
 @JavaStaticMethod
   public func access$checkValue(_ arg0: Headers.Companion?, _ arg1: String, _ arg2: String)
-
-  /// Java method `access$get`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public static final java.lang.String okhttp3.Headers$Companion.access$get(okhttp3.Headers$Companion,java.lang.String[],java.lang.String)
-  /// ```
-@JavaStaticMethod
-  public func access$get(_ arg0: Headers.Companion?, _ arg1: [String], _ arg2: String) -> String
 }

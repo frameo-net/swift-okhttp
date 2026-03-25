@@ -11,15 +11,6 @@ extension Response {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: Response?, environment: JNIEnvironment? = nil)
 
-    /// Java method `getHeaders$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.Headers$Builder okhttp3.Response$Builder.getHeaders$okhttp()
-    /// ```
-  @JavaMethod
-  open func getHeaders$okhttp() -> Headers.Builder!
-
     /// Java method `headers`.
     ///
     /// ### Java method signature
@@ -28,6 +19,33 @@ extension Response {
     /// ```
   @JavaMethod
   open func headers(_ arg0: Headers?) -> Response.Builder!
+
+    /// Java method `handshake`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public okhttp3.Response$Builder okhttp3.Response$Builder.handshake(okhttp3.Handshake)
+    /// ```
+  @JavaMethod
+  open func handshake(_ arg0: Handshake?) -> Response.Builder!
+
+    /// Java method `networkResponse`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public okhttp3.Response$Builder okhttp3.Response$Builder.networkResponse(okhttp3.Response)
+    /// ```
+  @JavaMethod
+  open func networkResponse(_ arg0: Response?) -> Response.Builder!
+
+    /// Java method `getHeaders$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Headers$Builder okhttp3.Response$Builder.getHeaders$okhttp()
+    /// ```
+  @JavaMethod
+  open func getHeaders$okhttp() -> Headers.Builder!
 
     /// Java method `setHeaders$okhttp`.
     ///
@@ -74,14 +92,23 @@ extension Response {
   @JavaMethod
   open func removeHeader(_ arg0: String) -> Response.Builder!
 
-    /// Java method `handshake`.
+    /// Java method `cacheResponse`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public okhttp3.Response$Builder okhttp3.Response$Builder.handshake(okhttp3.Handshake)
+    /// public okhttp3.Response$Builder okhttp3.Response$Builder.cacheResponse(okhttp3.Response)
     /// ```
   @JavaMethod
-  open func handshake(_ arg0: Handshake?) -> Response.Builder!
+  open func cacheResponse(_ arg0: Response?) -> Response.Builder!
+
+    /// Java method `priorResponse`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public okhttp3.Response$Builder okhttp3.Response$Builder.priorResponse(okhttp3.Response)
+    /// ```
+  @JavaMethod
+  open func priorResponse(_ arg0: Response?) -> Response.Builder!
 
     /// Java method `getRequest$okhttp`.
     ///
@@ -136,33 +163,6 @@ extension Response {
     /// ```
   @JavaMethod
   open func setMessage$okhttp(_ arg0: String)
-
-    /// Java method `networkResponse`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public okhttp3.Response$Builder okhttp3.Response$Builder.networkResponse(okhttp3.Response)
-    /// ```
-  @JavaMethod
-  open func networkResponse(_ arg0: Response?) -> Response.Builder!
-
-    /// Java method `cacheResponse`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public okhttp3.Response$Builder okhttp3.Response$Builder.cacheResponse(okhttp3.Response)
-    /// ```
-  @JavaMethod
-  open func cacheResponse(_ arg0: Response?) -> Response.Builder!
-
-    /// Java method `priorResponse`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public okhttp3.Response$Builder okhttp3.Response$Builder.priorResponse(okhttp3.Response)
-    /// ```
-  @JavaMethod
-  open func priorResponse(_ arg0: Response?) -> Response.Builder!
 
     /// Java method `sentRequestAtMillis`.
     ///

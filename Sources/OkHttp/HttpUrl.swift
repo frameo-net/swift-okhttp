@@ -7,14 +7,41 @@ open class HttpUrl: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: String, _ arg1: String, _ arg2: String, _ arg3: String, _ arg4: Int32, _ arg5: List<JavaString>?, _ arg6: List<JavaString>?, _ arg7: String, _ arg8: String, environment: JNIEnvironment? = nil)
 
-    /// Java method `pathSegments`.
+    /// Java method `-deprecated_scheme`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public final java.util.List<java.lang.String> okhttp3.HttpUrl.pathSegments()
+    /// public final java.lang.String okhttp3.HttpUrl.-deprecated_scheme()
     /// ```
   @JavaMethod
-  open func pathSegments() -> List<JavaString>!
+  open func `-deprecated_scheme`() -> String
+
+    /// Java method `isHttps`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final boolean okhttp3.HttpUrl.isHttps()
+    /// ```
+  @JavaMethod
+  open func isHttps() -> Bool
+
+    /// Java method `newBuilder`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl.newBuilder()
+    /// ```
+  @JavaMethod
+  open func newBuilder() -> HttpUrl.Builder!
+
+    /// Java method `newBuilder`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl.newBuilder(java.lang.String)
+    /// ```
+  @JavaMethod
+  open func newBuilder(_ arg0: String) -> HttpUrl.Builder!
 
     /// Java method `encodedUsername`.
     ///
@@ -34,14 +61,41 @@ open class HttpUrl: JavaObject {
   @JavaMethod
   open func encodedPassword() -> String
 
-    /// Java method `pathSize`.
+    /// Java method `encodedFragment`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public final int okhttp3.HttpUrl.pathSize()
+    /// public final java.lang.String okhttp3.HttpUrl.encodedFragment()
     /// ```
   @JavaMethod
-  open func pathSize() -> Int32
+  open func encodedFragment() -> String
+
+    /// Java method `username`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.lang.String okhttp3.HttpUrl.username()
+    /// ```
+  @JavaMethod
+  open func username() -> String
+
+    /// Java method `password`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.lang.String okhttp3.HttpUrl.password()
+    /// ```
+  @JavaMethod
+  open func password() -> String
+
+    /// Java method `pathSegments`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.util.List<java.lang.String> okhttp3.HttpUrl.pathSegments()
+    /// ```
+  @JavaMethod
+  open func pathSegments() -> List<JavaString>!
 
     /// Java method `encodedPath`.
     ///
@@ -60,6 +114,24 @@ open class HttpUrl: JavaObject {
     /// ```
   @JavaMethod
   open func encodedQuery() -> String
+
+    /// Java method `-deprecated_url`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.net.URL okhttp3.HttpUrl.-deprecated_url()
+    /// ```
+  @JavaMethod
+  open func `-deprecated_url`() -> JavaURL!
+
+    /// Java method `pathSize`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.HttpUrl.pathSize()
+    /// ```
+  @JavaMethod
+  open func pathSize() -> Int32
 
     /// Java method `querySize`.
     ///
@@ -87,15 +159,6 @@ open class HttpUrl: JavaObject {
     /// ```
   @JavaMethod
   open func queryParameterName(_ arg0: Int32) -> String
-
-    /// Java method `encodedFragment`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.lang.String okhttp3.HttpUrl.encodedFragment()
-    /// ```
-  @JavaMethod
-  open func encodedFragment() -> String
 
     /// Java method `redact`.
     ///
@@ -295,60 +358,6 @@ open class HttpUrl: JavaObject {
   @JavaMethod
   open func `-deprecated_fragment`() -> String
 
-    /// Java method `username`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.lang.String okhttp3.HttpUrl.username()
-    /// ```
-  @JavaMethod
-  open func username() -> String
-
-    /// Java method `password`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.lang.String okhttp3.HttpUrl.password()
-    /// ```
-  @JavaMethod
-  open func password() -> String
-
-    /// Java method `newBuilder`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl.newBuilder(java.lang.String)
-    /// ```
-  @JavaMethod
-  open func newBuilder(_ arg0: String) -> HttpUrl.Builder!
-
-    /// Java method `newBuilder`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl.newBuilder()
-    /// ```
-  @JavaMethod
-  open func newBuilder() -> HttpUrl.Builder!
-
-    /// Java method `isHttps`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final boolean okhttp3.HttpUrl.isHttps()
-    /// ```
-  @JavaMethod
-  open func isHttps() -> Bool
-
-    /// Java method `-deprecated_scheme`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.lang.String okhttp3.HttpUrl.-deprecated_scheme()
-    /// ```
-  @JavaMethod
-  open func `-deprecated_scheme`() -> String
-
     /// Java method `equals`.
     ///
     /// ### Java method signature
@@ -375,6 +384,15 @@ open class HttpUrl: JavaObject {
     /// ```
   @JavaMethod
   open override func hashCode() -> Int32
+
+    /// Java method `url`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.net.URL okhttp3.HttpUrl.url()
+    /// ```
+  @JavaMethod
+  open func url() -> JavaURL!
 
     /// Java method `resolve`.
     ///
@@ -493,6 +511,15 @@ extension JavaClass<HttpUrl> {
     /// ```
   @JavaStaticMethod
   public func get(_ arg0: String) -> HttpUrl!
+
+    /// Java method `get`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public static final okhttp3.HttpUrl okhttp3.HttpUrl.get(java.net.URL)
+    /// ```
+  @JavaStaticMethod
+  public func get(_ arg0: JavaURL?) -> HttpUrl!
 
     /// Java method `parse`.
     ///

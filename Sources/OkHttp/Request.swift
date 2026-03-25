@@ -4,14 +4,14 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.Request")
 open class Request: JavaObject {
-  /// Java method `newBuilder`.
+  /// Java method `headers`.
   ///
   /// ### Java method signature
   /// ```java
-  /// public final okhttp3.Request$Builder okhttp3.Request.newBuilder()
+  /// public final java.util.List<java.lang.String> okhttp3.Request.headers(java.lang.String)
   /// ```
 @JavaMethod
-  open func newBuilder() -> Request.Builder!
+  open func headers(_ arg0: String) -> List<JavaString>!
 
   /// Java method `headers`.
   ///
@@ -22,14 +22,23 @@ open class Request: JavaObject {
 @JavaMethod
   open func headers() -> Headers!
 
-  /// Java method `headers`.
+  /// Java method `isHttps`.
   ///
   /// ### Java method signature
   /// ```java
-  /// public final java.util.List<java.lang.String> okhttp3.Request.headers(java.lang.String)
+  /// public final boolean okhttp3.Request.isHttps()
   /// ```
 @JavaMethod
-  open func headers(_ arg0: String) -> List<JavaString>!
+  open func isHttps() -> Bool
+
+  /// Java method `newBuilder`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final okhttp3.Request$Builder okhttp3.Request.newBuilder()
+  /// ```
+@JavaMethod
+  open func newBuilder() -> Request.Builder!
 
   /// Java method `cacheControl`.
   ///
@@ -40,14 +49,14 @@ open class Request: JavaObject {
 @JavaMethod
   open func cacheControl() -> CacheControl!
 
-  /// Java method `isHttps`.
+  /// Java method `-deprecated_body`.
   ///
   /// ### Java method signature
   /// ```java
-  /// public final boolean okhttp3.Request.isHttps()
+  /// public final okhttp3.RequestBody okhttp3.Request.-deprecated_body()
   /// ```
 @JavaMethod
-  open func isHttps() -> Bool
+  open func `-deprecated_body`() -> RequestBody!
 
   /// Java method `-deprecated_url`.
   ///
@@ -58,14 +67,14 @@ open class Request: JavaObject {
 @JavaMethod
   open func `-deprecated_url`() -> HttpUrl!
 
-  /// Java method `-deprecated_body`.
+  /// Java method `-deprecated_method`.
   ///
   /// ### Java method signature
   /// ```java
-  /// public final okhttp3.RequestBody okhttp3.Request.-deprecated_body()
+  /// public final java.lang.String okhttp3.Request.-deprecated_method()
   /// ```
 @JavaMethod
-  open func `-deprecated_body`() -> RequestBody!
+  open func `-deprecated_method`() -> String
 
   /// Java method `-deprecated_headers`.
   ///
@@ -84,15 +93,6 @@ open class Request: JavaObject {
   /// ```
 @JavaMethod
   open func `-deprecated_cacheControl`() -> CacheControl!
-
-  /// Java method `-deprecated_method`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.lang.String okhttp3.Request.-deprecated_method()
-  /// ```
-@JavaMethod
-  open func `-deprecated_method`() -> String
 
   /// Java method `toString`.
   ///

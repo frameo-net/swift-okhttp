@@ -25,6 +25,15 @@ open class ResponseBody: JavaObject {
   @JavaMethod
   open func contentLength() -> Int64
 
+    /// Java method `byteStream`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.io.InputStream okhttp3.ResponseBody.byteStream()
+    /// ```
+  @JavaMethod
+  open func byteStream() -> InputStream!
+
     /// Java method `bytes`.
     ///
     /// ### Java method signature

@@ -14,6 +14,33 @@ extension HttpUrl {
   @JavaMethod
   open func defaultPort(_ arg0: String) -> Int32
 
+    /// Java method `-deprecated_get`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.HttpUrl okhttp3.HttpUrl$Companion.-deprecated_get(java.lang.String)
+    /// ```
+  @JavaMethod
+  open func `-deprecated_get`(_ arg0: String) -> HttpUrl!
+
+    /// Java method `-deprecated_get`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.HttpUrl okhttp3.HttpUrl$Companion.-deprecated_get(java.net.URL)
+    /// ```
+  @JavaMethod
+  open func `-deprecated_get`(_ arg0: JavaURL?) -> HttpUrl!
+
+    /// Java method `-deprecated_parse`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.HttpUrl okhttp3.HttpUrl$Companion.-deprecated_parse(java.lang.String)
+    /// ```
+  @JavaMethod
+  open func `-deprecated_parse`(_ arg0: String) -> HttpUrl!
+
     /// Java method `toQueryNamesAndValues$okhttp`.
     ///
     /// ### Java method signature
@@ -41,24 +68,6 @@ extension HttpUrl {
   @JavaMethod
   open func canonicalize$okhttp(_ arg0: String, _ arg1: Int32, _ arg2: Int32, _ arg3: String, _ arg4: Bool, _ arg5: Bool, _ arg6: Bool, _ arg7: Bool, _ arg8: Charset?) -> String
 
-    /// Java method `-deprecated_get`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.HttpUrl okhttp3.HttpUrl$Companion.-deprecated_get(java.lang.String)
-    /// ```
-  @JavaMethod
-  open func `-deprecated_get`(_ arg0: String) -> HttpUrl!
-
-    /// Java method `-deprecated_parse`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.HttpUrl okhttp3.HttpUrl$Companion.-deprecated_parse(java.lang.String)
-    /// ```
-  @JavaMethod
-  open func `-deprecated_parse`(_ arg0: String) -> HttpUrl!
-
     /// Java method `get`.
     ///
     /// ### Java method signature
@@ -67,6 +76,15 @@ extension HttpUrl {
     /// ```
   @JavaMethod
   open func get(_ arg0: String) -> HttpUrl!
+
+    /// Java method `get`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.HttpUrl okhttp3.HttpUrl$Companion.get(java.net.URL)
+    /// ```
+  @JavaMethod
+  open func get(_ arg0: JavaURL?) -> HttpUrl!
 
     /// Java method `parse`.
     ///

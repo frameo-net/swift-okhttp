@@ -11,194 +11,23 @@ extension OkHttpClient {
   @JavaMethod
   @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
-    /// Java method `setCache$okhttp`.
+    /// Java method `getMinWebSocketMessageToCompress$okhttp`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public final void okhttp3.OkHttpClient$Builder.setCache$okhttp(okhttp3.Cache)
+    /// public final long okhttp3.OkHttpClient$Builder.getMinWebSocketMessageToCompress$okhttp()
     /// ```
   @JavaMethod
-  open func setCache$okhttp(_ arg0: Cache?)
+  open func getMinWebSocketMessageToCompress$okhttp() -> Int64
 
-    /// Java method `setDns$okhttp`.
+    /// Java method `setMinWebSocketMessageToCompress$okhttp`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public final void okhttp3.OkHttpClient$Builder.setDns$okhttp(okhttp3.Dns)
+    /// public final void okhttp3.OkHttpClient$Builder.setMinWebSocketMessageToCompress$okhttp(long)
     /// ```
   @JavaMethod
-  open func setDns$okhttp(_ arg0: Dns?)
-
-    /// Java method `addInterceptor`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.OkHttpClient$Builder okhttp3.OkHttpClient$Builder.addInterceptor(okhttp3.Interceptor)
-    /// ```
-  @JavaMethod
-  open func addInterceptor(_ arg0: Interceptor?) -> OkHttpClient.Builder!
-
-    /// Java method `eventListener`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.OkHttpClient$Builder okhttp3.OkHttpClient$Builder.eventListener(okhttp3.EventListener)
-    /// ```
-  @JavaMethod
-  open func eventListener(_ arg0: EventListener?) -> OkHttpClient.Builder!
-
-    /// Java method `setDispatcher$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.OkHttpClient$Builder.setDispatcher$okhttp(okhttp3.Dispatcher)
-    /// ```
-  @JavaMethod
-  open func setDispatcher$okhttp(_ arg0: Dispatcher?)
-
-    /// Java method `setConnectionPool$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.OkHttpClient$Builder.setConnectionPool$okhttp(okhttp3.ConnectionPool)
-    /// ```
-  @JavaMethod
-  open func setConnectionPool$okhttp(_ arg0: ConnectionPool?)
-
-    /// Java method `setEventListenerFactory$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.OkHttpClient$Builder.setEventListenerFactory$okhttp(okhttp3.EventListener$Factory)
-    /// ```
-  @JavaMethod
-  open func setEventListenerFactory$okhttp(_ arg0: EventListener.Factory?)
-
-    /// Java method `setRetryOnConnectionFailure$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.OkHttpClient$Builder.setRetryOnConnectionFailure$okhttp(boolean)
-    /// ```
-  @JavaMethod
-  open func setRetryOnConnectionFailure$okhttp(_ arg0: Bool)
-
-    /// Java method `setAuthenticator$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.OkHttpClient$Builder.setAuthenticator$okhttp(okhttp3.Authenticator)
-    /// ```
-  @JavaMethod
-  open func setAuthenticator$okhttp(_ arg0: Authenticator?)
-
-    /// Java method `setFollowRedirects$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.OkHttpClient$Builder.setFollowRedirects$okhttp(boolean)
-    /// ```
-  @JavaMethod
-  open func setFollowRedirects$okhttp(_ arg0: Bool)
-
-    /// Java method `setFollowSslRedirects$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.OkHttpClient$Builder.setFollowSslRedirects$okhttp(boolean)
-    /// ```
-  @JavaMethod
-  open func setFollowSslRedirects$okhttp(_ arg0: Bool)
-
-    /// Java method `setCookieJar$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.OkHttpClient$Builder.setCookieJar$okhttp(okhttp3.CookieJar)
-    /// ```
-  @JavaMethod
-  open func setCookieJar$okhttp(_ arg0: CookieJar?)
-
-    /// Java method `setProxyAuthenticator$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.OkHttpClient$Builder.setProxyAuthenticator$okhttp(okhttp3.Authenticator)
-    /// ```
-  @JavaMethod
-  open func setProxyAuthenticator$okhttp(_ arg0: Authenticator?)
-
-    /// Java method `setConnectionSpecs$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.OkHttpClient$Builder.setConnectionSpecs$okhttp(java.util.List<okhttp3.ConnectionSpec>)
-    /// ```
-  @JavaMethod
-  open func setConnectionSpecs$okhttp(_ arg0: List<ConnectionSpec>?)
-
-    /// Java method `setCertificatePinner$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.OkHttpClient$Builder.setCertificatePinner$okhttp(okhttp3.CertificatePinner)
-    /// ```
-  @JavaMethod
-  open func setCertificatePinner$okhttp(_ arg0: CertificatePinner?)
-
-    /// Java method `setCallTimeout$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.OkHttpClient$Builder.setCallTimeout$okhttp(int)
-    /// ```
-  @JavaMethod
-  open func setCallTimeout$okhttp(_ arg0: Int32)
-
-    /// Java method `setConnectTimeout$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.OkHttpClient$Builder.setConnectTimeout$okhttp(int)
-    /// ```
-  @JavaMethod
-  open func setConnectTimeout$okhttp(_ arg0: Int32)
-
-    /// Java method `setReadTimeout$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.OkHttpClient$Builder.setReadTimeout$okhttp(int)
-    /// ```
-  @JavaMethod
-  open func setReadTimeout$okhttp(_ arg0: Int32)
-
-    /// Java method `setWriteTimeout$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.OkHttpClient$Builder.setWriteTimeout$okhttp(int)
-    /// ```
-  @JavaMethod
-  open func setWriteTimeout$okhttp(_ arg0: Int32)
-
-    /// Java method `setPingInterval$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.OkHttpClient$Builder.setPingInterval$okhttp(int)
-    /// ```
-  @JavaMethod
-  open func setPingInterval$okhttp(_ arg0: Int32)
-
-    /// Java method `addNetworkInterceptor`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.OkHttpClient$Builder okhttp3.OkHttpClient$Builder.addNetworkInterceptor(okhttp3.Interceptor)
-    /// ```
-  @JavaMethod
-  open func addNetworkInterceptor(_ arg0: Interceptor?) -> OkHttpClient.Builder!
+  open func setMinWebSocketMessageToCompress$okhttp(_ arg0: Int64)
 
     /// Java method `dispatcher`.
     ///
@@ -263,24 +92,6 @@ extension OkHttpClient {
   @JavaMethod
   open func cookieJar(_ arg0: CookieJar?) -> OkHttpClient.Builder!
 
-    /// Java method `getCache$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.Cache okhttp3.OkHttpClient$Builder.getCache$okhttp()
-    /// ```
-  @JavaMethod
-  open func getCache$okhttp() -> Cache!
-
-    /// Java method `getDns$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.Dns okhttp3.OkHttpClient$Builder.getDns$okhttp()
-    /// ```
-  @JavaMethod
-  open func getDns$okhttp() -> Dns!
-
     /// Java method `dns`.
     ///
     /// ### Java method signature
@@ -317,6 +128,96 @@ extension OkHttpClient {
   @JavaMethod
   open func certificatePinner(_ arg0: CertificatePinner?) -> OkHttpClient.Builder!
 
+    /// Java method `getCache$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Cache okhttp3.OkHttpClient$Builder.getCache$okhttp()
+    /// ```
+  @JavaMethod
+  open func getCache$okhttp() -> Cache!
+
+    /// Java method `setCache$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.OkHttpClient$Builder.setCache$okhttp(okhttp3.Cache)
+    /// ```
+  @JavaMethod
+  open func setCache$okhttp(_ arg0: Cache?)
+
+    /// Java method `getDns$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Dns okhttp3.OkHttpClient$Builder.getDns$okhttp()
+    /// ```
+  @JavaMethod
+  open func getDns$okhttp() -> Dns!
+
+    /// Java method `setDns$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.OkHttpClient$Builder.setDns$okhttp(okhttp3.Dns)
+    /// ```
+  @JavaMethod
+  open func setDns$okhttp(_ arg0: Dns?)
+
+    /// Java method `addInterceptor`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.OkHttpClient$Builder okhttp3.OkHttpClient$Builder.addInterceptor(okhttp3.Interceptor)
+    /// ```
+  @JavaMethod
+  open func addInterceptor(_ arg0: Interceptor?) -> OkHttpClient.Builder!
+
+    /// Java method `eventListener`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.OkHttpClient$Builder okhttp3.OkHttpClient$Builder.eventListener(okhttp3.EventListener)
+    /// ```
+  @JavaMethod
+  open func eventListener(_ arg0: EventListener?) -> OkHttpClient.Builder!
+
+    /// Java method `networkInterceptors`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.util.List<okhttp3.Interceptor> okhttp3.OkHttpClient$Builder.networkInterceptors()
+    /// ```
+  @JavaMethod
+  open func networkInterceptors() -> List<Interceptor>!
+
+    /// Java method `eventListenerFactory`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.OkHttpClient$Builder okhttp3.OkHttpClient$Builder.eventListenerFactory(okhttp3.EventListener$Factory)
+    /// ```
+  @JavaMethod
+  open func eventListenerFactory(_ arg0: EventListener.Factory?) -> OkHttpClient.Builder!
+
+    /// Java method `retryOnConnectionFailure`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.OkHttpClient$Builder okhttp3.OkHttpClient$Builder.retryOnConnectionFailure(boolean)
+    /// ```
+  @JavaMethod
+  open func retryOnConnectionFailure(_ arg0: Bool) -> OkHttpClient.Builder!
+
+    /// Java method `minWebSocketMessageToCompress`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.OkHttpClient$Builder okhttp3.OkHttpClient$Builder.minWebSocketMessageToCompress(long)
+    /// ```
+  @JavaMethod
+  open func minWebSocketMessageToCompress(_ arg0: Int64) -> OkHttpClient.Builder!
+
     /// Java method `getDispatcher$okhttp`.
     ///
     /// ### Java method signature
@@ -326,6 +227,15 @@ extension OkHttpClient {
   @JavaMethod
   open func getDispatcher$okhttp() -> Dispatcher!
 
+    /// Java method `setDispatcher$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.OkHttpClient$Builder.setDispatcher$okhttp(okhttp3.Dispatcher)
+    /// ```
+  @JavaMethod
+  open func setDispatcher$okhttp(_ arg0: Dispatcher?)
+
     /// Java method `getConnectionPool$okhttp`.
     ///
     /// ### Java method signature
@@ -334,6 +244,15 @@ extension OkHttpClient {
     /// ```
   @JavaMethod
   open func getConnectionPool$okhttp() -> ConnectionPool!
+
+    /// Java method `setConnectionPool$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.OkHttpClient$Builder.setConnectionPool$okhttp(okhttp3.ConnectionPool)
+    /// ```
+  @JavaMethod
+  open func setConnectionPool$okhttp(_ arg0: ConnectionPool?)
 
     /// Java method `getInterceptors$okhttp`.
     ///
@@ -353,15 +272,6 @@ extension OkHttpClient {
   @JavaMethod
   open func getNetworkInterceptors$okhttp() -> List<Interceptor>!
 
-    /// Java method `networkInterceptors`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.util.List<okhttp3.Interceptor> okhttp3.OkHttpClient$Builder.networkInterceptors()
-    /// ```
-  @JavaMethod
-  open func networkInterceptors() -> List<Interceptor>!
-
     /// Java method `getEventListenerFactory$okhttp`.
     ///
     /// ### Java method signature
@@ -371,14 +281,14 @@ extension OkHttpClient {
   @JavaMethod
   open func getEventListenerFactory$okhttp() -> EventListener.Factory!
 
-    /// Java method `eventListenerFactory`.
+    /// Java method `setEventListenerFactory$okhttp`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public final okhttp3.OkHttpClient$Builder okhttp3.OkHttpClient$Builder.eventListenerFactory(okhttp3.EventListener$Factory)
+    /// public final void okhttp3.OkHttpClient$Builder.setEventListenerFactory$okhttp(okhttp3.EventListener$Factory)
     /// ```
   @JavaMethod
-  open func eventListenerFactory(_ arg0: EventListener.Factory?) -> OkHttpClient.Builder!
+  open func setEventListenerFactory$okhttp(_ arg0: EventListener.Factory?)
 
     /// Java method `getRetryOnConnectionFailure$okhttp`.
     ///
@@ -389,14 +299,14 @@ extension OkHttpClient {
   @JavaMethod
   open func getRetryOnConnectionFailure$okhttp() -> Bool
 
-    /// Java method `retryOnConnectionFailure`.
+    /// Java method `setRetryOnConnectionFailure$okhttp`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public final okhttp3.OkHttpClient$Builder okhttp3.OkHttpClient$Builder.retryOnConnectionFailure(boolean)
+    /// public final void okhttp3.OkHttpClient$Builder.setRetryOnConnectionFailure$okhttp(boolean)
     /// ```
   @JavaMethod
-  open func retryOnConnectionFailure(_ arg0: Bool) -> OkHttpClient.Builder!
+  open func setRetryOnConnectionFailure$okhttp(_ arg0: Bool)
 
     /// Java method `getAuthenticator$okhttp`.
     ///
@@ -407,6 +317,15 @@ extension OkHttpClient {
   @JavaMethod
   open func getAuthenticator$okhttp() -> Authenticator!
 
+    /// Java method `setAuthenticator$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.OkHttpClient$Builder.setAuthenticator$okhttp(okhttp3.Authenticator)
+    /// ```
+  @JavaMethod
+  open func setAuthenticator$okhttp(_ arg0: Authenticator?)
+
     /// Java method `getFollowRedirects$okhttp`.
     ///
     /// ### Java method signature
@@ -415,6 +334,15 @@ extension OkHttpClient {
     /// ```
   @JavaMethod
   open func getFollowRedirects$okhttp() -> Bool
+
+    /// Java method `setFollowRedirects$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.OkHttpClient$Builder.setFollowRedirects$okhttp(boolean)
+    /// ```
+  @JavaMethod
+  open func setFollowRedirects$okhttp(_ arg0: Bool)
 
     /// Java method `getFollowSslRedirects$okhttp`.
     ///
@@ -425,6 +353,15 @@ extension OkHttpClient {
   @JavaMethod
   open func getFollowSslRedirects$okhttp() -> Bool
 
+    /// Java method `setFollowSslRedirects$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.OkHttpClient$Builder.setFollowSslRedirects$okhttp(boolean)
+    /// ```
+  @JavaMethod
+  open func setFollowSslRedirects$okhttp(_ arg0: Bool)
+
     /// Java method `getCookieJar$okhttp`.
     ///
     /// ### Java method signature
@@ -433,6 +370,15 @@ extension OkHttpClient {
     /// ```
   @JavaMethod
   open func getCookieJar$okhttp() -> CookieJar!
+
+    /// Java method `setCookieJar$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.OkHttpClient$Builder.setCookieJar$okhttp(okhttp3.CookieJar)
+    /// ```
+  @JavaMethod
+  open func setCookieJar$okhttp(_ arg0: CookieJar?)
 
     /// Java method `getProxyAuthenticator$okhttp`.
     ///
@@ -443,6 +389,15 @@ extension OkHttpClient {
   @JavaMethod
   open func getProxyAuthenticator$okhttp() -> Authenticator!
 
+    /// Java method `setProxyAuthenticator$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.OkHttpClient$Builder.setProxyAuthenticator$okhttp(okhttp3.Authenticator)
+    /// ```
+  @JavaMethod
+  open func setProxyAuthenticator$okhttp(_ arg0: Authenticator?)
+
     /// Java method `getConnectionSpecs$okhttp`.
     ///
     /// ### Java method signature
@@ -452,59 +407,14 @@ extension OkHttpClient {
   @JavaMethod
   open func getConnectionSpecs$okhttp() -> List<ConnectionSpec>!
 
-    /// Java method `getCallTimeout$okhttp`.
+    /// Java method `setConnectionSpecs$okhttp`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public final int okhttp3.OkHttpClient$Builder.getCallTimeout$okhttp()
+    /// public final void okhttp3.OkHttpClient$Builder.setConnectionSpecs$okhttp(java.util.List<okhttp3.ConnectionSpec>)
     /// ```
   @JavaMethod
-  open func getCallTimeout$okhttp() -> Int32
-
-    /// Java method `getConnectTimeout$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final int okhttp3.OkHttpClient$Builder.getConnectTimeout$okhttp()
-    /// ```
-  @JavaMethod
-  open func getConnectTimeout$okhttp() -> Int32
-
-    /// Java method `getReadTimeout$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final int okhttp3.OkHttpClient$Builder.getReadTimeout$okhttp()
-    /// ```
-  @JavaMethod
-  open func getReadTimeout$okhttp() -> Int32
-
-    /// Java method `getWriteTimeout$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final int okhttp3.OkHttpClient$Builder.getWriteTimeout$okhttp()
-    /// ```
-  @JavaMethod
-  open func getWriteTimeout$okhttp() -> Int32
-
-    /// Java method `getPingInterval$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final int okhttp3.OkHttpClient$Builder.getPingInterval$okhttp()
-    /// ```
-  @JavaMethod
-  open func getPingInterval$okhttp() -> Int32
-
-    /// Java method `minWebSocketMessageToCompress`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.OkHttpClient$Builder okhttp3.OkHttpClient$Builder.minWebSocketMessageToCompress(long)
-    /// ```
-  @JavaMethod
-  open func minWebSocketMessageToCompress(_ arg0: Int64) -> OkHttpClient.Builder!
+  open func setConnectionSpecs$okhttp(_ arg0: List<ConnectionSpec>?)
 
     /// Java method `getCertificatePinner$okhttp`.
     ///
@@ -515,23 +425,113 @@ extension OkHttpClient {
   @JavaMethod
   open func getCertificatePinner$okhttp() -> CertificatePinner!
 
-    /// Java method `getMinWebSocketMessageToCompress$okhttp`.
+    /// Java method `setCertificatePinner$okhttp`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public final long okhttp3.OkHttpClient$Builder.getMinWebSocketMessageToCompress$okhttp()
+    /// public final void okhttp3.OkHttpClient$Builder.setCertificatePinner$okhttp(okhttp3.CertificatePinner)
     /// ```
   @JavaMethod
-  open func getMinWebSocketMessageToCompress$okhttp() -> Int64
+  open func setCertificatePinner$okhttp(_ arg0: CertificatePinner?)
 
-    /// Java method `setMinWebSocketMessageToCompress$okhttp`.
+    /// Java method `getCallTimeout$okhttp`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public final void okhttp3.OkHttpClient$Builder.setMinWebSocketMessageToCompress$okhttp(long)
+    /// public final int okhttp3.OkHttpClient$Builder.getCallTimeout$okhttp()
     /// ```
   @JavaMethod
-  open func setMinWebSocketMessageToCompress$okhttp(_ arg0: Int64)
+  open func getCallTimeout$okhttp() -> Int32
+
+    /// Java method `setCallTimeout$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.OkHttpClient$Builder.setCallTimeout$okhttp(int)
+    /// ```
+  @JavaMethod
+  open func setCallTimeout$okhttp(_ arg0: Int32)
+
+    /// Java method `getConnectTimeout$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.OkHttpClient$Builder.getConnectTimeout$okhttp()
+    /// ```
+  @JavaMethod
+  open func getConnectTimeout$okhttp() -> Int32
+
+    /// Java method `setConnectTimeout$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.OkHttpClient$Builder.setConnectTimeout$okhttp(int)
+    /// ```
+  @JavaMethod
+  open func setConnectTimeout$okhttp(_ arg0: Int32)
+
+    /// Java method `getReadTimeout$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.OkHttpClient$Builder.getReadTimeout$okhttp()
+    /// ```
+  @JavaMethod
+  open func getReadTimeout$okhttp() -> Int32
+
+    /// Java method `setReadTimeout$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.OkHttpClient$Builder.setReadTimeout$okhttp(int)
+    /// ```
+  @JavaMethod
+  open func setReadTimeout$okhttp(_ arg0: Int32)
+
+    /// Java method `getWriteTimeout$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.OkHttpClient$Builder.getWriteTimeout$okhttp()
+    /// ```
+  @JavaMethod
+  open func getWriteTimeout$okhttp() -> Int32
+
+    /// Java method `setWriteTimeout$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.OkHttpClient$Builder.setWriteTimeout$okhttp(int)
+    /// ```
+  @JavaMethod
+  open func setWriteTimeout$okhttp(_ arg0: Int32)
+
+    /// Java method `getPingInterval$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.OkHttpClient$Builder.getPingInterval$okhttp()
+    /// ```
+  @JavaMethod
+  open func getPingInterval$okhttp() -> Int32
+
+    /// Java method `setPingInterval$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.OkHttpClient$Builder.setPingInterval$okhttp(int)
+    /// ```
+  @JavaMethod
+  open func setPingInterval$okhttp(_ arg0: Int32)
+
+    /// Java method `addNetworkInterceptor`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.OkHttpClient$Builder okhttp3.OkHttpClient$Builder.addNetworkInterceptor(okhttp3.Interceptor)
+    /// ```
+  @JavaMethod
+  open func addNetworkInterceptor(_ arg0: Interceptor?) -> OkHttpClient.Builder!
 
     /// Java method `cache`.
     ///

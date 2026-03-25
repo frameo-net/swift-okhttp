@@ -4,6 +4,15 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.CacheControl")
 open class CacheControl: JavaObject {
+  /// Java method `immutable`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final boolean okhttp3.CacheControl.immutable()
+  /// ```
+@JavaMethod
+  open func immutable() -> Bool
+
   /// Java method `noCache`.
   ///
   /// ### Java method signature
@@ -84,15 +93,6 @@ open class CacheControl: JavaObject {
   /// ```
 @JavaMethod
   open func noTransform() -> Bool
-
-  /// Java method `immutable`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.CacheControl.immutable()
-  /// ```
-@JavaMethod
-  open func immutable() -> Bool
 
   /// Java method `-deprecated_noCache`.
   ///

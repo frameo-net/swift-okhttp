@@ -8,6 +8,33 @@ extension HttpUrl {
   @JavaMethod
   @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
+    /// Java method `parse$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl$Builder.parse$okhttp(okhttp3.HttpUrl,java.lang.String)
+    /// ```
+  @JavaMethod
+  open func parse$okhttp(_ arg0: HttpUrl?, _ arg1: String) -> HttpUrl.Builder!
+
+    /// Java method `setEncodedQueryNamesAndValues$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.HttpUrl$Builder.setEncodedQueryNamesAndValues$okhttp(java.util.List<java.lang.String>)
+    /// ```
+  @JavaMethod
+  open func setEncodedQueryNamesAndValues$okhttp(_ arg0: List<JavaString>?)
+
+    /// Java method `getEncodedQueryNamesAndValues$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.util.List<java.lang.String> okhttp3.HttpUrl$Builder.getEncodedQueryNamesAndValues$okhttp()
+    /// ```
+  @JavaMethod
+  open func getEncodedQueryNamesAndValues$okhttp() -> List<JavaString>!
+
     /// Java method `encodedUsername`.
     ///
     /// ### Java method signature
@@ -26,32 +53,14 @@ extension HttpUrl {
   @JavaMethod
   open func encodedPassword(_ arg0: String) -> HttpUrl.Builder!
 
-    /// Java method `encodedPath`.
+    /// Java method `getScheme$okhttp`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl$Builder.encodedPath(java.lang.String)
+    /// public final java.lang.String okhttp3.HttpUrl$Builder.getScheme$okhttp()
     /// ```
   @JavaMethod
-  open func encodedPath(_ arg0: String) -> HttpUrl.Builder!
-
-    /// Java method `encodedQuery`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl$Builder.encodedQuery(java.lang.String)
-    /// ```
-  @JavaMethod
-  open func encodedQuery(_ arg0: String) -> HttpUrl.Builder!
-
-    /// Java method `encodedFragment`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl$Builder.encodedFragment(java.lang.String)
-    /// ```
-  @JavaMethod
-  open func encodedFragment(_ arg0: String) -> HttpUrl.Builder!
+  open func getScheme$okhttp() -> String
 
     /// Java method `setScheme$okhttp`.
     ///
@@ -62,6 +71,15 @@ extension HttpUrl {
   @JavaMethod
   open func setScheme$okhttp(_ arg0: String)
 
+    /// Java method `getHost$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.lang.String okhttp3.HttpUrl$Builder.getHost$okhttp()
+    /// ```
+  @JavaMethod
+  open func getHost$okhttp() -> String
+
     /// Java method `setHost$okhttp`.
     ///
     /// ### Java method signature
@@ -70,6 +88,15 @@ extension HttpUrl {
     /// ```
   @JavaMethod
   open func setHost$okhttp(_ arg0: String)
+
+    /// Java method `getPort$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.HttpUrl$Builder.getPort$okhttp()
+    /// ```
+  @JavaMethod
+  open func getPort$okhttp() -> Int32
 
     /// Java method `setPort$okhttp`.
     ///
@@ -80,41 +107,32 @@ extension HttpUrl {
   @JavaMethod
   open func setPort$okhttp(_ arg0: Int32)
 
-    /// Java method `parse$okhttp`.
+    /// Java method `encodedFragment`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl$Builder.parse$okhttp(okhttp3.HttpUrl,java.lang.String)
+    /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl$Builder.encodedFragment(java.lang.String)
     /// ```
   @JavaMethod
-  open func parse$okhttp(_ arg0: HttpUrl?, _ arg1: String) -> HttpUrl.Builder!
+  open func encodedFragment(_ arg0: String) -> HttpUrl.Builder!
 
-    /// Java method `getScheme$okhttp`.
+    /// Java method `username`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public final java.lang.String okhttp3.HttpUrl$Builder.getScheme$okhttp()
+    /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl$Builder.username(java.lang.String)
     /// ```
   @JavaMethod
-  open func getScheme$okhttp() -> String
+  open func username(_ arg0: String) -> HttpUrl.Builder!
 
-    /// Java method `getHost$okhttp`.
+    /// Java method `password`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public final java.lang.String okhttp3.HttpUrl$Builder.getHost$okhttp()
+    /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl$Builder.password(java.lang.String)
     /// ```
   @JavaMethod
-  open func getHost$okhttp() -> String
-
-    /// Java method `getPort$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final int okhttp3.HttpUrl$Builder.getPort$okhttp()
-    /// ```
-  @JavaMethod
-  open func getPort$okhttp() -> Int32
+  open func password(_ arg0: String) -> HttpUrl.Builder!
 
     /// Java method `addPathSegment`.
     ///
@@ -152,6 +170,24 @@ extension HttpUrl {
   @JavaMethod
   open func removePathSegment(_ arg0: Int32) -> HttpUrl.Builder!
 
+    /// Java method `encodedPath`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl$Builder.encodedPath(java.lang.String)
+    /// ```
+  @JavaMethod
+  open func encodedPath(_ arg0: String) -> HttpUrl.Builder!
+
+    /// Java method `encodedQuery`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl$Builder.encodedQuery(java.lang.String)
+    /// ```
+  @JavaMethod
+  open func encodedQuery(_ arg0: String) -> HttpUrl.Builder!
+
     /// Java method `addQueryParameter`.
     ///
     /// ### Java method signature
@@ -170,14 +206,14 @@ extension HttpUrl {
   @JavaMethod
   open func setQueryParameter(_ arg0: String, _ arg1: String) -> HttpUrl.Builder!
 
-    /// Java method `reencodeForUri$okhttp`.
+    /// Java method `getEncodedUsername$okhttp`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl$Builder.reencodeForUri$okhttp()
+    /// public final java.lang.String okhttp3.HttpUrl$Builder.getEncodedUsername$okhttp()
     /// ```
   @JavaMethod
-  open func reencodeForUri$okhttp() -> HttpUrl.Builder!
+  open func getEncodedUsername$okhttp() -> String
 
     /// Java method `setEncodedUsername$okhttp`.
     ///
@@ -187,6 +223,15 @@ extension HttpUrl {
     /// ```
   @JavaMethod
   open func setEncodedUsername$okhttp(_ arg0: String)
+
+    /// Java method `getEncodedPassword$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.lang.String okhttp3.HttpUrl$Builder.getEncodedPassword$okhttp()
+    /// ```
+  @JavaMethod
+  open func getEncodedPassword$okhttp() -> String
 
     /// Java method `setEncodedPassword$okhttp`.
     ///
@@ -206,33 +251,6 @@ extension HttpUrl {
   @JavaMethod
   open func getEncodedPathSegments$okhttp() -> List<JavaString>!
 
-    /// Java method `setEncodedFragment$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.HttpUrl$Builder.setEncodedFragment$okhttp(java.lang.String)
-    /// ```
-  @JavaMethod
-  open func setEncodedFragment$okhttp(_ arg0: String)
-
-    /// Java method `getEncodedUsername$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.lang.String okhttp3.HttpUrl$Builder.getEncodedUsername$okhttp()
-    /// ```
-  @JavaMethod
-  open func getEncodedUsername$okhttp() -> String
-
-    /// Java method `getEncodedPassword$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.lang.String okhttp3.HttpUrl$Builder.getEncodedPassword$okhttp()
-    /// ```
-  @JavaMethod
-  open func getEncodedPassword$okhttp() -> String
-
     /// Java method `getEncodedFragment$okhttp`.
     ///
     /// ### Java method signature
@@ -241,6 +259,15 @@ extension HttpUrl {
     /// ```
   @JavaMethod
   open func getEncodedFragment$okhttp() -> String
+
+    /// Java method `setEncodedFragment$okhttp`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final void okhttp3.HttpUrl$Builder.setEncodedFragment$okhttp(java.lang.String)
+    /// ```
+  @JavaMethod
+  open func setEncodedFragment$okhttp(_ arg0: String)
 
     /// Java method `addEncodedPathSegment`.
     ///
@@ -305,41 +332,14 @@ extension HttpUrl {
   @JavaMethod
   open func removeAllEncodedQueryParameters(_ arg0: String) -> HttpUrl.Builder!
 
-    /// Java method `username`.
+    /// Java method `reencodeForUri$okhttp`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl$Builder.username(java.lang.String)
+    /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl$Builder.reencodeForUri$okhttp()
     /// ```
   @JavaMethod
-  open func username(_ arg0: String) -> HttpUrl.Builder!
-
-    /// Java method `password`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl$Builder.password(java.lang.String)
-    /// ```
-  @JavaMethod
-  open func password(_ arg0: String) -> HttpUrl.Builder!
-
-    /// Java method `getEncodedQueryNamesAndValues$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.util.List<java.lang.String> okhttp3.HttpUrl$Builder.getEncodedQueryNamesAndValues$okhttp()
-    /// ```
-  @JavaMethod
-  open func getEncodedQueryNamesAndValues$okhttp() -> List<JavaString>!
-
-    /// Java method `setEncodedQueryNamesAndValues$okhttp`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final void okhttp3.HttpUrl$Builder.setEncodedQueryNamesAndValues$okhttp(java.util.List<java.lang.String>)
-    /// ```
-  @JavaMethod
-  open func setEncodedQueryNamesAndValues$okhttp(_ arg0: List<JavaString>?)
+  open func reencodeForUri$okhttp() -> HttpUrl.Builder!
 
     /// Java method `toString`.
     ///

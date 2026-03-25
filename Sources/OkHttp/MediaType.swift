@@ -4,6 +4,15 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.MediaType")
 open class MediaType: JavaObject {
+  /// Java method `subtype`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final java.lang.String okhttp3.MediaType.subtype()
+  /// ```
+@JavaMethod
+  open func subtype() -> String
+
   /// Java method `-deprecated_type`.
   ///
   /// ### Java method signature
@@ -21,15 +30,6 @@ open class MediaType: JavaObject {
   /// ```
 @JavaMethod
   open func `-deprecated_subtype`() -> String
-
-  /// Java method `subtype`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.lang.String okhttp3.MediaType.subtype()
-  /// ```
-@JavaMethod
-  open func subtype() -> String
 
   /// Java method `type`.
   ///

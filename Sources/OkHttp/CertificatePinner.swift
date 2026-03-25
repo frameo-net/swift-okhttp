@@ -4,15 +4,6 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.CertificatePinner")
 open class CertificatePinner: JavaObject {
-  /// Java method `findMatchingPins`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.util.List<okhttp3.CertificatePinner$Pin> okhttp3.CertificatePinner.findMatchingPins(java.lang.String)
-  /// ```
-@JavaMethod
-  open func findMatchingPins(_ arg0: String) -> List<CertificatePinner.Pin>!
-
   /// Java method `getPins`.
   ///
   /// ### Java method signature
@@ -21,6 +12,15 @@ open class CertificatePinner: JavaObject {
   /// ```
 @JavaMethod
   open func getPins() -> JavaSet<CertificatePinner.Pin>!
+
+  /// Java method `findMatchingPins`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final java.util.List<okhttp3.CertificatePinner$Pin> okhttp3.CertificatePinner.findMatchingPins(java.lang.String)
+  /// ```
+@JavaMethod
+  open func findMatchingPins(_ arg0: String) -> List<CertificatePinner.Pin>!
 
   /// Java method `equals`.
   ///

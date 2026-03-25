@@ -40,6 +40,15 @@ open class Address: JavaObject {
 @JavaMethod
   open func certificatePinner() -> CertificatePinner!
 
+  /// Java method `-deprecated_url`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final okhttp3.HttpUrl okhttp3.Address.-deprecated_url()
+  /// ```
+@JavaMethod
+  open func `-deprecated_url`() -> HttpUrl!
+
   /// Java method `-deprecated_dns`.
   ///
   /// ### Java method signature
@@ -75,15 +84,6 @@ open class Address: JavaObject {
   /// ```
 @JavaMethod
   open func `-deprecated_certificatePinner`() -> CertificatePinner!
-
-  /// Java method `-deprecated_url`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.HttpUrl okhttp3.Address.-deprecated_url()
-  /// ```
-@JavaMethod
-  open func `-deprecated_url`() -> HttpUrl!
 
   /// Java method `equalsNonHost$okhttp`.
   ///

@@ -7,6 +7,15 @@ open class WebSocketListener: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
+    /// Java method `onFailure`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void okhttp3.WebSocketListener.onFailure(okhttp3.WebSocket,java.lang.Throwable,okhttp3.Response)
+    /// ```
+  @JavaMethod
+  open func onFailure(_ arg0: WebSocket?, _ arg1: Throwable?, _ arg2: Response?)
+
     /// Java method `onOpen`.
     ///
     /// ### Java method signature
@@ -42,13 +51,4 @@ open class WebSocketListener: JavaObject {
     /// ```
   @JavaMethod
   open func onClosed(_ arg0: WebSocket?, _ arg1: Int32, _ arg2: String)
-
-    /// Java method `onFailure`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public void okhttp3.WebSocketListener.onFailure(okhttp3.WebSocket,java.lang.Throwable,okhttp3.Response)
-    /// ```
-  @JavaMethod
-  open func onFailure(_ arg0: WebSocket?, _ arg1: Throwable?, _ arg2: Response?)
 }

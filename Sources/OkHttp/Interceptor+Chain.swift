@@ -23,15 +23,6 @@ extension Interceptor {
   @JavaMethod
   public func writeTimeoutMillis() -> Int32
 
-    /// Java method `connectTimeoutMillis`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public abstract int okhttp3.Interceptor$Chain.connectTimeoutMillis()
-    /// ```
-  @JavaMethod
-  public func connectTimeoutMillis() -> Int32
-
     /// Java method `proceed`.
     ///
     /// ### Java method signature
@@ -40,6 +31,15 @@ extension Interceptor {
     /// ```
   @JavaMethod
   public func proceed(_ arg0: Request?) throws -> Response!
+
+    /// Java method `connectTimeoutMillis`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public abstract int okhttp3.Interceptor$Chain.connectTimeoutMillis()
+    /// ```
+  @JavaMethod
+  public func connectTimeoutMillis() -> Int32
 
     /// Java method `call`.
     ///

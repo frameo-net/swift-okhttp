@@ -4,15 +4,6 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.Handshake")
 open class Handshake: JavaObject {
-  /// Java method `-deprecated_cipherSuite`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.CipherSuite okhttp3.Handshake.-deprecated_cipherSuite()
-  /// ```
-@JavaMethod
-  open func `-deprecated_cipherSuite`() -> CipherSuite!
-
   /// Java method `cipherSuite`.
   ///
   /// ### Java method signature
@@ -21,6 +12,15 @@ open class Handshake: JavaObject {
   /// ```
 @JavaMethod
   open func cipherSuite() -> CipherSuite!
+
+  /// Java method `-deprecated_cipherSuite`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final okhttp3.CipherSuite okhttp3.Handshake.-deprecated_cipherSuite()
+  /// ```
+@JavaMethod
+  open func `-deprecated_cipherSuite`() -> CipherSuite!
 
   /// Java method `equals`.
   ///

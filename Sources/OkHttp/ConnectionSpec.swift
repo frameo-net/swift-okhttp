@@ -16,6 +16,15 @@ open class ConnectionSpec: JavaObject {
   @JavaMethod
   open func cipherSuites() -> List<CipherSuite>!
 
+    /// Java method `isTls`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final boolean okhttp3.ConnectionSpec.isTls()
+    /// ```
+  @JavaMethod
+  open func isTls() -> Bool
+
     /// Java method `supportsTlsExtensions`.
     ///
     /// ### Java method signature
@@ -42,15 +51,6 @@ open class ConnectionSpec: JavaObject {
     /// ```
   @JavaMethod
   open func `-deprecated_supportsTlsExtensions`() -> Bool
-
-    /// Java method `isTls`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final boolean okhttp3.ConnectionSpec.isTls()
-    /// ```
-  @JavaMethod
-  open func isTls() -> Bool
 
     /// Java method `equals`.
     ///

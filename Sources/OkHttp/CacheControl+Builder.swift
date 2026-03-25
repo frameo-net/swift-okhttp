@@ -8,6 +8,15 @@ extension CacheControl {
   @JavaMethod
   @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
+    /// Java method `immutable`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.CacheControl$Builder okhttp3.CacheControl$Builder.immutable()
+    /// ```
+  @JavaMethod
+  open func immutable() -> CacheControl.Builder!
+
     /// Java method `noCache`.
     ///
     /// ### Java method signature
@@ -43,15 +52,6 @@ extension CacheControl {
     /// ```
   @JavaMethod
   open func noTransform() -> CacheControl.Builder!
-
-    /// Java method `immutable`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.CacheControl$Builder okhttp3.CacheControl$Builder.immutable()
-    /// ```
-  @JavaMethod
-  open func immutable() -> CacheControl.Builder!
 
     /// Java method `build`.
     ///

@@ -8,15 +8,6 @@ extension Headers {
   @JavaMethod
   @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
-    /// Java method `addUnsafeNonAscii`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.Headers$Builder okhttp3.Headers$Builder.addUnsafeNonAscii(java.lang.String,java.lang.String)
-    /// ```
-  @JavaMethod
-  open func addUnsafeNonAscii(_ arg0: String, _ arg1: String) -> Headers.Builder!
-
     /// Java method `addLenient$okhttp`.
     ///
     /// ### Java method signature
@@ -34,6 +25,15 @@ extension Headers {
     /// ```
   @JavaMethod
   open func addLenient$okhttp(_ arg0: String, _ arg1: String) -> Headers.Builder!
+
+    /// Java method `addUnsafeNonAscii`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Headers$Builder okhttp3.Headers$Builder.addUnsafeNonAscii(java.lang.String,java.lang.String)
+    /// ```
+  @JavaMethod
+  open func addUnsafeNonAscii(_ arg0: String, _ arg1: String) -> Headers.Builder!
 
     /// Java method `getNamesAndValues$okhttp`.
     ///

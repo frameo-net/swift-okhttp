@@ -9,24 +9,6 @@ extension HttpUrl.Builder {
   }
 }
 extension JavaClass<HttpUrl.Builder.Companion> {
-  /// Java method `access$schemeDelimiterOffset`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public static final int okhttp3.HttpUrl$Builder$Companion.access$schemeDelimiterOffset(okhttp3.HttpUrl$Builder$Companion,java.lang.String,int,int)
-  /// ```
-@JavaStaticMethod
-  public func access$schemeDelimiterOffset(_ arg0: HttpUrl.Builder.Companion?, _ arg1: String, _ arg2: Int32, _ arg3: Int32) -> Int32
-
-  /// Java method `access$portColonOffset`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public static final int okhttp3.HttpUrl$Builder$Companion.access$portColonOffset(okhttp3.HttpUrl$Builder$Companion,java.lang.String,int,int)
-  /// ```
-@JavaStaticMethod
-  public func access$portColonOffset(_ arg0: HttpUrl.Builder.Companion?, _ arg1: String, _ arg2: Int32, _ arg3: Int32) -> Int32
-
   /// Java method `access$slashCount`.
   ///
   /// ### Java method signature
@@ -44,4 +26,22 @@ extension JavaClass<HttpUrl.Builder.Companion> {
   /// ```
 @JavaStaticMethod
   public func access$parsePort(_ arg0: HttpUrl.Builder.Companion?, _ arg1: String, _ arg2: Int32, _ arg3: Int32) -> Int32
+
+  /// Java method `access$schemeDelimiterOffset`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public static final int okhttp3.HttpUrl$Builder$Companion.access$schemeDelimiterOffset(okhttp3.HttpUrl$Builder$Companion,java.lang.String,int,int)
+  /// ```
+@JavaStaticMethod
+  public func access$schemeDelimiterOffset(_ arg0: HttpUrl.Builder.Companion?, _ arg1: String, _ arg2: Int32, _ arg3: Int32) -> Int32
+
+  /// Java method `access$portColonOffset`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public static final int okhttp3.HttpUrl$Builder$Companion.access$portColonOffset(okhttp3.HttpUrl$Builder$Companion,java.lang.String,int,int)
+  /// ```
+@JavaStaticMethod
+  public func access$portColonOffset(_ arg0: HttpUrl.Builder.Companion?, _ arg1: String, _ arg2: Int32, _ arg3: Int32) -> Int32
 }

@@ -23,15 +23,6 @@ extension Cache {
   @JavaMethod
   open func readInt$okhttp(_ arg0: BufferedSource?) throws -> Int32
 
-    /// Java method `varyHeaders`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.Headers okhttp3.Cache$Companion.varyHeaders(okhttp3.Response)
-    /// ```
-  @JavaMethod
-  open func varyHeaders(_ arg0: Response?) -> Headers!
-
     /// Java method `varyMatches`.
     ///
     /// ### Java method signature
@@ -40,6 +31,15 @@ extension Cache {
     /// ```
   @JavaMethod
   open func varyMatches(_ arg0: Response?, _ arg1: Headers?, _ arg2: Request?) -> Bool
+
+    /// Java method `varyHeaders`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Headers okhttp3.Cache$Companion.varyHeaders(okhttp3.Response)
+    /// ```
+  @JavaMethod
+  open func varyHeaders(_ arg0: Response?) -> Headers!
 
     /// Java method `key`.
     ///

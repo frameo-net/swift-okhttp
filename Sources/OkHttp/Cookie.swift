@@ -22,15 +22,6 @@ open class Cookie: JavaObject {
 @JavaMethod
   open func domain() -> String
 
-  /// Java method `hostOnly`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.Cookie.hostOnly()
-  /// ```
-@JavaMethod
-  open func hostOnly() -> Bool
-
   /// Java method `secure`.
   ///
   /// ### Java method signature
@@ -49,41 +40,14 @@ open class Cookie: JavaObject {
 @JavaMethod
   open func httpOnly() -> Bool
 
-  /// Java method `-deprecated_persistent`.
+  /// Java method `hostOnly`.
   ///
   /// ### Java method signature
   /// ```java
-  /// public final boolean okhttp3.Cookie.-deprecated_persistent()
+  /// public final boolean okhttp3.Cookie.hostOnly()
   /// ```
 @JavaMethod
-  open func `-deprecated_persistent`() -> Bool
-
-  /// Java method `-deprecated_expiresAt`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final long okhttp3.Cookie.-deprecated_expiresAt()
-  /// ```
-@JavaMethod
-  open func `-deprecated_expiresAt`() -> Int64
-
-  /// Java method `-deprecated_hostOnly`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.Cookie.-deprecated_hostOnly()
-  /// ```
-@JavaMethod
-  open func `-deprecated_hostOnly`() -> Bool
-
-  /// Java method `-deprecated_httpOnly`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.Cookie.-deprecated_httpOnly()
-  /// ```
-@JavaMethod
-  open func `-deprecated_httpOnly`() -> Bool
+  open func hostOnly() -> Bool
 
   /// Java method `toString$okhttp`.
   ///
@@ -138,6 +102,42 @@ open class Cookie: JavaObject {
   /// ```
 @JavaMethod
   open func `-deprecated_secure`() -> Bool
+
+  /// Java method `-deprecated_persistent`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final boolean okhttp3.Cookie.-deprecated_persistent()
+  /// ```
+@JavaMethod
+  open func `-deprecated_persistent`() -> Bool
+
+  /// Java method `-deprecated_expiresAt`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final long okhttp3.Cookie.-deprecated_expiresAt()
+  /// ```
+@JavaMethod
+  open func `-deprecated_expiresAt`() -> Int64
+
+  /// Java method `-deprecated_hostOnly`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final boolean okhttp3.Cookie.-deprecated_hostOnly()
+  /// ```
+@JavaMethod
+  open func `-deprecated_hostOnly`() -> Bool
+
+  /// Java method `-deprecated_httpOnly`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final boolean okhttp3.Cookie.-deprecated_httpOnly()
+  /// ```
+@JavaMethod
+  open func `-deprecated_httpOnly`() -> Bool
 
   /// Java method `name`.
   ///

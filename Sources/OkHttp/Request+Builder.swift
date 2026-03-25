@@ -11,6 +11,15 @@ extension Request {
   @JavaMethod
   @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
+    /// Java method `headers`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public okhttp3.Request$Builder okhttp3.Request$Builder.headers(okhttp3.Headers)
+    /// ```
+  @JavaMethod
+  open func headers(_ arg0: Headers?) -> Request.Builder!
+
     /// Java method `getUrl$okhttp`.
     ///
     /// ### Java method signature
@@ -55,15 +64,6 @@ extension Request {
     /// ```
   @JavaMethod
   open func getHeaders$okhttp() -> Headers.Builder!
-
-    /// Java method `headers`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public okhttp3.Request$Builder okhttp3.Request$Builder.headers(okhttp3.Headers)
-    /// ```
-  @JavaMethod
-  open func headers(_ arg0: Headers?) -> Request.Builder!
 
     /// Java method `setHeaders$okhttp`.
     ///
@@ -154,6 +154,15 @@ extension Request {
     /// ```
   @JavaMethod
   open func url(_ arg0: String) -> Request.Builder!
+
+    /// Java method `url`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public okhttp3.Request$Builder okhttp3.Request$Builder.url(java.net.URL)
+    /// ```
+  @JavaMethod
+  open func url(_ arg0: JavaURL?) -> Request.Builder!
 
     /// Java method `url`.
     ///
