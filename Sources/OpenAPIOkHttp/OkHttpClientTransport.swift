@@ -136,34 +136,28 @@ public struct OkHttpClientTransport: ClientTransport {
     static func convertResponse(method: HTTPRequest.Method, httpResponse: Response) throws -> (
         HTTPResponse, HTTPBody?
     ) {
-        let environment = try JavaVirtualMachine.shared().environment()
-
-        return try environment.withLocalFrame {
-            var headerFields: HTTPFields = [:]
-            let headers = httpResponse.headers()!
-            for i in 0..<headers.size() {
-                try environment.withLocalFrame(capacity: 4) {
-                    let headerName = headers.name(i)
-                    let headerValue = headers.value(i)
-                    headerFields[.init(headerName)!] = headerValue
-                }
-            }
-
-            var body: HTTPBody?
-            switch method {
-            case .head, .connect, .trace: body = nil
-            default:
-                let bytes = try httpResponse.body().bytes()
-                bytes.withUnsafeBufferPointer { buffer in
-                    buffer.withMemoryRebound(to: UInt8.self) { buffer in
-                        // Unfortunate copy...
-                        body = HTTPBody([UInt8](buffer))
-                    }
-                }
-            }
-
-            let response = HTTPResponse(status: .init(code: Int(httpResponse.code())), headerFields: headerFields)
-            return (response, body)
+        var headerFields: HTTPFields = [:]
+        let headers = httpResponse.headers()!
+        for i in 0..<headers.size() {
+            let headerName = headers.name(i)
+            let headerValue = headers.value(i)
+            headerFields[.init(headerName)!] = headerValue
         }
+
+        var body: HTTPBody?
+        switch method {
+        case .head, .connect, .trace: body = nil
+        default:
+            let bytes = try httpResponse.body().bytes()
+            bytes.withUnsafeBufferPointer { buffer in
+                buffer.withMemoryRebound(to: UInt8.self) { buffer in
+                    // Unfortunate copy...
+                    body = HTTPBody([UInt8](buffer))
+                }
+            }
+        }
+
+        let response = HTTPResponse(status: .init(code: Int(httpResponse.code())), headerFields: headerFields)
+        return (response, body)
     }
 }
