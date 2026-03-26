@@ -4,46 +4,46 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.CertificatePinner")
 open class CertificatePinner: JavaObject {
-  /// Java method `getPins`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.util.Set<okhttp3.CertificatePinner$Pin> okhttp3.CertificatePinner.getPins()
-  /// ```
-@JavaMethod
-  open func getPins() -> JavaSet<CertificatePinner.Pin>!
+    /// Java method `getPins`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.util.Set<okhttp3.CertificatePinner$Pin> okhttp3.CertificatePinner.getPins()
+    /// ```
+    @JavaMethod
+    open func getPins() -> JavaSet<CertificatePinner.Pin>!
 
-  /// Java method `findMatchingPins`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.util.List<okhttp3.CertificatePinner$Pin> okhttp3.CertificatePinner.findMatchingPins(java.lang.String)
-  /// ```
-@JavaMethod
-  open func findMatchingPins(_ arg0: String) -> List<CertificatePinner.Pin>!
+    /// Java method `findMatchingPins`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.util.List<okhttp3.CertificatePinner$Pin> okhttp3.CertificatePinner.findMatchingPins(java.lang.String)
+    /// ```
+    @JavaMethod
+    open func findMatchingPins(_ arg0: String) -> List<CertificatePinner.Pin>!
 
-  /// Java method `equals`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public boolean okhttp3.CertificatePinner.equals(java.lang.Object)
-  /// ```
-@JavaMethod
-  open override func equals(_ arg0: JavaObject?) -> Bool
+    /// Java method `equals`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public boolean okhttp3.CertificatePinner.equals(java.lang.Object)
+    /// ```
+    @JavaMethod
+    open override func equals(_ arg0: JavaObject?) -> Bool
 
-  /// Java method `hashCode`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public int okhttp3.CertificatePinner.hashCode()
-  /// ```
-@JavaMethod
-  open override func hashCode() -> Int32
+    /// Java method `hashCode`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public int okhttp3.CertificatePinner.hashCode()
+    /// ```
+    @JavaMethod
+    open override func hashCode() -> Int32
 }
 extension JavaClass<CertificatePinner> {
-  @JavaStaticField(isFinal: true)
-  public var Companion: CertificatePinner.Companion!
+    @JavaStaticField(isFinal: true)
+    public var Companion: CertificatePinner.Companion!
 
-  @JavaStaticField(isFinal: true)
-  public var DEFAULT: CertificatePinner!
+    @JavaStaticField(isFinal: true)
+    public var DEFAULT: CertificatePinner!
 }

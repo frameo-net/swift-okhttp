@@ -4,8 +4,8 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.Dispatcher")
 open class Dispatcher: JavaObject {
-  @JavaMethod
-  @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
+    @JavaMethod
+    @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
     /// Java method `getMaxRequests`.
     ///
@@ -13,8 +13,8 @@ open class Dispatcher: JavaObject {
     /// ```java
     /// public final synchronized int okhttp3.Dispatcher.getMaxRequests()
     /// ```
-  @JavaMethod
-  open func getMaxRequests() -> Int32
+    @JavaMethod
+    open func getMaxRequests() -> Int32
 
     /// Java method `setMaxRequests`.
     ///
@@ -22,8 +22,8 @@ open class Dispatcher: JavaObject {
     /// ```java
     /// public final void okhttp3.Dispatcher.setMaxRequests(int)
     /// ```
-  @JavaMethod
-  open func setMaxRequests(_ arg0: Int32)
+    @JavaMethod
+    open func setMaxRequests(_ arg0: Int32)
 
     /// Java method `runningCallsCount`.
     ///
@@ -31,8 +31,8 @@ open class Dispatcher: JavaObject {
     /// ```java
     /// public final synchronized int okhttp3.Dispatcher.runningCallsCount()
     /// ```
-  @JavaMethod
-  open func runningCallsCount() -> Int32
+    @JavaMethod
+    open func runningCallsCount() -> Int32
 
     /// Java method `queuedCalls`.
     ///
@@ -40,8 +40,8 @@ open class Dispatcher: JavaObject {
     /// ```java
     /// public final synchronized java.util.List<okhttp3.Call> okhttp3.Dispatcher.queuedCalls()
     /// ```
-  @JavaMethod
-  open func queuedCalls() -> List<Call>!
+    @JavaMethod
+    open func queuedCalls() -> List<Call>!
 
     /// Java method `runningCalls`.
     ///
@@ -49,8 +49,8 @@ open class Dispatcher: JavaObject {
     /// ```java
     /// public final synchronized java.util.List<okhttp3.Call> okhttp3.Dispatcher.runningCalls()
     /// ```
-  @JavaMethod
-  open func runningCalls() -> List<Call>!
+    @JavaMethod
+    open func runningCalls() -> List<Call>!
 
     /// Java method `queuedCallsCount`.
     ///
@@ -58,8 +58,8 @@ open class Dispatcher: JavaObject {
     /// ```java
     /// public final synchronized int okhttp3.Dispatcher.queuedCallsCount()
     /// ```
-  @JavaMethod
-  open func queuedCallsCount() -> Int32
+    @JavaMethod
+    open func queuedCallsCount() -> Int32
 
     /// Java method `getMaxRequestsPerHost`.
     ///
@@ -67,8 +67,8 @@ open class Dispatcher: JavaObject {
     /// ```java
     /// public final synchronized int okhttp3.Dispatcher.getMaxRequestsPerHost()
     /// ```
-  @JavaMethod
-  open func getMaxRequestsPerHost() -> Int32
+    @JavaMethod
+    open func getMaxRequestsPerHost() -> Int32
 
     /// Java method `setMaxRequestsPerHost`.
     ///
@@ -76,8 +76,8 @@ open class Dispatcher: JavaObject {
     /// ```java
     /// public final void okhttp3.Dispatcher.setMaxRequestsPerHost(int)
     /// ```
-  @JavaMethod
-  open func setMaxRequestsPerHost(_ arg0: Int32)
+    @JavaMethod
+    open func setMaxRequestsPerHost(_ arg0: Int32)
 
     /// Java method `cancelAll`.
     ///
@@ -85,6 +85,6 @@ open class Dispatcher: JavaObject {
     /// ```java
     /// public final synchronized void okhttp3.Dispatcher.cancelAll()
     /// ```
-  @JavaMethod
-  open func cancelAll()
+    @JavaMethod
+    open func cancelAll()
 }

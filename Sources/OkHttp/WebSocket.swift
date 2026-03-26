@@ -4,48 +4,48 @@ import SwiftJavaJNICore
 
 @JavaInterface("okhttp3.WebSocket")
 public struct WebSocket {
-  /// Java method `send`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract boolean okhttp3.WebSocket.send(java.lang.String)
-  /// ```
-@JavaMethod
-  public func send(_ arg0: String) -> Bool
+    /// Java method `send`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public abstract boolean okhttp3.WebSocket.send(java.lang.String)
+    /// ```
+    @JavaMethod
+    public func send(_ arg0: String) -> Bool
 
-  /// Java method `cancel`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract void okhttp3.WebSocket.cancel()
-  /// ```
-@JavaMethod
-  public func cancel()
+    /// Java method `cancel`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public abstract void okhttp3.WebSocket.cancel()
+    /// ```
+    @JavaMethod
+    public func cancel()
 
-  /// Java method `close`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract boolean okhttp3.WebSocket.close(int,java.lang.String)
-  /// ```
-@JavaMethod
-  public func close(_ arg0: Int32, _ arg1: String) -> Bool
+    /// Java method `close`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public abstract boolean okhttp3.WebSocket.close(int,java.lang.String)
+    /// ```
+    @JavaMethod
+    public func close(_ arg0: Int32, _ arg1: String) -> Bool
 
-  /// Java method `request`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract okhttp3.Request okhttp3.WebSocket.request()
-  /// ```
-@JavaMethod
-  public func request() -> Request!
+    /// Java method `request`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public abstract okhttp3.Request okhttp3.WebSocket.request()
+    /// ```
+    @JavaMethod
+    public func request() -> Request!
 
-  /// Java method `queueSize`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract long okhttp3.WebSocket.queueSize()
-  /// ```
-@JavaMethod
-  public func queueSize() -> Int64
+    /// Java method `queueSize`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public abstract long okhttp3.WebSocket.queueSize()
+    /// ```
+    @JavaMethod
+    public func queueSize() -> Int64
 }

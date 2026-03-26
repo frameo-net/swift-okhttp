@@ -3,8 +3,8 @@ import SwiftJava
 import SwiftJavaJNICore
 
 extension Authenticator {
-  @JavaClass("okhttp3.Authenticator$Companion")
-  open class Companion: JavaObject {
+    @JavaClass("okhttp3.Authenticator$Companion")
+    open class Companion: JavaObject {
 
-  }
+    }
 }

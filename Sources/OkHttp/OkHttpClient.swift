@@ -4,11 +4,11 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.OkHttpClient", implements: Call.Factory.self, WebSocket.Factory.self)
 open class OkHttpClient: JavaObject {
-  @JavaMethod
-  @_nonoverride public convenience init(_ arg0: OkHttpClient.Builder?, environment: JNIEnvironment? = nil)
+    @JavaMethod
+    @_nonoverride public convenience init(_ arg0: OkHttpClient.Builder?, environment: JNIEnvironment? = nil)
 
-  @JavaMethod
-  @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
+    @JavaMethod
+    @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
     /// Java method `dispatcher`.
     ///
@@ -16,8 +16,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final okhttp3.Dispatcher okhttp3.OkHttpClient.dispatcher()
     /// ```
-  @JavaMethod
-  open func dispatcher() -> Dispatcher!
+    @JavaMethod
+    open func dispatcher() -> Dispatcher!
 
     /// Java method `connectionPool`.
     ///
@@ -25,8 +25,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final okhttp3.ConnectionPool okhttp3.OkHttpClient.connectionPool()
     /// ```
-  @JavaMethod
-  open func connectionPool() -> ConnectionPool!
+    @JavaMethod
+    open func connectionPool() -> ConnectionPool!
 
     /// Java method `interceptors`.
     ///
@@ -34,8 +34,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final java.util.List<okhttp3.Interceptor> okhttp3.OkHttpClient.interceptors()
     /// ```
-  @JavaMethod
-  open func interceptors() -> List<Interceptor>!
+    @JavaMethod
+    open func interceptors() -> List<Interceptor>!
 
     /// Java method `authenticator`.
     ///
@@ -43,8 +43,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final okhttp3.Authenticator okhttp3.OkHttpClient.authenticator()
     /// ```
-  @JavaMethod
-  open func authenticator() -> Authenticator!
+    @JavaMethod
+    open func authenticator() -> Authenticator!
 
     /// Java method `followRedirects`.
     ///
@@ -52,8 +52,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final boolean okhttp3.OkHttpClient.followRedirects()
     /// ```
-  @JavaMethod
-  open func followRedirects() -> Bool
+    @JavaMethod
+    open func followRedirects() -> Bool
 
     /// Java method `followSslRedirects`.
     ///
@@ -61,8 +61,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final boolean okhttp3.OkHttpClient.followSslRedirects()
     /// ```
-  @JavaMethod
-  open func followSslRedirects() -> Bool
+    @JavaMethod
+    open func followSslRedirects() -> Bool
 
     /// Java method `cookieJar`.
     ///
@@ -70,8 +70,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final okhttp3.CookieJar okhttp3.OkHttpClient.cookieJar()
     /// ```
-  @JavaMethod
-  open func cookieJar() -> CookieJar!
+    @JavaMethod
+    open func cookieJar() -> CookieJar!
 
     /// Java method `dns`.
     ///
@@ -79,8 +79,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final okhttp3.Dns okhttp3.OkHttpClient.dns()
     /// ```
-  @JavaMethod
-  open func dns() -> Dns!
+    @JavaMethod
+    open func dns() -> Dns!
 
     /// Java method `proxyAuthenticator`.
     ///
@@ -88,8 +88,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final okhttp3.Authenticator okhttp3.OkHttpClient.proxyAuthenticator()
     /// ```
-  @JavaMethod
-  open func proxyAuthenticator() -> Authenticator!
+    @JavaMethod
+    open func proxyAuthenticator() -> Authenticator!
 
     /// Java method `connectionSpecs`.
     ///
@@ -97,8 +97,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final java.util.List<okhttp3.ConnectionSpec> okhttp3.OkHttpClient.connectionSpecs()
     /// ```
-  @JavaMethod
-  open func connectionSpecs() -> List<ConnectionSpec>!
+    @JavaMethod
+    open func connectionSpecs() -> List<ConnectionSpec>!
 
     /// Java method `certificatePinner`.
     ///
@@ -106,8 +106,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final okhttp3.CertificatePinner okhttp3.OkHttpClient.certificatePinner()
     /// ```
-  @JavaMethod
-  open func certificatePinner() -> CertificatePinner!
+    @JavaMethod
+    open func certificatePinner() -> CertificatePinner!
 
     /// Java method `callTimeoutMillis`.
     ///
@@ -115,8 +115,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final int okhttp3.OkHttpClient.callTimeoutMillis()
     /// ```
-  @JavaMethod
-  open func callTimeoutMillis() -> Int32
+    @JavaMethod
+    open func callTimeoutMillis() -> Int32
 
     /// Java method `readTimeoutMillis`.
     ///
@@ -124,8 +124,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final int okhttp3.OkHttpClient.readTimeoutMillis()
     /// ```
-  @JavaMethod
-  open func readTimeoutMillis() -> Int32
+    @JavaMethod
+    open func readTimeoutMillis() -> Int32
 
     /// Java method `writeTimeoutMillis`.
     ///
@@ -133,8 +133,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final int okhttp3.OkHttpClient.writeTimeoutMillis()
     /// ```
-  @JavaMethod
-  open func writeTimeoutMillis() -> Int32
+    @JavaMethod
+    open func writeTimeoutMillis() -> Int32
 
     /// Java method `pingIntervalMillis`.
     ///
@@ -142,8 +142,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final int okhttp3.OkHttpClient.pingIntervalMillis()
     /// ```
-  @JavaMethod
-  open func pingIntervalMillis() -> Int32
+    @JavaMethod
+    open func pingIntervalMillis() -> Int32
 
     /// Java method `newBuilder`.
     ///
@@ -151,8 +151,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public okhttp3.OkHttpClient$Builder okhttp3.OkHttpClient.newBuilder()
     /// ```
-  @JavaMethod
-  open func newBuilder() -> OkHttpClient.Builder!
+    @JavaMethod
+    open func newBuilder() -> OkHttpClient.Builder!
 
     /// Java method `-deprecated_dns`.
     ///
@@ -160,8 +160,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final okhttp3.Dns okhttp3.OkHttpClient.-deprecated_dns()
     /// ```
-  @JavaMethod
-  open func `-deprecated_dns`() -> Dns!
+    @JavaMethod
+    open func `-deprecated_dns`() -> Dns!
 
     /// Java method `newWebSocket`.
     ///
@@ -169,8 +169,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public okhttp3.WebSocket okhttp3.OkHttpClient.newWebSocket(okhttp3.Request,okhttp3.WebSocketListener)
     /// ```
-  @JavaMethod
-  open func newWebSocket(_ arg0: Request?, _ arg1: WebSocketListener?) -> WebSocket!
+    @JavaMethod
+    open func newWebSocket(_ arg0: Request?, _ arg1: WebSocketListener?) -> WebSocket!
 
     /// Java method `newCall`.
     ///
@@ -178,8 +178,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public okhttp3.Call okhttp3.OkHttpClient.newCall(okhttp3.Request)
     /// ```
-  @JavaMethod
-  open func newCall(_ arg0: Request?) -> Call!
+    @JavaMethod
+    open func newCall(_ arg0: Request?) -> Call!
 
     /// Java method `-deprecated_cache`.
     ///
@@ -187,8 +187,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final okhttp3.Cache okhttp3.OkHttpClient.-deprecated_cache()
     /// ```
-  @JavaMethod
-  open func `-deprecated_cache`() -> Cache!
+    @JavaMethod
+    open func `-deprecated_cache`() -> Cache!
 
     /// Java method `-deprecated_retryOnConnectionFailure`.
     ///
@@ -196,8 +196,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final boolean okhttp3.OkHttpClient.-deprecated_retryOnConnectionFailure()
     /// ```
-  @JavaMethod
-  open func `-deprecated_retryOnConnectionFailure`() -> Bool
+    @JavaMethod
+    open func `-deprecated_retryOnConnectionFailure`() -> Bool
 
     /// Java method `networkInterceptors`.
     ///
@@ -205,8 +205,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final java.util.List<okhttp3.Interceptor> okhttp3.OkHttpClient.networkInterceptors()
     /// ```
-  @JavaMethod
-  open func networkInterceptors() -> List<Interceptor>!
+    @JavaMethod
+    open func networkInterceptors() -> List<Interceptor>!
 
     /// Java method `eventListenerFactory`.
     ///
@@ -214,8 +214,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final okhttp3.EventListener$Factory okhttp3.OkHttpClient.eventListenerFactory()
     /// ```
-  @JavaMethod
-  open func eventListenerFactory() -> EventListener.Factory!
+    @JavaMethod
+    open func eventListenerFactory() -> EventListener.Factory!
 
     /// Java method `retryOnConnectionFailure`.
     ///
@@ -223,8 +223,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final boolean okhttp3.OkHttpClient.retryOnConnectionFailure()
     /// ```
-  @JavaMethod
-  open func retryOnConnectionFailure() -> Bool
+    @JavaMethod
+    open func retryOnConnectionFailure() -> Bool
 
     /// Java method `minWebSocketMessageToCompress`.
     ///
@@ -232,8 +232,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final long okhttp3.OkHttpClient.minWebSocketMessageToCompress()
     /// ```
-  @JavaMethod
-  open func minWebSocketMessageToCompress() -> Int64
+    @JavaMethod
+    open func minWebSocketMessageToCompress() -> Int64
 
     /// Java method `connectTimeoutMillis`.
     ///
@@ -241,8 +241,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final int okhttp3.OkHttpClient.connectTimeoutMillis()
     /// ```
-  @JavaMethod
-  open func connectTimeoutMillis() -> Int32
+    @JavaMethod
+    open func connectTimeoutMillis() -> Int32
 
     /// Java method `-deprecated_proxyAuthenticator`.
     ///
@@ -250,8 +250,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final okhttp3.Authenticator okhttp3.OkHttpClient.-deprecated_proxyAuthenticator()
     /// ```
-  @JavaMethod
-  open func `-deprecated_proxyAuthenticator`() -> Authenticator!
+    @JavaMethod
+    open func `-deprecated_proxyAuthenticator`() -> Authenticator!
 
     /// Java method `-deprecated_connectionSpecs`.
     ///
@@ -259,8 +259,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final java.util.List<okhttp3.ConnectionSpec> okhttp3.OkHttpClient.-deprecated_connectionSpecs()
     /// ```
-  @JavaMethod
-  open func `-deprecated_connectionSpecs`() -> List<ConnectionSpec>!
+    @JavaMethod
+    open func `-deprecated_connectionSpecs`() -> List<ConnectionSpec>!
 
     /// Java method `-deprecated_certificatePinner`.
     ///
@@ -268,8 +268,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final okhttp3.CertificatePinner okhttp3.OkHttpClient.-deprecated_certificatePinner()
     /// ```
-  @JavaMethod
-  open func `-deprecated_certificatePinner`() -> CertificatePinner!
+    @JavaMethod
+    open func `-deprecated_certificatePinner`() -> CertificatePinner!
 
     /// Java method `-deprecated_dispatcher`.
     ///
@@ -277,8 +277,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final okhttp3.Dispatcher okhttp3.OkHttpClient.-deprecated_dispatcher()
     /// ```
-  @JavaMethod
-  open func `-deprecated_dispatcher`() -> Dispatcher!
+    @JavaMethod
+    open func `-deprecated_dispatcher`() -> Dispatcher!
 
     /// Java method `-deprecated_connectionPool`.
     ///
@@ -286,8 +286,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final okhttp3.ConnectionPool okhttp3.OkHttpClient.-deprecated_connectionPool()
     /// ```
-  @JavaMethod
-  open func `-deprecated_connectionPool`() -> ConnectionPool!
+    @JavaMethod
+    open func `-deprecated_connectionPool`() -> ConnectionPool!
 
     /// Java method `-deprecated_interceptors`.
     ///
@@ -295,8 +295,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final java.util.List<okhttp3.Interceptor> okhttp3.OkHttpClient.-deprecated_interceptors()
     /// ```
-  @JavaMethod
-  open func `-deprecated_interceptors`() -> List<Interceptor>!
+    @JavaMethod
+    open func `-deprecated_interceptors`() -> List<Interceptor>!
 
     /// Java method `-deprecated_networkInterceptors`.
     ///
@@ -304,8 +304,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final java.util.List<okhttp3.Interceptor> okhttp3.OkHttpClient.-deprecated_networkInterceptors()
     /// ```
-  @JavaMethod
-  open func `-deprecated_networkInterceptors`() -> List<Interceptor>!
+    @JavaMethod
+    open func `-deprecated_networkInterceptors`() -> List<Interceptor>!
 
     /// Java method `-deprecated_eventListenerFactory`.
     ///
@@ -313,8 +313,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final okhttp3.EventListener$Factory okhttp3.OkHttpClient.-deprecated_eventListenerFactory()
     /// ```
-  @JavaMethod
-  open func `-deprecated_eventListenerFactory`() -> EventListener.Factory!
+    @JavaMethod
+    open func `-deprecated_eventListenerFactory`() -> EventListener.Factory!
 
     /// Java method `-deprecated_authenticator`.
     ///
@@ -322,8 +322,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final okhttp3.Authenticator okhttp3.OkHttpClient.-deprecated_authenticator()
     /// ```
-  @JavaMethod
-  open func `-deprecated_authenticator`() -> Authenticator!
+    @JavaMethod
+    open func `-deprecated_authenticator`() -> Authenticator!
 
     /// Java method `-deprecated_followRedirects`.
     ///
@@ -331,8 +331,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final boolean okhttp3.OkHttpClient.-deprecated_followRedirects()
     /// ```
-  @JavaMethod
-  open func `-deprecated_followRedirects`() -> Bool
+    @JavaMethod
+    open func `-deprecated_followRedirects`() -> Bool
 
     /// Java method `-deprecated_followSslRedirects`.
     ///
@@ -340,8 +340,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final boolean okhttp3.OkHttpClient.-deprecated_followSslRedirects()
     /// ```
-  @JavaMethod
-  open func `-deprecated_followSslRedirects`() -> Bool
+    @JavaMethod
+    open func `-deprecated_followSslRedirects`() -> Bool
 
     /// Java method `-deprecated_cookieJar`.
     ///
@@ -349,8 +349,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final okhttp3.CookieJar okhttp3.OkHttpClient.-deprecated_cookieJar()
     /// ```
-  @JavaMethod
-  open func `-deprecated_cookieJar`() -> CookieJar!
+    @JavaMethod
+    open func `-deprecated_cookieJar`() -> CookieJar!
 
     /// Java method `-deprecated_callTimeoutMillis`.
     ///
@@ -358,8 +358,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final int okhttp3.OkHttpClient.-deprecated_callTimeoutMillis()
     /// ```
-  @JavaMethod
-  open func `-deprecated_callTimeoutMillis`() -> Int32
+    @JavaMethod
+    open func `-deprecated_callTimeoutMillis`() -> Int32
 
     /// Java method `-deprecated_connectTimeoutMillis`.
     ///
@@ -367,8 +367,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final int okhttp3.OkHttpClient.-deprecated_connectTimeoutMillis()
     /// ```
-  @JavaMethod
-  open func `-deprecated_connectTimeoutMillis`() -> Int32
+    @JavaMethod
+    open func `-deprecated_connectTimeoutMillis`() -> Int32
 
     /// Java method `-deprecated_readTimeoutMillis`.
     ///
@@ -376,8 +376,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final int okhttp3.OkHttpClient.-deprecated_readTimeoutMillis()
     /// ```
-  @JavaMethod
-  open func `-deprecated_readTimeoutMillis`() -> Int32
+    @JavaMethod
+    open func `-deprecated_readTimeoutMillis`() -> Int32
 
     /// Java method `-deprecated_writeTimeoutMillis`.
     ///
@@ -385,8 +385,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final int okhttp3.OkHttpClient.-deprecated_writeTimeoutMillis()
     /// ```
-  @JavaMethod
-  open func `-deprecated_writeTimeoutMillis`() -> Int32
+    @JavaMethod
+    open func `-deprecated_writeTimeoutMillis`() -> Int32
 
     /// Java method `-deprecated_pingIntervalMillis`.
     ///
@@ -394,8 +394,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final int okhttp3.OkHttpClient.-deprecated_pingIntervalMillis()
     /// ```
-  @JavaMethod
-  open func `-deprecated_pingIntervalMillis`() -> Int32
+    @JavaMethod
+    open func `-deprecated_pingIntervalMillis`() -> Int32
 
     /// Java method `cache`.
     ///
@@ -403,8 +403,8 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public final okhttp3.Cache okhttp3.OkHttpClient.cache()
     /// ```
-  @JavaMethod
-  open func cache() -> Cache!
+    @JavaMethod
+    open func cache() -> Cache!
 
     /// Java method `clone`.
     ///
@@ -412,10 +412,10 @@ open class OkHttpClient: JavaObject {
     /// ```java
     /// public java.lang.Object okhttp3.OkHttpClient.clone()
     /// ```
-  @JavaMethod
-  open override func clone() -> JavaObject!
+    @JavaMethod
+    open override func clone() -> JavaObject!
 }
 extension JavaClass<OkHttpClient> {
-  @JavaStaticField(isFinal: true)
-  public var Companion: OkHttpClient.Companion!
+    @JavaStaticField(isFinal: true)
+    public var Companion: OkHttpClient.Companion!
 }

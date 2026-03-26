@@ -3,8 +3,8 @@ import SwiftJava
 import SwiftJavaJNICore
 
 extension ConnectionSpec {
-  @JavaClass("okhttp3.ConnectionSpec$Companion")
-  open class Companion: JavaObject {
+    @JavaClass("okhttp3.ConnectionSpec$Companion")
+    open class Companion: JavaObject {
 
-  }
+    }
 }

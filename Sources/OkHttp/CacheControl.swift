@@ -4,222 +4,222 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.CacheControl")
 open class CacheControl: JavaObject {
-  /// Java method `immutable`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.CacheControl.immutable()
-  /// ```
-@JavaMethod
-  open func immutable() -> Bool
+    /// Java method `immutable`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final boolean okhttp3.CacheControl.immutable()
+    /// ```
+    @JavaMethod
+    open func immutable() -> Bool
 
-  /// Java method `noCache`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.CacheControl.noCache()
-  /// ```
-@JavaMethod
-  open func noCache() -> Bool
+    /// Java method `noCache`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final boolean okhttp3.CacheControl.noCache()
+    /// ```
+    @JavaMethod
+    open func noCache() -> Bool
 
-  /// Java method `noStore`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.CacheControl.noStore()
-  /// ```
-@JavaMethod
-  open func noStore() -> Bool
+    /// Java method `noStore`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final boolean okhttp3.CacheControl.noStore()
+    /// ```
+    @JavaMethod
+    open func noStore() -> Bool
 
-  /// Java method `maxAgeSeconds`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final int okhttp3.CacheControl.maxAgeSeconds()
-  /// ```
-@JavaMethod
-  open func maxAgeSeconds() -> Int32
+    /// Java method `maxAgeSeconds`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.CacheControl.maxAgeSeconds()
+    /// ```
+    @JavaMethod
+    open func maxAgeSeconds() -> Int32
 
-  /// Java method `sMaxAgeSeconds`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final int okhttp3.CacheControl.sMaxAgeSeconds()
-  /// ```
-@JavaMethod
-  open func sMaxAgeSeconds() -> Int32
+    /// Java method `sMaxAgeSeconds`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.CacheControl.sMaxAgeSeconds()
+    /// ```
+    @JavaMethod
+    open func sMaxAgeSeconds() -> Int32
 
-  /// Java method `mustRevalidate`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.CacheControl.mustRevalidate()
-  /// ```
-@JavaMethod
-  open func mustRevalidate() -> Bool
+    /// Java method `mustRevalidate`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final boolean okhttp3.CacheControl.mustRevalidate()
+    /// ```
+    @JavaMethod
+    open func mustRevalidate() -> Bool
 
-  /// Java method `maxStaleSeconds`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final int okhttp3.CacheControl.maxStaleSeconds()
-  /// ```
-@JavaMethod
-  open func maxStaleSeconds() -> Int32
+    /// Java method `maxStaleSeconds`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.CacheControl.maxStaleSeconds()
+    /// ```
+    @JavaMethod
+    open func maxStaleSeconds() -> Int32
 
-  /// Java method `minFreshSeconds`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final int okhttp3.CacheControl.minFreshSeconds()
-  /// ```
-@JavaMethod
-  open func minFreshSeconds() -> Int32
+    /// Java method `minFreshSeconds`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.CacheControl.minFreshSeconds()
+    /// ```
+    @JavaMethod
+    open func minFreshSeconds() -> Int32
 
-  /// Java method `onlyIfCached`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.CacheControl.onlyIfCached()
-  /// ```
-@JavaMethod
-  open func onlyIfCached() -> Bool
+    /// Java method `onlyIfCached`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final boolean okhttp3.CacheControl.onlyIfCached()
+    /// ```
+    @JavaMethod
+    open func onlyIfCached() -> Bool
 
-  /// Java method `noTransform`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.CacheControl.noTransform()
-  /// ```
-@JavaMethod
-  open func noTransform() -> Bool
+    /// Java method `noTransform`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final boolean okhttp3.CacheControl.noTransform()
+    /// ```
+    @JavaMethod
+    open func noTransform() -> Bool
 
-  /// Java method `-deprecated_noCache`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.CacheControl.-deprecated_noCache()
-  /// ```
-@JavaMethod
-  open func `-deprecated_noCache`() -> Bool
+    /// Java method `-deprecated_noCache`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final boolean okhttp3.CacheControl.-deprecated_noCache()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_noCache`() -> Bool
 
-  /// Java method `-deprecated_noStore`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.CacheControl.-deprecated_noStore()
-  /// ```
-@JavaMethod
-  open func `-deprecated_noStore`() -> Bool
+    /// Java method `-deprecated_noStore`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final boolean okhttp3.CacheControl.-deprecated_noStore()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_noStore`() -> Bool
 
-  /// Java method `-deprecated_maxAgeSeconds`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final int okhttp3.CacheControl.-deprecated_maxAgeSeconds()
-  /// ```
-@JavaMethod
-  open func `-deprecated_maxAgeSeconds`() -> Int32
+    /// Java method `-deprecated_maxAgeSeconds`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.CacheControl.-deprecated_maxAgeSeconds()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_maxAgeSeconds`() -> Int32
 
-  /// Java method `-deprecated_sMaxAgeSeconds`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final int okhttp3.CacheControl.-deprecated_sMaxAgeSeconds()
-  /// ```
-@JavaMethod
-  open func `-deprecated_sMaxAgeSeconds`() -> Int32
+    /// Java method `-deprecated_sMaxAgeSeconds`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.CacheControl.-deprecated_sMaxAgeSeconds()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_sMaxAgeSeconds`() -> Int32
 
-  /// Java method `-deprecated_mustRevalidate`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.CacheControl.-deprecated_mustRevalidate()
-  /// ```
-@JavaMethod
-  open func `-deprecated_mustRevalidate`() -> Bool
+    /// Java method `-deprecated_mustRevalidate`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final boolean okhttp3.CacheControl.-deprecated_mustRevalidate()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_mustRevalidate`() -> Bool
 
-  /// Java method `-deprecated_maxStaleSeconds`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final int okhttp3.CacheControl.-deprecated_maxStaleSeconds()
-  /// ```
-@JavaMethod
-  open func `-deprecated_maxStaleSeconds`() -> Int32
+    /// Java method `-deprecated_maxStaleSeconds`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.CacheControl.-deprecated_maxStaleSeconds()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_maxStaleSeconds`() -> Int32
 
-  /// Java method `-deprecated_minFreshSeconds`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final int okhttp3.CacheControl.-deprecated_minFreshSeconds()
-  /// ```
-@JavaMethod
-  open func `-deprecated_minFreshSeconds`() -> Int32
+    /// Java method `-deprecated_minFreshSeconds`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.CacheControl.-deprecated_minFreshSeconds()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_minFreshSeconds`() -> Int32
 
-  /// Java method `-deprecated_onlyIfCached`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.CacheControl.-deprecated_onlyIfCached()
-  /// ```
-@JavaMethod
-  open func `-deprecated_onlyIfCached`() -> Bool
+    /// Java method `-deprecated_onlyIfCached`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final boolean okhttp3.CacheControl.-deprecated_onlyIfCached()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_onlyIfCached`() -> Bool
 
-  /// Java method `-deprecated_noTransform`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.CacheControl.-deprecated_noTransform()
-  /// ```
-@JavaMethod
-  open func `-deprecated_noTransform`() -> Bool
+    /// Java method `-deprecated_noTransform`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final boolean okhttp3.CacheControl.-deprecated_noTransform()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_noTransform`() -> Bool
 
-  /// Java method `-deprecated_immutable`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.CacheControl.-deprecated_immutable()
-  /// ```
-@JavaMethod
-  open func `-deprecated_immutable`() -> Bool
+    /// Java method `-deprecated_immutable`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final boolean okhttp3.CacheControl.-deprecated_immutable()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_immutable`() -> Bool
 
-  /// Java method `toString`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public java.lang.String okhttp3.CacheControl.toString()
-  /// ```
-@JavaMethod
-  open override func toString() -> String
+    /// Java method `toString`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public java.lang.String okhttp3.CacheControl.toString()
+    /// ```
+    @JavaMethod
+    open override func toString() -> String
 
-  /// Java method `isPublic`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.CacheControl.isPublic()
-  /// ```
-@JavaMethod
-  open func isPublic() -> Bool
+    /// Java method `isPublic`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final boolean okhttp3.CacheControl.isPublic()
+    /// ```
+    @JavaMethod
+    open func isPublic() -> Bool
 
-  /// Java method `isPrivate`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.CacheControl.isPrivate()
-  /// ```
-@JavaMethod
-  open func isPrivate() -> Bool
+    /// Java method `isPrivate`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final boolean okhttp3.CacheControl.isPrivate()
+    /// ```
+    @JavaMethod
+    open func isPrivate() -> Bool
 }
 extension JavaClass<CacheControl> {
-  @JavaStaticField(isFinal: true)
-  public var Companion: CacheControl.Companion!
+    @JavaStaticField(isFinal: true)
+    public var Companion: CacheControl.Companion!
 
-  @JavaStaticField(isFinal: true)
-  public var FORCE_NETWORK: CacheControl!
+    @JavaStaticField(isFinal: true)
+    public var FORCE_NETWORK: CacheControl!
 
-  @JavaStaticField(isFinal: true)
-  public var FORCE_CACHE: CacheControl!
+    @JavaStaticField(isFinal: true)
+    public var FORCE_CACHE: CacheControl!
 
     /// Java method `parse`.
     ///
@@ -227,6 +227,6 @@ extension JavaClass<CacheControl> {
     /// ```java
     /// public static final okhttp3.CacheControl okhttp3.CacheControl.parse(okhttp3.Headers)
     /// ```
-  @JavaStaticMethod
-  public func parse(_ arg0: Headers?) -> CacheControl!
+    @JavaStaticMethod
+    public func parse(_ arg0: Headers?) -> CacheControl!
 }

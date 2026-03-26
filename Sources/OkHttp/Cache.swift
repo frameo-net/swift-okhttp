@@ -4,8 +4,8 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.Cache", implements: Closeable.self, Flushable.self)
 open class Cache: JavaObject {
-  @JavaMethod
-  @_nonoverride public convenience init(_ arg0: File?, _ arg1: Int64, environment: JNIEnvironment? = nil)
+    @JavaMethod
+    @_nonoverride public convenience init(_ arg0: File?, _ arg1: Int64, environment: JNIEnvironment? = nil)
 
     /// Java method `writeSuccessCount`.
     ///
@@ -13,8 +13,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public final synchronized int okhttp3.Cache.writeSuccessCount()
     /// ```
-  @JavaMethod
-  open func writeSuccessCount() -> Int32
+    @JavaMethod
+    open func writeSuccessCount() -> Int32
 
     /// Java method `writeAbortCount`.
     ///
@@ -22,8 +22,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public final synchronized int okhttp3.Cache.writeAbortCount()
     /// ```
-  @JavaMethod
-  open func writeAbortCount() -> Int32
+    @JavaMethod
+    open func writeAbortCount() -> Int32
 
     /// Java method `isClosed`.
     ///
@@ -31,8 +31,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public final boolean okhttp3.Cache.isClosed()
     /// ```
-  @JavaMethod
-  open func isClosed() -> Bool
+    @JavaMethod
+    open func isClosed() -> Bool
 
     /// Java method `get$okhttp`.
     ///
@@ -40,8 +40,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public final okhttp3.Response okhttp3.Cache.get$okhttp(okhttp3.Request)
     /// ```
-  @JavaMethod
-  open func get$okhttp(_ arg0: Request?) -> Response!
+    @JavaMethod
+    open func get$okhttp(_ arg0: Request?) -> Response!
 
     /// Java method `remove$okhttp`.
     ///
@@ -49,8 +49,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public final void okhttp3.Cache.remove$okhttp(okhttp3.Request) throws java.io.IOException
     /// ```
-  @JavaMethod
-  open func remove$okhttp(_ arg0: Request?) throws
+    @JavaMethod
+    open func remove$okhttp(_ arg0: Request?) throws
 
     /// Java method `update$okhttp`.
     ///
@@ -58,8 +58,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public final void okhttp3.Cache.update$okhttp(okhttp3.Response,okhttp3.Response)
     /// ```
-  @JavaMethod
-  open func update$okhttp(_ arg0: Response?, _ arg1: Response?)
+    @JavaMethod
+    open func update$okhttp(_ arg0: Response?, _ arg1: Response?)
 
     /// Java method `evictAll`.
     ///
@@ -67,8 +67,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public final void okhttp3.Cache.evictAll() throws java.io.IOException
     /// ```
-  @JavaMethod
-  open func evictAll() throws
+    @JavaMethod
+    open func evictAll() throws
 
     /// Java method `requestCount`.
     ///
@@ -76,8 +76,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public final synchronized int okhttp3.Cache.requestCount()
     /// ```
-  @JavaMethod
-  open func requestCount() -> Int32
+    @JavaMethod
+    open func requestCount() -> Int32
 
     /// Java method `networkCount`.
     ///
@@ -85,8 +85,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public final synchronized int okhttp3.Cache.networkCount()
     /// ```
-  @JavaMethod
-  open func networkCount() -> Int32
+    @JavaMethod
+    open func networkCount() -> Int32
 
     /// Java method `hitCount`.
     ///
@@ -94,8 +94,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public final synchronized int okhttp3.Cache.hitCount()
     /// ```
-  @JavaMethod
-  open func hitCount() -> Int32
+    @JavaMethod
+    open func hitCount() -> Int32
 
     /// Java method `getWriteSuccessCount$okhttp`.
     ///
@@ -103,8 +103,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public final int okhttp3.Cache.getWriteSuccessCount$okhttp()
     /// ```
-  @JavaMethod
-  open func getWriteSuccessCount$okhttp() -> Int32
+    @JavaMethod
+    open func getWriteSuccessCount$okhttp() -> Int32
 
     /// Java method `setWriteSuccessCount$okhttp`.
     ///
@@ -112,8 +112,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public final void okhttp3.Cache.setWriteSuccessCount$okhttp(int)
     /// ```
-  @JavaMethod
-  open func setWriteSuccessCount$okhttp(_ arg0: Int32)
+    @JavaMethod
+    open func setWriteSuccessCount$okhttp(_ arg0: Int32)
 
     /// Java method `getWriteAbortCount$okhttp`.
     ///
@@ -121,8 +121,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public final int okhttp3.Cache.getWriteAbortCount$okhttp()
     /// ```
-  @JavaMethod
-  open func getWriteAbortCount$okhttp() -> Int32
+    @JavaMethod
+    open func getWriteAbortCount$okhttp() -> Int32
 
     /// Java method `setWriteAbortCount$okhttp`.
     ///
@@ -130,8 +130,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public final void okhttp3.Cache.setWriteAbortCount$okhttp(int)
     /// ```
-  @JavaMethod
-  open func setWriteAbortCount$okhttp(_ arg0: Int32)
+    @JavaMethod
+    open func setWriteAbortCount$okhttp(_ arg0: Int32)
 
     /// Java method `-deprecated_directory`.
     ///
@@ -139,8 +139,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public final java.io.File okhttp3.Cache.-deprecated_directory()
     /// ```
-  @JavaMethod
-  open func `-deprecated_directory`() -> File!
+    @JavaMethod
+    open func `-deprecated_directory`() -> File!
 
     /// Java method `trackConditionalCacheHit$okhttp`.
     ///
@@ -148,8 +148,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public final synchronized void okhttp3.Cache.trackConditionalCacheHit$okhttp()
     /// ```
-  @JavaMethod
-  open func trackConditionalCacheHit$okhttp()
+    @JavaMethod
+    open func trackConditionalCacheHit$okhttp()
 
     /// Java method `size`.
     ///
@@ -157,8 +157,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public final long okhttp3.Cache.size() throws java.io.IOException
     /// ```
-  @JavaMethod
-  open func size() throws -> Int64
+    @JavaMethod
+    open func size() throws -> Int64
 
     /// Java method `maxSize`.
     ///
@@ -166,8 +166,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public final long okhttp3.Cache.maxSize()
     /// ```
-  @JavaMethod
-  open func maxSize() -> Int64
+    @JavaMethod
+    open func maxSize() -> Int64
 
     /// Java method `flush`.
     ///
@@ -175,8 +175,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public void okhttp3.Cache.flush() throws java.io.IOException
     /// ```
-  @JavaMethod
-  open func flush() throws
+    @JavaMethod
+    open func flush() throws
 
     /// Java method `initialize`.
     ///
@@ -184,8 +184,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public final void okhttp3.Cache.initialize() throws java.io.IOException
     /// ```
-  @JavaMethod
-  open func initialize() throws
+    @JavaMethod
+    open func initialize() throws
 
     /// Java method `directory`.
     ///
@@ -193,8 +193,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public final java.io.File okhttp3.Cache.directory()
     /// ```
-  @JavaMethod
-  open func directory() -> File!
+    @JavaMethod
+    open func directory() -> File!
 
     /// Java method `close`.
     ///
@@ -202,8 +202,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public void okhttp3.Cache.close() throws java.io.IOException
     /// ```
-  @JavaMethod
-  open func close() throws
+    @JavaMethod
+    open func close() throws
 
     /// Java method `delete`.
     ///
@@ -211,8 +211,8 @@ open class Cache: JavaObject {
     /// ```java
     /// public final void okhttp3.Cache.delete() throws java.io.IOException
     /// ```
-  @JavaMethod
-  open func delete() throws
+    @JavaMethod
+    open func delete() throws
 
     /// Java method `urls`.
     ///
@@ -220,12 +220,12 @@ open class Cache: JavaObject {
     /// ```java
     /// public final java.util.Iterator<java.lang.String> okhttp3.Cache.urls() throws java.io.IOException
     /// ```
-  @JavaMethod
-  open func urls() throws -> JavaIterator<JavaString>!
+    @JavaMethod
+    open func urls() throws -> JavaIterator<JavaString>!
 }
 extension JavaClass<Cache> {
-  @JavaStaticField(isFinal: true)
-  public var Companion: Cache.Companion!
+    @JavaStaticField(isFinal: true)
+    public var Companion: Cache.Companion!
 
     /// Java method `key`.
     ///
@@ -233,6 +233,6 @@ extension JavaClass<Cache> {
     /// ```java
     /// public static final java.lang.String okhttp3.Cache.key(okhttp3.HttpUrl)
     /// ```
-  @JavaStaticMethod
-  public func key(_ arg0: HttpUrl?) -> String
+    @JavaStaticMethod
+    public func key(_ arg0: HttpUrl?) -> String
 }

@@ -4,16 +4,16 @@ import SwiftJavaJNICore
 
 @JavaInterface("okhttp3.Interceptor")
 public struct Interceptor {
-  /// Java method `intercept`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract okhttp3.Response okhttp3.Interceptor.intercept(okhttp3.Interceptor$Chain) throws java.io.IOException
-  /// ```
-@JavaMethod
-  public func intercept(_ arg0: Interceptor.Chain?) throws -> Response!
+    /// Java method `intercept`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public abstract okhttp3.Response okhttp3.Interceptor.intercept(okhttp3.Interceptor$Chain) throws java.io.IOException
+    /// ```
+    @JavaMethod
+    public func intercept(_ arg0: Interceptor.Chain?) throws -> Response!
 }
 extension JavaClass<Interceptor> {
-  @JavaStaticField(isFinal: true)
-  public var Companion: Interceptor.Companion!
+    @JavaStaticField(isFinal: true)
+    public var Companion: Interceptor.Companion!
 }

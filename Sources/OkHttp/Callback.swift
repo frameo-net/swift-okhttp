@@ -4,12 +4,12 @@ import SwiftJavaJNICore
 
 @JavaInterface("okhttp3.Callback")
 public struct Callback {
-  /// Java method `onResponse`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract void okhttp3.Callback.onResponse(okhttp3.Call,okhttp3.Response) throws java.io.IOException
-  /// ```
-@JavaMethod
-  public func onResponse(_ arg0: Call?, _ arg1: Response?) throws
+    /// Java method `onResponse`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public abstract void okhttp3.Callback.onResponse(okhttp3.Call,okhttp3.Response) throws java.io.IOException
+    /// ```
+    @JavaMethod
+    public func onResponse(_ arg0: Call?, _ arg1: Response?) throws
 }

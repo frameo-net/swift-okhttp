@@ -3,8 +3,8 @@ import SwiftJava
 import SwiftJavaJNICore
 
 extension FormBody {
-  @JavaClass("okhttp3.FormBody$Companion")
-  open class Companion: JavaObject {
+    @JavaClass("okhttp3.FormBody$Companion")
+    open class Companion: JavaObject {
 
-  }
+    }
 }

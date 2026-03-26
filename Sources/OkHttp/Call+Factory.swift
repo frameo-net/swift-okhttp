@@ -3,15 +3,15 @@ import SwiftJava
 import SwiftJavaJNICore
 
 extension Call {
-  @JavaInterface("okhttp3.Call$Factory")
-  public struct Factory {
-    /// Java method `newCall`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public abstract okhttp3.Call okhttp3.Call$Factory.newCall(okhttp3.Request)
-    /// ```
-  @JavaMethod
-  public func newCall(_ arg0: Request?) -> Call!
-  }
+    @JavaInterface("okhttp3.Call$Factory")
+    public struct Factory {
+        /// Java method `newCall`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public abstract okhttp3.Call okhttp3.Call$Factory.newCall(okhttp3.Request)
+        /// ```
+        @JavaMethod
+        public func newCall(_ arg0: Request?) -> Call!
+    }
 }

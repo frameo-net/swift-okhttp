@@ -3,15 +3,15 @@ import SwiftJava
 import SwiftJavaJNICore
 
 extension EventListener {
-  @JavaInterface("okhttp3.EventListener$Factory")
-  public struct Factory {
-    /// Java method `create`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public abstract okhttp3.EventListener okhttp3.EventListener$Factory.create(okhttp3.Call)
-    /// ```
-  @JavaMethod
-  public func create(_ arg0: Call?) -> EventListener!
-  }
+    @JavaInterface("okhttp3.EventListener$Factory")
+    public struct Factory {
+        /// Java method `create`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public abstract okhttp3.EventListener okhttp3.EventListener$Factory.create(okhttp3.Call)
+        /// ```
+        @JavaMethod
+        public func create(_ arg0: Call?) -> EventListener!
+    }
 }

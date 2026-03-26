@@ -3,36 +3,37 @@ import SwiftJava
 import SwiftJavaJNICore
 
 extension MultipartReader {
-  @JavaClass("okhttp3.MultipartReader$Part", implements: Closeable.self)
-  open class Part: JavaObject {
-  @JavaMethod
-  @_nonoverride public convenience init(_ arg0: Headers?, _ arg1: BufferedSource?, environment: JNIEnvironment? = nil)
+    @JavaClass("okhttp3.MultipartReader$Part", implements: Closeable.self)
+    open class Part: JavaObject {
+        @JavaMethod
+        @_nonoverride public convenience init(
+            _ arg0: Headers?, _ arg1: BufferedSource?, environment: JNIEnvironment? = nil)
 
-    /// Java method `headers`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.Headers okhttp3.MultipartReader$Part.headers()
-    /// ```
-  @JavaMethod
-  open func headers() -> Headers!
+        /// Java method `headers`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public final okhttp3.Headers okhttp3.MultipartReader$Part.headers()
+        /// ```
+        @JavaMethod
+        open func headers() -> Headers!
 
-    /// Java method `close`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public void okhttp3.MultipartReader$Part.close()
-    /// ```
-  @JavaMethod
-  open func close()
+        /// Java method `close`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public void okhttp3.MultipartReader$Part.close()
+        /// ```
+        @JavaMethod
+        open func close()
 
-    /// Java method `body`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okio.BufferedSource okhttp3.MultipartReader$Part.body()
-    /// ```
-  @JavaMethod
-  open func body() -> BufferedSource!
-  }
+        /// Java method `body`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public final okio.BufferedSource okhttp3.MultipartReader$Part.body()
+        /// ```
+        @JavaMethod
+        open func body() -> BufferedSource!
+    }
 }

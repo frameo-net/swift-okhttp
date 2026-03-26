@@ -3,15 +3,15 @@ import SwiftJava
 import SwiftJavaJNICore
 
 extension WebSocket {
-  @JavaInterface("okhttp3.WebSocket$Factory")
-  public struct Factory {
-    /// Java method `newWebSocket`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public abstract okhttp3.WebSocket okhttp3.WebSocket$Factory.newWebSocket(okhttp3.Request,okhttp3.WebSocketListener)
-    /// ```
-  @JavaMethod
-  public func newWebSocket(_ arg0: Request?, _ arg1: WebSocketListener?) -> WebSocket!
-  }
+    @JavaInterface("okhttp3.WebSocket$Factory")
+    public struct Factory {
+        /// Java method `newWebSocket`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public abstract okhttp3.WebSocket okhttp3.WebSocket$Factory.newWebSocket(okhttp3.Request,okhttp3.WebSocketListener)
+        /// ```
+        @JavaMethod
+        public func newWebSocket(_ arg0: Request?, _ arg1: WebSocketListener?) -> WebSocket!
+    }
 }

@@ -4,99 +4,99 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.MediaType")
 open class MediaType: JavaObject {
-  /// Java method `subtype`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.lang.String okhttp3.MediaType.subtype()
-  /// ```
-@JavaMethod
-  open func subtype() -> String
+    /// Java method `subtype`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.lang.String okhttp3.MediaType.subtype()
+    /// ```
+    @JavaMethod
+    open func subtype() -> String
 
-  /// Java method `-deprecated_type`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.lang.String okhttp3.MediaType.-deprecated_type()
-  /// ```
-@JavaMethod
-  open func `-deprecated_type`() -> String
+    /// Java method `-deprecated_type`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.lang.String okhttp3.MediaType.-deprecated_type()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_type`() -> String
 
-  /// Java method `-deprecated_subtype`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.lang.String okhttp3.MediaType.-deprecated_subtype()
-  /// ```
-@JavaMethod
-  open func `-deprecated_subtype`() -> String
+    /// Java method `-deprecated_subtype`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.lang.String okhttp3.MediaType.-deprecated_subtype()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_subtype`() -> String
 
-  /// Java method `type`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.lang.String okhttp3.MediaType.type()
-  /// ```
-@JavaMethod
-  open func type() -> String
+    /// Java method `type`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.lang.String okhttp3.MediaType.type()
+    /// ```
+    @JavaMethod
+    open func type() -> String
 
-  /// Java method `equals`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public boolean okhttp3.MediaType.equals(java.lang.Object)
-  /// ```
-@JavaMethod
-  open override func equals(_ arg0: JavaObject?) -> Bool
+    /// Java method `equals`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public boolean okhttp3.MediaType.equals(java.lang.Object)
+    /// ```
+    @JavaMethod
+    open override func equals(_ arg0: JavaObject?) -> Bool
 
-  /// Java method `toString`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public java.lang.String okhttp3.MediaType.toString()
-  /// ```
-@JavaMethod
-  open override func toString() -> String
+    /// Java method `toString`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public java.lang.String okhttp3.MediaType.toString()
+    /// ```
+    @JavaMethod
+    open override func toString() -> String
 
-  /// Java method `hashCode`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public int okhttp3.MediaType.hashCode()
-  /// ```
-@JavaMethod
-  open override func hashCode() -> Int32
+    /// Java method `hashCode`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public int okhttp3.MediaType.hashCode()
+    /// ```
+    @JavaMethod
+    open override func hashCode() -> Int32
 
-  /// Java method `charset`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.nio.charset.Charset okhttp3.MediaType.charset(java.nio.charset.Charset)
-  /// ```
-@JavaMethod
-  open func charset(_ arg0: Charset?) -> Charset!
+    /// Java method `charset`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.nio.charset.Charset okhttp3.MediaType.charset(java.nio.charset.Charset)
+    /// ```
+    @JavaMethod
+    open func charset(_ arg0: Charset?) -> Charset!
 
-  /// Java method `charset`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.nio.charset.Charset okhttp3.MediaType.charset()
-  /// ```
-@JavaMethod
-  open func charset() -> Charset!
+    /// Java method `charset`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.nio.charset.Charset okhttp3.MediaType.charset()
+    /// ```
+    @JavaMethod
+    open func charset() -> Charset!
 
-  /// Java method `parameter`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.lang.String okhttp3.MediaType.parameter(java.lang.String)
-  /// ```
-@JavaMethod
-  open func parameter(_ arg0: String) -> String
+    /// Java method `parameter`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.lang.String okhttp3.MediaType.parameter(java.lang.String)
+    /// ```
+    @JavaMethod
+    open func parameter(_ arg0: String) -> String
 }
 extension JavaClass<MediaType> {
-  @JavaStaticField(isFinal: true)
-  public var Companion: MediaType.Companion!
+    @JavaStaticField(isFinal: true)
+    public var Companion: MediaType.Companion!
 
     /// Java method `charset$default`.
     ///
@@ -104,8 +104,8 @@ extension JavaClass<MediaType> {
     /// ```java
     /// public static java.nio.charset.Charset okhttp3.MediaType.charset$default(okhttp3.MediaType,java.nio.charset.Charset,int,java.lang.Object)
     /// ```
-  @JavaStaticMethod
-  public func charset$default(_ arg0: MediaType?, _ arg1: Charset?, _ arg2: Int32, _ arg3: JavaObject?) -> Charset!
+    @JavaStaticMethod
+    public func charset$default(_ arg0: MediaType?, _ arg1: Charset?, _ arg2: Int32, _ arg3: JavaObject?) -> Charset!
 
     /// Java method `get`.
     ///
@@ -113,8 +113,8 @@ extension JavaClass<MediaType> {
     /// ```java
     /// public static final okhttp3.MediaType okhttp3.MediaType.get(java.lang.String)
     /// ```
-  @JavaStaticMethod
-  public func get(_ arg0: String) -> MediaType!
+    @JavaStaticMethod
+    public func get(_ arg0: String) -> MediaType!
 
     /// Java method `parse`.
     ///
@@ -122,6 +122,6 @@ extension JavaClass<MediaType> {
     /// ```java
     /// public static final okhttp3.MediaType okhttp3.MediaType.parse(java.lang.String)
     /// ```
-  @JavaStaticMethod
-  public func parse(_ arg0: String) -> MediaType!
+    @JavaStaticMethod
+    public func parse(_ arg0: String) -> MediaType!
 }

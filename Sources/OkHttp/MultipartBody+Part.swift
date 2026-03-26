@@ -3,48 +3,48 @@ import SwiftJava
 import SwiftJavaJNICore
 
 extension MultipartBody {
-  @JavaClass("okhttp3.MultipartBody$Part")
-  open class Part: JavaObject {
-    /// Java method `headers`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.Headers okhttp3.MultipartBody$Part.headers()
-    /// ```
-  @JavaMethod
-  open func headers() -> Headers!
+    @JavaClass("okhttp3.MultipartBody$Part")
+    open class Part: JavaObject {
+        /// Java method `headers`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public final okhttp3.Headers okhttp3.MultipartBody$Part.headers()
+        /// ```
+        @JavaMethod
+        open func headers() -> Headers!
 
-    /// Java method `-deprecated_body`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.RequestBody okhttp3.MultipartBody$Part.-deprecated_body()
-    /// ```
-  @JavaMethod
-  open func `-deprecated_body`() -> RequestBody!
+        /// Java method `-deprecated_body`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public final okhttp3.RequestBody okhttp3.MultipartBody$Part.-deprecated_body()
+        /// ```
+        @JavaMethod
+        open func `-deprecated_body`() -> RequestBody!
 
-    /// Java method `-deprecated_headers`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.Headers okhttp3.MultipartBody$Part.-deprecated_headers()
-    /// ```
-  @JavaMethod
-  open func `-deprecated_headers`() -> Headers!
+        /// Java method `-deprecated_headers`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public final okhttp3.Headers okhttp3.MultipartBody$Part.-deprecated_headers()
+        /// ```
+        @JavaMethod
+        open func `-deprecated_headers`() -> Headers!
 
-    /// Java method `body`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.RequestBody okhttp3.MultipartBody$Part.body()
-    /// ```
-  @JavaMethod
-  open func body() -> RequestBody!
-  }
+        /// Java method `body`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public final okhttp3.RequestBody okhttp3.MultipartBody$Part.body()
+        /// ```
+        @JavaMethod
+        open func body() -> RequestBody!
+    }
 }
 extension JavaClass<MultipartBody.Part> {
-  @JavaStaticField(isFinal: true)
-  public var Companion: MultipartBody.Part.Companion!
+    @JavaStaticField(isFinal: true)
+    public var Companion: MultipartBody.Part.Companion!
 
     /// Java method `createFormData`.
     ///
@@ -52,8 +52,8 @@ extension JavaClass<MultipartBody.Part> {
     /// ```java
     /// public static final okhttp3.MultipartBody$Part okhttp3.MultipartBody$Part.createFormData(java.lang.String,java.lang.String,okhttp3.RequestBody)
     /// ```
-  @JavaStaticMethod
-  public func createFormData(_ arg0: String, _ arg1: String, _ arg2: RequestBody?) -> MultipartBody.Part!
+    @JavaStaticMethod
+    public func createFormData(_ arg0: String, _ arg1: String, _ arg2: RequestBody?) -> MultipartBody.Part!
 
     /// Java method `createFormData`.
     ///
@@ -61,8 +61,8 @@ extension JavaClass<MultipartBody.Part> {
     /// ```java
     /// public static final okhttp3.MultipartBody$Part okhttp3.MultipartBody$Part.createFormData(java.lang.String,java.lang.String)
     /// ```
-  @JavaStaticMethod
-  public func createFormData(_ arg0: String, _ arg1: String) -> MultipartBody.Part!
+    @JavaStaticMethod
+    public func createFormData(_ arg0: String, _ arg1: String) -> MultipartBody.Part!
 
     /// Java method `create`.
     ///
@@ -70,8 +70,8 @@ extension JavaClass<MultipartBody.Part> {
     /// ```java
     /// public static final okhttp3.MultipartBody$Part okhttp3.MultipartBody$Part.create(okhttp3.RequestBody)
     /// ```
-  @JavaStaticMethod
-  public func create(_ arg0: RequestBody?) -> MultipartBody.Part!
+    @JavaStaticMethod
+    public func create(_ arg0: RequestBody?) -> MultipartBody.Part!
 
     /// Java method `create`.
     ///
@@ -79,6 +79,6 @@ extension JavaClass<MultipartBody.Part> {
     /// ```java
     /// public static final okhttp3.MultipartBody$Part okhttp3.MultipartBody$Part.create(okhttp3.Headers,okhttp3.RequestBody)
     /// ```
-  @JavaStaticMethod
-  public func create(_ arg0: Headers?, _ arg1: RequestBody?) -> MultipartBody.Part!
+    @JavaStaticMethod
+    public func create(_ arg0: Headers?, _ arg1: RequestBody?) -> MultipartBody.Part!
 }

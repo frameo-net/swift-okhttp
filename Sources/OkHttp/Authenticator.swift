@@ -4,22 +4,22 @@ import SwiftJavaJNICore
 
 @JavaInterface("okhttp3.Authenticator")
 public struct Authenticator {
-  /// Java method `authenticate`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract okhttp3.Request okhttp3.Authenticator.authenticate(okhttp3.Route,okhttp3.Response) throws java.io.IOException
-  /// ```
-@JavaMethod
-  public func authenticate(_ arg0: Route?, _ arg1: Response?) throws -> Request!
+    /// Java method `authenticate`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public abstract okhttp3.Request okhttp3.Authenticator.authenticate(okhttp3.Route,okhttp3.Response) throws java.io.IOException
+    /// ```
+    @JavaMethod
+    public func authenticate(_ arg0: Route?, _ arg1: Response?) throws -> Request!
 }
 extension JavaClass<Authenticator> {
-  @JavaStaticField(isFinal: true)
-  public var Companion: Authenticator.Companion!
+    @JavaStaticField(isFinal: true)
+    public var Companion: Authenticator.Companion!
 
-  @JavaStaticField(isFinal: true)
-  public var NONE: Authenticator!
+    @JavaStaticField(isFinal: true)
+    public var NONE: Authenticator!
 
-  @JavaStaticField(isFinal: true)
-  public var JAVA_NET_AUTHENTICATOR: Authenticator!
+    @JavaStaticField(isFinal: true)
+    public var JAVA_NET_AUTHENTICATOR: Authenticator!
 }

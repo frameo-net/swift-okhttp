@@ -4,328 +4,329 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.Response", implements: Closeable.self)
 open class Response: JavaObject {
-  /// Java method `headers`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.Headers okhttp3.Response.headers()
-  /// ```
-@JavaMethod
-  open func headers() -> Headers!
+    /// Java method `headers`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Headers okhttp3.Response.headers()
+    /// ```
+    @JavaMethod
+    open func headers() -> Headers!
 
-  /// Java method `headers`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.util.List<java.lang.String> okhttp3.Response.headers(java.lang.String)
-  /// ```
-@JavaMethod
-  open func headers(_ arg0: String) -> List<JavaString>!
+    /// Java method `headers`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.util.List<java.lang.String> okhttp3.Response.headers(java.lang.String)
+    /// ```
+    @JavaMethod
+    open func headers(_ arg0: String) -> List<JavaString>!
 
-  /// Java method `handshake`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.Handshake okhttp3.Response.handshake()
-  /// ```
-@JavaMethod
-  open func handshake() -> Handshake!
+    /// Java method `handshake`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Handshake okhttp3.Response.handshake()
+    /// ```
+    @JavaMethod
+    open func handshake() -> Handshake!
 
-  /// Java method `-deprecated_receivedResponseAtMillis`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final long okhttp3.Response.-deprecated_receivedResponseAtMillis()
-  /// ```
-@JavaMethod
-  open func `-deprecated_receivedResponseAtMillis`() -> Int64
+    /// Java method `-deprecated_receivedResponseAtMillis`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final long okhttp3.Response.-deprecated_receivedResponseAtMillis()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_receivedResponseAtMillis`() -> Int64
 
-  /// Java method `networkResponse`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.Response okhttp3.Response.networkResponse()
-  /// ```
-@JavaMethod
-  open func networkResponse() -> Response!
+    /// Java method `networkResponse`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Response okhttp3.Response.networkResponse()
+    /// ```
+    @JavaMethod
+    open func networkResponse() -> Response!
 
-  /// Java method `newBuilder`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.Response$Builder okhttp3.Response.newBuilder()
-  /// ```
-@JavaMethod
-  open func newBuilder() -> Response.Builder!
+    /// Java method `newBuilder`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Response$Builder okhttp3.Response.newBuilder()
+    /// ```
+    @JavaMethod
+    open func newBuilder() -> Response.Builder!
 
-  /// Java method `cacheControl`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.CacheControl okhttp3.Response.cacheControl()
-  /// ```
-@JavaMethod
-  open func cacheControl() -> CacheControl!
+    /// Java method `cacheControl`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.CacheControl okhttp3.Response.cacheControl()
+    /// ```
+    @JavaMethod
+    open func cacheControl() -> CacheControl!
 
-  /// Java method `-deprecated_body`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.ResponseBody okhttp3.Response.-deprecated_body()
-  /// ```
-@JavaMethod
-  open func `-deprecated_body`() -> ResponseBody!
+    /// Java method `-deprecated_body`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.ResponseBody okhttp3.Response.-deprecated_body()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_body`() -> ResponseBody!
 
-  /// Java method `cacheResponse`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.Response okhttp3.Response.cacheResponse()
-  /// ```
-@JavaMethod
-  open func cacheResponse() -> Response!
+    /// Java method `cacheResponse`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Response okhttp3.Response.cacheResponse()
+    /// ```
+    @JavaMethod
+    open func cacheResponse() -> Response!
 
-  /// Java method `priorResponse`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.Response okhttp3.Response.priorResponse()
-  /// ```
-@JavaMethod
-  open func priorResponse() -> Response!
+    /// Java method `priorResponse`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Response okhttp3.Response.priorResponse()
+    /// ```
+    @JavaMethod
+    open func priorResponse() -> Response!
 
-  /// Java method `-deprecated_code`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final int okhttp3.Response.-deprecated_code()
-  /// ```
-@JavaMethod
-  open func `-deprecated_code`() -> Int32
+    /// Java method `-deprecated_code`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.Response.-deprecated_code()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_code`() -> Int32
 
-  /// Java method `isSuccessful`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.Response.isSuccessful()
-  /// ```
-@JavaMethod
-  open func isSuccessful() -> Bool
+    /// Java method `isSuccessful`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final boolean okhttp3.Response.isSuccessful()
+    /// ```
+    @JavaMethod
+    open func isSuccessful() -> Bool
 
-  /// Java method `trailers`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.Headers okhttp3.Response.trailers() throws java.io.IOException
-  /// ```
-@JavaMethod
-  open func trailers() throws -> Headers!
+    /// Java method `trailers`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Headers okhttp3.Response.trailers() throws java.io.IOException
+    /// ```
+    @JavaMethod
+    open func trailers() throws -> Headers!
 
-  /// Java method `peekBody`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.ResponseBody okhttp3.Response.peekBody(long) throws java.io.IOException
-  /// ```
-@JavaMethod
-  open func peekBody(_ arg0: Int64) throws -> ResponseBody!
+    /// Java method `peekBody`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.ResponseBody okhttp3.Response.peekBody(long) throws java.io.IOException
+    /// ```
+    @JavaMethod
+    open func peekBody(_ arg0: Int64) throws -> ResponseBody!
 
-  /// Java method `isRedirect`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final boolean okhttp3.Response.isRedirect()
-  /// ```
-@JavaMethod
-  open func isRedirect() -> Bool
+    /// Java method `isRedirect`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final boolean okhttp3.Response.isRedirect()
+    /// ```
+    @JavaMethod
+    open func isRedirect() -> Bool
 
-  /// Java method `challenges`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.util.List<okhttp3.Challenge> okhttp3.Response.challenges()
-  /// ```
-@JavaMethod
-  open func challenges() -> List<Challenge>!
+    /// Java method `challenges`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.util.List<okhttp3.Challenge> okhttp3.Response.challenges()
+    /// ```
+    @JavaMethod
+    open func challenges() -> List<Challenge>!
 
-  /// Java method `-deprecated_headers`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.Headers okhttp3.Response.-deprecated_headers()
-  /// ```
-@JavaMethod
-  open func `-deprecated_headers`() -> Headers!
+    /// Java method `-deprecated_headers`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Headers okhttp3.Response.-deprecated_headers()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_headers`() -> Headers!
 
-  /// Java method `sentRequestAtMillis`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final long okhttp3.Response.sentRequestAtMillis()
-  /// ```
-@JavaMethod
-  open func sentRequestAtMillis() -> Int64
+    /// Java method `sentRequestAtMillis`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final long okhttp3.Response.sentRequestAtMillis()
+    /// ```
+    @JavaMethod
+    open func sentRequestAtMillis() -> Int64
 
-  /// Java method `receivedResponseAtMillis`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final long okhttp3.Response.receivedResponseAtMillis()
-  /// ```
-@JavaMethod
-  open func receivedResponseAtMillis() -> Int64
+    /// Java method `receivedResponseAtMillis`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final long okhttp3.Response.receivedResponseAtMillis()
+    /// ```
+    @JavaMethod
+    open func receivedResponseAtMillis() -> Int64
 
-  /// Java method `-deprecated_request`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.Request okhttp3.Response.-deprecated_request()
-  /// ```
-@JavaMethod
-  open func `-deprecated_request`() -> Request!
+    /// Java method `-deprecated_request`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Request okhttp3.Response.-deprecated_request()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_request`() -> Request!
 
-  /// Java method `-deprecated_message`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.lang.String okhttp3.Response.-deprecated_message()
-  /// ```
-@JavaMethod
-  open func `-deprecated_message`() -> String
+    /// Java method `-deprecated_message`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.lang.String okhttp3.Response.-deprecated_message()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_message`() -> String
 
-  /// Java method `-deprecated_handshake`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.Handshake okhttp3.Response.-deprecated_handshake()
-  /// ```
-@JavaMethod
-  open func `-deprecated_handshake`() -> Handshake!
+    /// Java method `-deprecated_handshake`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Handshake okhttp3.Response.-deprecated_handshake()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_handshake`() -> Handshake!
 
-  /// Java method `-deprecated_networkResponse`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.Response okhttp3.Response.-deprecated_networkResponse()
-  /// ```
-@JavaMethod
-  open func `-deprecated_networkResponse`() -> Response!
+    /// Java method `-deprecated_networkResponse`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Response okhttp3.Response.-deprecated_networkResponse()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_networkResponse`() -> Response!
 
-  /// Java method `-deprecated_cacheResponse`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.Response okhttp3.Response.-deprecated_cacheResponse()
-  /// ```
-@JavaMethod
-  open func `-deprecated_cacheResponse`() -> Response!
+    /// Java method `-deprecated_cacheResponse`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Response okhttp3.Response.-deprecated_cacheResponse()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_cacheResponse`() -> Response!
 
-  /// Java method `-deprecated_priorResponse`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.Response okhttp3.Response.-deprecated_priorResponse()
-  /// ```
-@JavaMethod
-  open func `-deprecated_priorResponse`() -> Response!
+    /// Java method `-deprecated_priorResponse`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Response okhttp3.Response.-deprecated_priorResponse()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_priorResponse`() -> Response!
 
-  /// Java method `-deprecated_cacheControl`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.CacheControl okhttp3.Response.-deprecated_cacheControl()
-  /// ```
-@JavaMethod
-  open func `-deprecated_cacheControl`() -> CacheControl!
+    /// Java method `-deprecated_cacheControl`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.CacheControl okhttp3.Response.-deprecated_cacheControl()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_cacheControl`() -> CacheControl!
 
-  /// Java method `-deprecated_sentRequestAtMillis`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final long okhttp3.Response.-deprecated_sentRequestAtMillis()
-  /// ```
-@JavaMethod
-  open func `-deprecated_sentRequestAtMillis`() -> Int64
+    /// Java method `-deprecated_sentRequestAtMillis`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final long okhttp3.Response.-deprecated_sentRequestAtMillis()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_sentRequestAtMillis`() -> Int64
 
-  /// Java method `toString`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public java.lang.String okhttp3.Response.toString()
-  /// ```
-@JavaMethod
-  open override func toString() -> String
+    /// Java method `toString`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public java.lang.String okhttp3.Response.toString()
+    /// ```
+    @JavaMethod
+    open override func toString() -> String
 
-  /// Java method `code`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final int okhttp3.Response.code()
-  /// ```
-@JavaMethod
-  open func code() -> Int32
+    /// Java method `code`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final int okhttp3.Response.code()
+    /// ```
+    @JavaMethod
+    open func code() -> Int32
 
-  /// Java method `message`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.lang.String okhttp3.Response.message()
-  /// ```
-@JavaMethod
-  open func message() -> String
+    /// Java method `message`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.lang.String okhttp3.Response.message()
+    /// ```
+    @JavaMethod
+    open func message() -> String
 
-  /// Java method `close`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public void okhttp3.Response.close()
-  /// ```
-@JavaMethod
-  open func close()
+    /// Java method `close`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void okhttp3.Response.close()
+    /// ```
+    @JavaMethod
+    open func close()
 
-  /// Java method `body`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.ResponseBody okhttp3.Response.body()
-  /// ```
-@JavaMethod
-  open func body() -> ResponseBody!
+    /// Java method `body`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.ResponseBody okhttp3.Response.body()
+    /// ```
+    @JavaMethod
+    open func body() -> ResponseBody!
 
-  /// Java method `request`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.Request okhttp3.Response.request()
-  /// ```
-@JavaMethod
-  open func request() -> Request!
+    /// Java method `request`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.Request okhttp3.Response.request()
+    /// ```
+    @JavaMethod
+    open func request() -> Request!
 
-  /// Java method `header`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.lang.String okhttp3.Response.header(java.lang.String)
-  /// ```
-@JavaMethod
-  open func header(_ arg0: String) -> String
+    /// Java method `header`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.lang.String okhttp3.Response.header(java.lang.String)
+    /// ```
+    @JavaMethod
+    open func header(_ arg0: String) -> String
 
-  /// Java method `header`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.lang.String okhttp3.Response.header(java.lang.String,java.lang.String)
-  /// ```
-@JavaMethod
-  open func header(_ arg0: String, _ arg1: String) -> String
+    /// Java method `header`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.lang.String okhttp3.Response.header(java.lang.String,java.lang.String)
+    /// ```
+    @JavaMethod
+    open func header(_ arg0: String, _ arg1: String) -> String
 }
 extension JavaClass<Response> {
-  /// Java method `header$default`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public static java.lang.String okhttp3.Response.header$default(okhttp3.Response,java.lang.String,java.lang.String,int,java.lang.Object)
-  /// ```
-@JavaStaticMethod
-  public func header$default(_ arg0: Response?, _ arg1: String, _ arg2: String, _ arg3: Int32, _ arg4: JavaObject?) -> String
+    /// Java method `header$default`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public static java.lang.String okhttp3.Response.header$default(okhttp3.Response,java.lang.String,java.lang.String,int,java.lang.Object)
+    /// ```
+    @JavaStaticMethod
+    public func header$default(_ arg0: Response?, _ arg1: String, _ arg2: String, _ arg3: Int32, _ arg4: JavaObject?)
+        -> String
 }

@@ -3,8 +3,8 @@ import SwiftJava
 import SwiftJavaJNICore
 
 extension Dns {
-  @JavaClass("okhttp3.Dns$Companion")
-  open class Companion: JavaObject {
+    @JavaClass("okhttp3.Dns$Companion")
+    open class Companion: JavaObject {
 
-  }
+    }
 }

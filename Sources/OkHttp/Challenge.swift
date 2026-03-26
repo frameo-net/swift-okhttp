@@ -4,8 +4,8 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.Challenge")
 open class Challenge: JavaObject {
-  @JavaMethod
-  @_nonoverride public convenience init(_ arg0: String, _ arg1: String, environment: JNIEnvironment? = nil)
+    @JavaMethod
+    @_nonoverride public convenience init(_ arg0: String, _ arg1: String, environment: JNIEnvironment? = nil)
 
     /// Java method `realm`.
     ///
@@ -13,8 +13,8 @@ open class Challenge: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.Challenge.realm()
     /// ```
-  @JavaMethod
-  open func realm() -> String
+    @JavaMethod
+    open func realm() -> String
 
     /// Java method `withCharset`.
     ///
@@ -22,8 +22,8 @@ open class Challenge: JavaObject {
     /// ```java
     /// public final okhttp3.Challenge okhttp3.Challenge.withCharset(java.nio.charset.Charset)
     /// ```
-  @JavaMethod
-  open func withCharset(_ arg0: Charset?) -> Challenge!
+    @JavaMethod
+    open func withCharset(_ arg0: Charset?) -> Challenge!
 
     /// Java method `-deprecated_scheme`.
     ///
@@ -31,8 +31,8 @@ open class Challenge: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.Challenge.-deprecated_scheme()
     /// ```
-  @JavaMethod
-  open func `-deprecated_scheme`() -> String
+    @JavaMethod
+    open func `-deprecated_scheme`() -> String
 
     /// Java method `-deprecated_realm`.
     ///
@@ -40,8 +40,8 @@ open class Challenge: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.Challenge.-deprecated_realm()
     /// ```
-  @JavaMethod
-  open func `-deprecated_realm`() -> String
+    @JavaMethod
+    open func `-deprecated_realm`() -> String
 
     /// Java method `-deprecated_charset`.
     ///
@@ -49,8 +49,8 @@ open class Challenge: JavaObject {
     /// ```java
     /// public final java.nio.charset.Charset okhttp3.Challenge.-deprecated_charset()
     /// ```
-  @JavaMethod
-  open func `-deprecated_charset`() -> Charset!
+    @JavaMethod
+    open func `-deprecated_charset`() -> Charset!
 
     /// Java method `equals`.
     ///
@@ -58,8 +58,8 @@ open class Challenge: JavaObject {
     /// ```java
     /// public boolean okhttp3.Challenge.equals(java.lang.Object)
     /// ```
-  @JavaMethod
-  open override func equals(_ arg0: JavaObject?) -> Bool
+    @JavaMethod
+    open override func equals(_ arg0: JavaObject?) -> Bool
 
     /// Java method `toString`.
     ///
@@ -67,8 +67,8 @@ open class Challenge: JavaObject {
     /// ```java
     /// public java.lang.String okhttp3.Challenge.toString()
     /// ```
-  @JavaMethod
-  open override func toString() -> String
+    @JavaMethod
+    open override func toString() -> String
 
     /// Java method `hashCode`.
     ///
@@ -76,8 +76,8 @@ open class Challenge: JavaObject {
     /// ```java
     /// public int okhttp3.Challenge.hashCode()
     /// ```
-  @JavaMethod
-  open override func hashCode() -> Int32
+    @JavaMethod
+    open override func hashCode() -> Int32
 
     /// Java method `charset`.
     ///
@@ -85,8 +85,8 @@ open class Challenge: JavaObject {
     /// ```java
     /// public final java.nio.charset.Charset okhttp3.Challenge.charset()
     /// ```
-  @JavaMethod
-  open func charset() -> Charset!
+    @JavaMethod
+    open func charset() -> Charset!
 
     /// Java method `scheme`.
     ///
@@ -94,6 +94,6 @@ open class Challenge: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.Challenge.scheme()
     /// ```
-  @JavaMethod
-  open func scheme() -> String
+    @JavaMethod
+    open func scheme() -> String
 }

@@ -4,8 +4,9 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.FormBody")
 open class FormBody: RequestBody {
-  @JavaMethod
-  @_nonoverride public convenience init(_ arg0: List<JavaString>?, _ arg1: List<JavaString>?, environment: JNIEnvironment? = nil)
+    @JavaMethod
+    @_nonoverride public convenience init(
+        _ arg0: List<JavaString>?, _ arg1: List<JavaString>?, environment: JNIEnvironment? = nil)
 
     /// Java method `contentType`.
     ///
@@ -13,8 +14,8 @@ open class FormBody: RequestBody {
     /// ```java
     /// public okhttp3.MediaType okhttp3.FormBody.contentType()
     /// ```
-  @JavaMethod
-  open override func contentType() -> MediaType!
+    @JavaMethod
+    open override func contentType() -> MediaType!
 
     /// Java method `contentLength`.
     ///
@@ -22,8 +23,8 @@ open class FormBody: RequestBody {
     /// ```java
     /// public long okhttp3.FormBody.contentLength()
     /// ```
-  @JavaMethod
-  open override func contentLength() -> Int64
+    @JavaMethod
+    open override func contentLength() -> Int64
 
     /// Java method `encodedName`.
     ///
@@ -31,8 +32,8 @@ open class FormBody: RequestBody {
     /// ```java
     /// public final java.lang.String okhttp3.FormBody.encodedName(int)
     /// ```
-  @JavaMethod
-  open func encodedName(_ arg0: Int32) -> String
+    @JavaMethod
+    open func encodedName(_ arg0: Int32) -> String
 
     /// Java method `encodedValue`.
     ///
@@ -40,8 +41,8 @@ open class FormBody: RequestBody {
     /// ```java
     /// public final java.lang.String okhttp3.FormBody.encodedValue(int)
     /// ```
-  @JavaMethod
-  open func encodedValue(_ arg0: Int32) -> String
+    @JavaMethod
+    open func encodedValue(_ arg0: Int32) -> String
 
     /// Java method `-deprecated_size`.
     ///
@@ -49,8 +50,8 @@ open class FormBody: RequestBody {
     /// ```java
     /// public final int okhttp3.FormBody.-deprecated_size()
     /// ```
-  @JavaMethod
-  open func `-deprecated_size`() -> Int32
+    @JavaMethod
+    open func `-deprecated_size`() -> Int32
 
     /// Java method `name`.
     ///
@@ -58,8 +59,8 @@ open class FormBody: RequestBody {
     /// ```java
     /// public final java.lang.String okhttp3.FormBody.name(int)
     /// ```
-  @JavaMethod
-  open func name(_ arg0: Int32) -> String
+    @JavaMethod
+    open func name(_ arg0: Int32) -> String
 
     /// Java method `size`.
     ///
@@ -67,8 +68,8 @@ open class FormBody: RequestBody {
     /// ```java
     /// public final int okhttp3.FormBody.size()
     /// ```
-  @JavaMethod
-  open func size() -> Int32
+    @JavaMethod
+    open func size() -> Int32
 
     /// Java method `value`.
     ///
@@ -76,10 +77,10 @@ open class FormBody: RequestBody {
     /// ```java
     /// public final java.lang.String okhttp3.FormBody.value(int)
     /// ```
-  @JavaMethod
-  open func value(_ arg0: Int32) -> String
+    @JavaMethod
+    open func value(_ arg0: Int32) -> String
 }
 extension JavaClass<FormBody> {
-  @JavaStaticField(isFinal: true)
-  public var Companion: FormBody.Companion!
+    @JavaStaticField(isFinal: true)
+    public var Companion: FormBody.Companion!
 }

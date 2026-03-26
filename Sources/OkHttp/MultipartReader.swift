@@ -4,11 +4,12 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.MultipartReader", implements: Closeable.self)
 open class MultipartReader: JavaObject {
-  @JavaMethod
-  @_nonoverride public convenience init(_ arg0: ResponseBody?, environment: JNIEnvironment? = nil) throws
+    @JavaMethod
+    @_nonoverride public convenience init(_ arg0: ResponseBody?, environment: JNIEnvironment? = nil) throws
 
-  @JavaMethod
-  @_nonoverride public convenience init(_ arg0: BufferedSource?, _ arg1: String, environment: JNIEnvironment? = nil) throws
+    @JavaMethod
+    @_nonoverride public convenience init(_ arg0: BufferedSource?, _ arg1: String, environment: JNIEnvironment? = nil)
+        throws
 
     /// Java method `boundary`.
     ///
@@ -16,8 +17,8 @@ open class MultipartReader: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.MultipartReader.boundary()
     /// ```
-  @JavaMethod
-  open func boundary() -> String
+    @JavaMethod
+    open func boundary() -> String
 
     /// Java method `nextPart`.
     ///
@@ -25,8 +26,8 @@ open class MultipartReader: JavaObject {
     /// ```java
     /// public final okhttp3.MultipartReader$Part okhttp3.MultipartReader.nextPart() throws java.io.IOException
     /// ```
-  @JavaMethod
-  open func nextPart() throws -> MultipartReader.Part!
+    @JavaMethod
+    open func nextPart() throws -> MultipartReader.Part!
 
     /// Java method `close`.
     ///
@@ -34,12 +35,12 @@ open class MultipartReader: JavaObject {
     /// ```java
     /// public void okhttp3.MultipartReader.close() throws java.io.IOException
     /// ```
-  @JavaMethod
-  open func close() throws
+    @JavaMethod
+    open func close() throws
 }
 extension JavaClass<MultipartReader> {
-  @JavaStaticField(isFinal: true)
-  public var Companion: MultipartReader.Companion!
+    @JavaStaticField(isFinal: true)
+    public var Companion: MultipartReader.Companion!
 
     /// Java method `access$getSource$p`.
     ///
@@ -47,8 +48,8 @@ extension JavaClass<MultipartReader> {
     /// ```java
     /// public static final okio.BufferedSource okhttp3.MultipartReader.access$getSource$p(okhttp3.MultipartReader)
     /// ```
-  @JavaStaticMethod
-  public func access$getSource$p(_ arg0: MultipartReader?) -> BufferedSource!
+    @JavaStaticMethod
+    public func access$getSource$p(_ arg0: MultipartReader?) -> BufferedSource!
 
     /// Java method `access$currentPartBytesRemaining`.
     ///
@@ -56,6 +57,6 @@ extension JavaClass<MultipartReader> {
     /// ```java
     /// public static final long okhttp3.MultipartReader.access$currentPartBytesRemaining(okhttp3.MultipartReader,long)
     /// ```
-  @JavaStaticMethod
-  public func access$currentPartBytesRemaining(_ arg0: MultipartReader?, _ arg1: Int64) -> Int64
+    @JavaStaticMethod
+    public func access$currentPartBytesRemaining(_ arg0: MultipartReader?, _ arg1: Int64) -> Int64
 }

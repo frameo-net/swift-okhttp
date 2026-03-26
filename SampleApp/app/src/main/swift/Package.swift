@@ -12,13 +12,13 @@ let package = Package(
             name: "SampleLib",
             type: .dynamic,
             targets: ["SampleLib"]
-        ),
+        )
     ],
     dependencies: [
         .package(name: "swift-okhttp", path: "../../../../../"),
         .package(url: "https://github.com/apple/swift-openapi-generator", from: "1.6.0"),
         .package(url: "https://github.com/apple/swift-openapi-runtime", from: "1.11.0"),
-        .package(url: "https://github.com/swiftlang/swift-java", branch: "main")
+        .package(url: "https://github.com/swiftlang/swift-java", branch: "main"),
     ],
     targets: [
         .target(
@@ -29,12 +29,12 @@ let package = Package(
                 .product(name: "SwiftJava", package: "swift-java"),
             ],
             swiftSettings: [
-                .swiftLanguageMode(.v5),
+                .swiftLanguageMode(.v5)
             ],
             plugins: [
                 .plugin(name: "JExtractSwiftPlugin", package: "swift-java"),
                 .plugin(name: "OpenAPIGenerator", package: "swift-openapi-generator"),
             ],
-        ),
+        )
     ]
 )

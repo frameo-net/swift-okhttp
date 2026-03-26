@@ -4,8 +4,10 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.HttpUrl")
 open class HttpUrl: JavaObject {
-  @JavaMethod
-  @_nonoverride public convenience init(_ arg0: String, _ arg1: String, _ arg2: String, _ arg3: String, _ arg4: Int32, _ arg5: List<JavaString>?, _ arg6: List<JavaString>?, _ arg7: String, _ arg8: String, environment: JNIEnvironment? = nil)
+    @JavaMethod
+    @_nonoverride public convenience init(
+        _ arg0: String, _ arg1: String, _ arg2: String, _ arg3: String, _ arg4: Int32, _ arg5: List<JavaString>?,
+        _ arg6: List<JavaString>?, _ arg7: String, _ arg8: String, environment: JNIEnvironment? = nil)
 
     /// Java method `-deprecated_scheme`.
     ///
@@ -13,8 +15,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.-deprecated_scheme()
     /// ```
-  @JavaMethod
-  open func `-deprecated_scheme`() -> String
+    @JavaMethod
+    open func `-deprecated_scheme`() -> String
 
     /// Java method `isHttps`.
     ///
@@ -22,8 +24,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final boolean okhttp3.HttpUrl.isHttps()
     /// ```
-  @JavaMethod
-  open func isHttps() -> Bool
+    @JavaMethod
+    open func isHttps() -> Bool
 
     /// Java method `newBuilder`.
     ///
@@ -31,8 +33,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl.newBuilder()
     /// ```
-  @JavaMethod
-  open func newBuilder() -> HttpUrl.Builder!
+    @JavaMethod
+    open func newBuilder() -> HttpUrl.Builder!
 
     /// Java method `newBuilder`.
     ///
@@ -40,8 +42,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final okhttp3.HttpUrl$Builder okhttp3.HttpUrl.newBuilder(java.lang.String)
     /// ```
-  @JavaMethod
-  open func newBuilder(_ arg0: String) -> HttpUrl.Builder!
+    @JavaMethod
+    open func newBuilder(_ arg0: String) -> HttpUrl.Builder!
 
     /// Java method `encodedUsername`.
     ///
@@ -49,8 +51,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.encodedUsername()
     /// ```
-  @JavaMethod
-  open func encodedUsername() -> String
+    @JavaMethod
+    open func encodedUsername() -> String
 
     /// Java method `encodedPassword`.
     ///
@@ -58,8 +60,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.encodedPassword()
     /// ```
-  @JavaMethod
-  open func encodedPassword() -> String
+    @JavaMethod
+    open func encodedPassword() -> String
 
     /// Java method `encodedFragment`.
     ///
@@ -67,8 +69,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.encodedFragment()
     /// ```
-  @JavaMethod
-  open func encodedFragment() -> String
+    @JavaMethod
+    open func encodedFragment() -> String
 
     /// Java method `username`.
     ///
@@ -76,8 +78,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.username()
     /// ```
-  @JavaMethod
-  open func username() -> String
+    @JavaMethod
+    open func username() -> String
 
     /// Java method `password`.
     ///
@@ -85,8 +87,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.password()
     /// ```
-  @JavaMethod
-  open func password() -> String
+    @JavaMethod
+    open func password() -> String
 
     /// Java method `pathSegments`.
     ///
@@ -94,8 +96,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.util.List<java.lang.String> okhttp3.HttpUrl.pathSegments()
     /// ```
-  @JavaMethod
-  open func pathSegments() -> List<JavaString>!
+    @JavaMethod
+    open func pathSegments() -> List<JavaString>!
 
     /// Java method `encodedPath`.
     ///
@@ -103,8 +105,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.encodedPath()
     /// ```
-  @JavaMethod
-  open func encodedPath() -> String
+    @JavaMethod
+    open func encodedPath() -> String
 
     /// Java method `encodedQuery`.
     ///
@@ -112,8 +114,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.encodedQuery()
     /// ```
-  @JavaMethod
-  open func encodedQuery() -> String
+    @JavaMethod
+    open func encodedQuery() -> String
 
     /// Java method `-deprecated_url`.
     ///
@@ -121,8 +123,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.net.URL okhttp3.HttpUrl.-deprecated_url()
     /// ```
-  @JavaMethod
-  open func `-deprecated_url`() -> JavaURL!
+    @JavaMethod
+    open func `-deprecated_url`() -> JavaURL!
 
     /// Java method `pathSize`.
     ///
@@ -130,8 +132,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final int okhttp3.HttpUrl.pathSize()
     /// ```
-  @JavaMethod
-  open func pathSize() -> Int32
+    @JavaMethod
+    open func pathSize() -> Int32
 
     /// Java method `querySize`.
     ///
@@ -139,8 +141,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final int okhttp3.HttpUrl.querySize()
     /// ```
-  @JavaMethod
-  open func querySize() -> Int32
+    @JavaMethod
+    open func querySize() -> Int32
 
     /// Java method `queryParameter`.
     ///
@@ -148,8 +150,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.queryParameter(java.lang.String)
     /// ```
-  @JavaMethod
-  open func queryParameter(_ arg0: String) -> String
+    @JavaMethod
+    open func queryParameter(_ arg0: String) -> String
 
     /// Java method `queryParameterName`.
     ///
@@ -157,8 +159,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.queryParameterName(int)
     /// ```
-  @JavaMethod
-  open func queryParameterName(_ arg0: Int32) -> String
+    @JavaMethod
+    open func queryParameterName(_ arg0: Int32) -> String
 
     /// Java method `redact`.
     ///
@@ -166,8 +168,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.redact()
     /// ```
-  @JavaMethod
-  open func redact() -> String
+    @JavaMethod
+    open func redact() -> String
 
     /// Java method `topPrivateDomain`.
     ///
@@ -175,8 +177,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.topPrivateDomain()
     /// ```
-  @JavaMethod
-  open func topPrivateDomain() -> String
+    @JavaMethod
+    open func topPrivateDomain() -> String
 
     /// Java method `-deprecated_host`.
     ///
@@ -184,8 +186,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.-deprecated_host()
     /// ```
-  @JavaMethod
-  open func `-deprecated_host`() -> String
+    @JavaMethod
+    open func `-deprecated_host`() -> String
 
     /// Java method `-deprecated_port`.
     ///
@@ -193,8 +195,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final int okhttp3.HttpUrl.-deprecated_port()
     /// ```
-  @JavaMethod
-  open func `-deprecated_port`() -> Int32
+    @JavaMethod
+    open func `-deprecated_port`() -> Int32
 
     /// Java method `-deprecated_query`.
     ///
@@ -202,8 +204,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.-deprecated_query()
     /// ```
-  @JavaMethod
-  open func `-deprecated_query`() -> String
+    @JavaMethod
+    open func `-deprecated_query`() -> String
 
     /// Java method `encodedPathSegments`.
     ///
@@ -211,8 +213,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.util.List<java.lang.String> okhttp3.HttpUrl.encodedPathSegments()
     /// ```
-  @JavaMethod
-  open func encodedPathSegments() -> List<JavaString>!
+    @JavaMethod
+    open func encodedPathSegments() -> List<JavaString>!
 
     /// Java method `queryParameterNames`.
     ///
@@ -220,8 +222,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.util.Set<java.lang.String> okhttp3.HttpUrl.queryParameterNames()
     /// ```
-  @JavaMethod
-  open func queryParameterNames() -> JavaSet<JavaString>!
+    @JavaMethod
+    open func queryParameterNames() -> JavaSet<JavaString>!
 
     /// Java method `queryParameterValues`.
     ///
@@ -229,8 +231,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.util.List<java.lang.String> okhttp3.HttpUrl.queryParameterValues(java.lang.String)
     /// ```
-  @JavaMethod
-  open func queryParameterValues(_ arg0: String) -> List<JavaString>!
+    @JavaMethod
+    open func queryParameterValues(_ arg0: String) -> List<JavaString>!
 
     /// Java method `queryParameterValue`.
     ///
@@ -238,8 +240,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.queryParameterValue(int)
     /// ```
-  @JavaMethod
-  open func queryParameterValue(_ arg0: Int32) -> String
+    @JavaMethod
+    open func queryParameterValue(_ arg0: Int32) -> String
 
     /// Java method `-deprecated_encodedUsername`.
     ///
@@ -247,8 +249,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.-deprecated_encodedUsername()
     /// ```
-  @JavaMethod
-  open func `-deprecated_encodedUsername`() -> String
+    @JavaMethod
+    open func `-deprecated_encodedUsername`() -> String
 
     /// Java method `-deprecated_username`.
     ///
@@ -256,8 +258,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.-deprecated_username()
     /// ```
-  @JavaMethod
-  open func `-deprecated_username`() -> String
+    @JavaMethod
+    open func `-deprecated_username`() -> String
 
     /// Java method `-deprecated_encodedPassword`.
     ///
@@ -265,8 +267,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.-deprecated_encodedPassword()
     /// ```
-  @JavaMethod
-  open func `-deprecated_encodedPassword`() -> String
+    @JavaMethod
+    open func `-deprecated_encodedPassword`() -> String
 
     /// Java method `-deprecated_password`.
     ///
@@ -274,8 +276,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.-deprecated_password()
     /// ```
-  @JavaMethod
-  open func `-deprecated_password`() -> String
+    @JavaMethod
+    open func `-deprecated_password`() -> String
 
     /// Java method `-deprecated_pathSize`.
     ///
@@ -283,8 +285,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final int okhttp3.HttpUrl.-deprecated_pathSize()
     /// ```
-  @JavaMethod
-  open func `-deprecated_pathSize`() -> Int32
+    @JavaMethod
+    open func `-deprecated_pathSize`() -> Int32
 
     /// Java method `-deprecated_encodedPath`.
     ///
@@ -292,8 +294,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.-deprecated_encodedPath()
     /// ```
-  @JavaMethod
-  open func `-deprecated_encodedPath`() -> String
+    @JavaMethod
+    open func `-deprecated_encodedPath`() -> String
 
     /// Java method `-deprecated_encodedPathSegments`.
     ///
@@ -301,8 +303,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.util.List<java.lang.String> okhttp3.HttpUrl.-deprecated_encodedPathSegments()
     /// ```
-  @JavaMethod
-  open func `-deprecated_encodedPathSegments`() -> List<JavaString>!
+    @JavaMethod
+    open func `-deprecated_encodedPathSegments`() -> List<JavaString>!
 
     /// Java method `-deprecated_pathSegments`.
     ///
@@ -310,8 +312,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.util.List<java.lang.String> okhttp3.HttpUrl.-deprecated_pathSegments()
     /// ```
-  @JavaMethod
-  open func `-deprecated_pathSegments`() -> List<JavaString>!
+    @JavaMethod
+    open func `-deprecated_pathSegments`() -> List<JavaString>!
 
     /// Java method `-deprecated_encodedQuery`.
     ///
@@ -319,8 +321,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.-deprecated_encodedQuery()
     /// ```
-  @JavaMethod
-  open func `-deprecated_encodedQuery`() -> String
+    @JavaMethod
+    open func `-deprecated_encodedQuery`() -> String
 
     /// Java method `-deprecated_querySize`.
     ///
@@ -328,8 +330,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final int okhttp3.HttpUrl.-deprecated_querySize()
     /// ```
-  @JavaMethod
-  open func `-deprecated_querySize`() -> Int32
+    @JavaMethod
+    open func `-deprecated_querySize`() -> Int32
 
     /// Java method `-deprecated_queryParameterNames`.
     ///
@@ -337,8 +339,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.util.Set<java.lang.String> okhttp3.HttpUrl.-deprecated_queryParameterNames()
     /// ```
-  @JavaMethod
-  open func `-deprecated_queryParameterNames`() -> JavaSet<JavaString>!
+    @JavaMethod
+    open func `-deprecated_queryParameterNames`() -> JavaSet<JavaString>!
 
     /// Java method `-deprecated_encodedFragment`.
     ///
@@ -346,8 +348,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.-deprecated_encodedFragment()
     /// ```
-  @JavaMethod
-  open func `-deprecated_encodedFragment`() -> String
+    @JavaMethod
+    open func `-deprecated_encodedFragment`() -> String
 
     /// Java method `-deprecated_fragment`.
     ///
@@ -355,8 +357,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.-deprecated_fragment()
     /// ```
-  @JavaMethod
-  open func `-deprecated_fragment`() -> String
+    @JavaMethod
+    open func `-deprecated_fragment`() -> String
 
     /// Java method `equals`.
     ///
@@ -364,8 +366,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public boolean okhttp3.HttpUrl.equals(java.lang.Object)
     /// ```
-  @JavaMethod
-  open override func equals(_ arg0: JavaObject?) -> Bool
+    @JavaMethod
+    open override func equals(_ arg0: JavaObject?) -> Bool
 
     /// Java method `toString`.
     ///
@@ -373,8 +375,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public java.lang.String okhttp3.HttpUrl.toString()
     /// ```
-  @JavaMethod
-  open override func toString() -> String
+    @JavaMethod
+    open override func toString() -> String
 
     /// Java method `hashCode`.
     ///
@@ -382,8 +384,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public int okhttp3.HttpUrl.hashCode()
     /// ```
-  @JavaMethod
-  open override func hashCode() -> Int32
+    @JavaMethod
+    open override func hashCode() -> Int32
 
     /// Java method `url`.
     ///
@@ -391,8 +393,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.net.URL okhttp3.HttpUrl.url()
     /// ```
-  @JavaMethod
-  open func url() -> JavaURL!
+    @JavaMethod
+    open func url() -> JavaURL!
 
     /// Java method `resolve`.
     ///
@@ -400,8 +402,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final okhttp3.HttpUrl okhttp3.HttpUrl.resolve(java.lang.String)
     /// ```
-  @JavaMethod
-  open func resolve(_ arg0: String) -> HttpUrl!
+    @JavaMethod
+    open func resolve(_ arg0: String) -> HttpUrl!
 
     /// Java method `port`.
     ///
@@ -409,8 +411,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final int okhttp3.HttpUrl.port()
     /// ```
-  @JavaMethod
-  open func port() -> Int32
+    @JavaMethod
+    open func port() -> Int32
 
     /// Java method `host`.
     ///
@@ -418,8 +420,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.host()
     /// ```
-  @JavaMethod
-  open func host() -> String
+    @JavaMethod
+    open func host() -> String
 
     /// Java method `query`.
     ///
@@ -427,8 +429,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.query()
     /// ```
-  @JavaMethod
-  open func query() -> String
+    @JavaMethod
+    open func query() -> String
 
     /// Java method `scheme`.
     ///
@@ -436,8 +438,8 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.scheme()
     /// ```
-  @JavaMethod
-  open func scheme() -> String
+    @JavaMethod
+    open func scheme() -> String
 
     /// Java method `fragment`.
     ///
@@ -445,45 +447,45 @@ open class HttpUrl: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.HttpUrl.fragment()
     /// ```
-  @JavaMethod
-  open func fragment() -> String
+    @JavaMethod
+    open func fragment() -> String
 }
 extension JavaClass<HttpUrl> {
-  @JavaStaticField(isFinal: true)
-  public var Companion: HttpUrl.Companion!
+    @JavaStaticField(isFinal: true)
+    public var Companion: HttpUrl.Companion!
 
-  @JavaStaticField(isFinal: true)
-  public var USERNAME_ENCODE_SET: String
+    @JavaStaticField(isFinal: true)
+    public var USERNAME_ENCODE_SET: String
 
-  @JavaStaticField(isFinal: true)
-  public var PASSWORD_ENCODE_SET: String
+    @JavaStaticField(isFinal: true)
+    public var PASSWORD_ENCODE_SET: String
 
-  @JavaStaticField(isFinal: true)
-  public var PATH_SEGMENT_ENCODE_SET: String
+    @JavaStaticField(isFinal: true)
+    public var PATH_SEGMENT_ENCODE_SET: String
 
-  @JavaStaticField(isFinal: true)
-  public var PATH_SEGMENT_ENCODE_SET_URI: String
+    @JavaStaticField(isFinal: true)
+    public var PATH_SEGMENT_ENCODE_SET_URI: String
 
-  @JavaStaticField(isFinal: true)
-  public var QUERY_ENCODE_SET: String
+    @JavaStaticField(isFinal: true)
+    public var QUERY_ENCODE_SET: String
 
-  @JavaStaticField(isFinal: true)
-  public var QUERY_COMPONENT_REENCODE_SET: String
+    @JavaStaticField(isFinal: true)
+    public var QUERY_COMPONENT_REENCODE_SET: String
 
-  @JavaStaticField(isFinal: true)
-  public var QUERY_COMPONENT_ENCODE_SET: String
+    @JavaStaticField(isFinal: true)
+    public var QUERY_COMPONENT_ENCODE_SET: String
 
-  @JavaStaticField(isFinal: true)
-  public var QUERY_COMPONENT_ENCODE_SET_URI: String
+    @JavaStaticField(isFinal: true)
+    public var QUERY_COMPONENT_ENCODE_SET_URI: String
 
-  @JavaStaticField(isFinal: true)
-  public var FORM_ENCODE_SET: String
+    @JavaStaticField(isFinal: true)
+    public var FORM_ENCODE_SET: String
 
-  @JavaStaticField(isFinal: true)
-  public var FRAGMENT_ENCODE_SET: String
+    @JavaStaticField(isFinal: true)
+    public var FRAGMENT_ENCODE_SET: String
 
-  @JavaStaticField(isFinal: true)
-  public var FRAGMENT_ENCODE_SET_URI: String
+    @JavaStaticField(isFinal: true)
+    public var FRAGMENT_ENCODE_SET_URI: String
 
     /// Java method `defaultPort`.
     ///
@@ -491,8 +493,8 @@ extension JavaClass<HttpUrl> {
     /// ```java
     /// public static final int okhttp3.HttpUrl.defaultPort(java.lang.String)
     /// ```
-  @JavaStaticMethod
-  public func defaultPort(_ arg0: String) -> Int32
+    @JavaStaticMethod
+    public func defaultPort(_ arg0: String) -> Int32
 
     /// Java method `access$getHEX_DIGITS$cp`.
     ///
@@ -500,8 +502,8 @@ extension JavaClass<HttpUrl> {
     /// ```java
     /// public static final char[] okhttp3.HttpUrl.access$getHEX_DIGITS$cp()
     /// ```
-  @JavaStaticMethod
-  public func access$getHEX_DIGITS$cp() -> [UInt16]
+    @JavaStaticMethod
+    public func access$getHEX_DIGITS$cp() -> [UInt16]
 
     /// Java method `get`.
     ///
@@ -509,8 +511,8 @@ extension JavaClass<HttpUrl> {
     /// ```java
     /// public static final okhttp3.HttpUrl okhttp3.HttpUrl.get(java.lang.String)
     /// ```
-  @JavaStaticMethod
-  public func get(_ arg0: String) -> HttpUrl!
+    @JavaStaticMethod
+    public func get(_ arg0: String) -> HttpUrl!
 
     /// Java method `get`.
     ///
@@ -518,8 +520,8 @@ extension JavaClass<HttpUrl> {
     /// ```java
     /// public static final okhttp3.HttpUrl okhttp3.HttpUrl.get(java.net.URL)
     /// ```
-  @JavaStaticMethod
-  public func get(_ arg0: JavaURL?) -> HttpUrl!
+    @JavaStaticMethod
+    public func get(_ arg0: JavaURL?) -> HttpUrl!
 
     /// Java method `parse`.
     ///
@@ -527,6 +529,6 @@ extension JavaClass<HttpUrl> {
     /// ```java
     /// public static final okhttp3.HttpUrl okhttp3.HttpUrl.parse(java.lang.String)
     /// ```
-  @JavaStaticMethod
-  public func parse(_ arg0: String) -> HttpUrl!
+    @JavaStaticMethod
+    public func parse(_ arg0: String) -> HttpUrl!
 }

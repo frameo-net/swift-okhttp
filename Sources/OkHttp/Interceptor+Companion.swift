@@ -3,8 +3,8 @@ import SwiftJava
 import SwiftJavaJNICore
 
 extension Interceptor {
-  @JavaClass("okhttp3.Interceptor$Companion")
-  open class Companion: JavaObject {
+    @JavaClass("okhttp3.Interceptor$Companion")
+    open class Companion: JavaObject {
 
-  }
+    }
 }

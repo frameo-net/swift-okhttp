@@ -7,9 +7,9 @@ public struct Dns {
 
 }
 extension JavaClass<Dns> {
-  @JavaStaticField(isFinal: true)
-  public var Companion: Dns.Companion!
+    @JavaStaticField(isFinal: true)
+    public var Companion: Dns.Companion!
 
-  @JavaStaticField(isFinal: true)
-  public var SYSTEM: Dns!
+    @JavaStaticField(isFinal: true)
+    public var SYSTEM: Dns!
 }

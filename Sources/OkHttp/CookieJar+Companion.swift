@@ -3,8 +3,8 @@ import SwiftJava
 import SwiftJavaJNICore
 
 extension CookieJar {
-  @JavaClass("okhttp3.CookieJar$Companion")
-  open class Companion: JavaObject {
+    @JavaClass("okhttp3.CookieJar$Companion")
+    open class Companion: JavaObject {
 
-  }
+    }
 }

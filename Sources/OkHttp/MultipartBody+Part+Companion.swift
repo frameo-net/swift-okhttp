@@ -3,42 +3,42 @@ import SwiftJava
 import SwiftJavaJNICore
 
 extension MultipartBody.Part {
-  @JavaClass("okhttp3.MultipartBody$Part$Companion")
-  open class Companion: JavaObject {
-    /// Java method `createFormData`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.MultipartBody$Part okhttp3.MultipartBody$Part$Companion.createFormData(java.lang.String,java.lang.String,okhttp3.RequestBody)
-    /// ```
-  @JavaMethod
-  open func createFormData(_ arg0: String, _ arg1: String, _ arg2: RequestBody?) -> MultipartBody.Part!
+    @JavaClass("okhttp3.MultipartBody$Part$Companion")
+    open class Companion: JavaObject {
+        /// Java method `createFormData`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public final okhttp3.MultipartBody$Part okhttp3.MultipartBody$Part$Companion.createFormData(java.lang.String,java.lang.String,okhttp3.RequestBody)
+        /// ```
+        @JavaMethod
+        open func createFormData(_ arg0: String, _ arg1: String, _ arg2: RequestBody?) -> MultipartBody.Part!
 
-    /// Java method `createFormData`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.MultipartBody$Part okhttp3.MultipartBody$Part$Companion.createFormData(java.lang.String,java.lang.String)
-    /// ```
-  @JavaMethod
-  open func createFormData(_ arg0: String, _ arg1: String) -> MultipartBody.Part!
+        /// Java method `createFormData`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public final okhttp3.MultipartBody$Part okhttp3.MultipartBody$Part$Companion.createFormData(java.lang.String,java.lang.String)
+        /// ```
+        @JavaMethod
+        open func createFormData(_ arg0: String, _ arg1: String) -> MultipartBody.Part!
 
-    /// Java method `create`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.MultipartBody$Part okhttp3.MultipartBody$Part$Companion.create(okhttp3.Headers,okhttp3.RequestBody)
-    /// ```
-  @JavaMethod
-  open func create(_ arg0: Headers?, _ arg1: RequestBody?) -> MultipartBody.Part!
+        /// Java method `create`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public final okhttp3.MultipartBody$Part okhttp3.MultipartBody$Part$Companion.create(okhttp3.Headers,okhttp3.RequestBody)
+        /// ```
+        @JavaMethod
+        open func create(_ arg0: Headers?, _ arg1: RequestBody?) -> MultipartBody.Part!
 
-    /// Java method `create`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.MultipartBody$Part okhttp3.MultipartBody$Part$Companion.create(okhttp3.RequestBody)
-    /// ```
-  @JavaMethod
-  open func create(_ arg0: RequestBody?) -> MultipartBody.Part!
-  }
+        /// Java method `create`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public final okhttp3.MultipartBody$Part okhttp3.MultipartBody$Part$Companion.create(okhttp3.RequestBody)
+        /// ```
+        @JavaMethod
+        open func create(_ arg0: RequestBody?) -> MultipartBody.Part!
+    }
 }

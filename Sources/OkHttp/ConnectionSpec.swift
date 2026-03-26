@@ -4,8 +4,9 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.ConnectionSpec")
 open class ConnectionSpec: JavaObject {
-  @JavaMethod
-  @_nonoverride public convenience init(_ arg0: Bool, _ arg1: Bool, _ arg2: [String], _ arg3: [String], environment: JNIEnvironment? = nil)
+    @JavaMethod
+    @_nonoverride public convenience init(
+        _ arg0: Bool, _ arg1: Bool, _ arg2: [String], _ arg3: [String], environment: JNIEnvironment? = nil)
 
     /// Java method `cipherSuites`.
     ///
@@ -13,8 +14,8 @@ open class ConnectionSpec: JavaObject {
     /// ```java
     /// public final java.util.List<okhttp3.CipherSuite> okhttp3.ConnectionSpec.cipherSuites()
     /// ```
-  @JavaMethod
-  open func cipherSuites() -> List<CipherSuite>!
+    @JavaMethod
+    open func cipherSuites() -> List<CipherSuite>!
 
     /// Java method `isTls`.
     ///
@@ -22,8 +23,8 @@ open class ConnectionSpec: JavaObject {
     /// ```java
     /// public final boolean okhttp3.ConnectionSpec.isTls()
     /// ```
-  @JavaMethod
-  open func isTls() -> Bool
+    @JavaMethod
+    open func isTls() -> Bool
 
     /// Java method `supportsTlsExtensions`.
     ///
@@ -31,8 +32,8 @@ open class ConnectionSpec: JavaObject {
     /// ```java
     /// public final boolean okhttp3.ConnectionSpec.supportsTlsExtensions()
     /// ```
-  @JavaMethod
-  open func supportsTlsExtensions() -> Bool
+    @JavaMethod
+    open func supportsTlsExtensions() -> Bool
 
     /// Java method `-deprecated_cipherSuites`.
     ///
@@ -40,8 +41,8 @@ open class ConnectionSpec: JavaObject {
     /// ```java
     /// public final java.util.List<okhttp3.CipherSuite> okhttp3.ConnectionSpec.-deprecated_cipherSuites()
     /// ```
-  @JavaMethod
-  open func `-deprecated_cipherSuites`() -> List<CipherSuite>!
+    @JavaMethod
+    open func `-deprecated_cipherSuites`() -> List<CipherSuite>!
 
     /// Java method `-deprecated_supportsTlsExtensions`.
     ///
@@ -49,8 +50,8 @@ open class ConnectionSpec: JavaObject {
     /// ```java
     /// public final boolean okhttp3.ConnectionSpec.-deprecated_supportsTlsExtensions()
     /// ```
-  @JavaMethod
-  open func `-deprecated_supportsTlsExtensions`() -> Bool
+    @JavaMethod
+    open func `-deprecated_supportsTlsExtensions`() -> Bool
 
     /// Java method `equals`.
     ///
@@ -58,8 +59,8 @@ open class ConnectionSpec: JavaObject {
     /// ```java
     /// public boolean okhttp3.ConnectionSpec.equals(java.lang.Object)
     /// ```
-  @JavaMethod
-  open override func equals(_ arg0: JavaObject?) -> Bool
+    @JavaMethod
+    open override func equals(_ arg0: JavaObject?) -> Bool
 
     /// Java method `toString`.
     ///
@@ -67,8 +68,8 @@ open class ConnectionSpec: JavaObject {
     /// ```java
     /// public java.lang.String okhttp3.ConnectionSpec.toString()
     /// ```
-  @JavaMethod
-  open override func toString() -> String
+    @JavaMethod
+    open override func toString() -> String
 
     /// Java method `hashCode`.
     ///
@@ -76,24 +77,24 @@ open class ConnectionSpec: JavaObject {
     /// ```java
     /// public int okhttp3.ConnectionSpec.hashCode()
     /// ```
-  @JavaMethod
-  open override func hashCode() -> Int32
+    @JavaMethod
+    open override func hashCode() -> Int32
 }
 extension JavaClass<ConnectionSpec> {
-  @JavaStaticField(isFinal: true)
-  public var Companion: ConnectionSpec.Companion!
+    @JavaStaticField(isFinal: true)
+    public var Companion: ConnectionSpec.Companion!
 
-  @JavaStaticField(isFinal: true)
-  public var RESTRICTED_TLS: ConnectionSpec!
+    @JavaStaticField(isFinal: true)
+    public var RESTRICTED_TLS: ConnectionSpec!
 
-  @JavaStaticField(isFinal: true)
-  public var MODERN_TLS: ConnectionSpec!
+    @JavaStaticField(isFinal: true)
+    public var MODERN_TLS: ConnectionSpec!
 
-  @JavaStaticField(isFinal: true)
-  public var COMPATIBLE_TLS: ConnectionSpec!
+    @JavaStaticField(isFinal: true)
+    public var COMPATIBLE_TLS: ConnectionSpec!
 
-  @JavaStaticField(isFinal: true)
-  public var CLEARTEXT: ConnectionSpec!
+    @JavaStaticField(isFinal: true)
+    public var CLEARTEXT: ConnectionSpec!
 
     /// Java method `access$getCipherSuitesAsString$p`.
     ///
@@ -101,8 +102,8 @@ extension JavaClass<ConnectionSpec> {
     /// ```java
     /// public static final java.lang.String[] okhttp3.ConnectionSpec.access$getCipherSuitesAsString$p(okhttp3.ConnectionSpec)
     /// ```
-  @JavaStaticMethod
-  public func access$getCipherSuitesAsString$p(_ arg0: ConnectionSpec?) -> [String]
+    @JavaStaticMethod
+    public func access$getCipherSuitesAsString$p(_ arg0: ConnectionSpec?) -> [String]
 
     /// Java method `access$getTlsVersionsAsString$p`.
     ///
@@ -110,6 +111,6 @@ extension JavaClass<ConnectionSpec> {
     /// ```java
     /// public static final java.lang.String[] okhttp3.ConnectionSpec.access$getTlsVersionsAsString$p(okhttp3.ConnectionSpec)
     /// ```
-  @JavaStaticMethod
-  public func access$getTlsVersionsAsString$p(_ arg0: ConnectionSpec?) -> [String]
+    @JavaStaticMethod
+    public func access$getTlsVersionsAsString$p(_ arg0: ConnectionSpec?) -> [String]
 }

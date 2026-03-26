@@ -3,42 +3,42 @@ import SwiftJava
 import SwiftJavaJNICore
 
 extension MediaType {
-  @JavaClass("okhttp3.MediaType$Companion")
-  open class Companion: JavaObject {
-    /// Java method `-deprecated_get`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.MediaType okhttp3.MediaType$Companion.-deprecated_get(java.lang.String)
-    /// ```
-  @JavaMethod
-  open func `-deprecated_get`(_ arg0: String) -> MediaType!
+    @JavaClass("okhttp3.MediaType$Companion")
+    open class Companion: JavaObject {
+        /// Java method `-deprecated_get`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public final okhttp3.MediaType okhttp3.MediaType$Companion.-deprecated_get(java.lang.String)
+        /// ```
+        @JavaMethod
+        open func `-deprecated_get`(_ arg0: String) -> MediaType!
 
-    /// Java method `-deprecated_parse`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.MediaType okhttp3.MediaType$Companion.-deprecated_parse(java.lang.String)
-    /// ```
-  @JavaMethod
-  open func `-deprecated_parse`(_ arg0: String) -> MediaType!
+        /// Java method `-deprecated_parse`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public final okhttp3.MediaType okhttp3.MediaType$Companion.-deprecated_parse(java.lang.String)
+        /// ```
+        @JavaMethod
+        open func `-deprecated_parse`(_ arg0: String) -> MediaType!
 
-    /// Java method `get`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.MediaType okhttp3.MediaType$Companion.get(java.lang.String)
-    /// ```
-  @JavaMethod
-  open func get(_ arg0: String) -> MediaType!
+        /// Java method `get`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public final okhttp3.MediaType okhttp3.MediaType$Companion.get(java.lang.String)
+        /// ```
+        @JavaMethod
+        open func get(_ arg0: String) -> MediaType!
 
-    /// Java method `parse`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.MediaType okhttp3.MediaType$Companion.parse(java.lang.String)
-    /// ```
-  @JavaMethod
-  open func parse(_ arg0: String) -> MediaType!
-  }
+        /// Java method `parse`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public final okhttp3.MediaType okhttp3.MediaType$Companion.parse(java.lang.String)
+        /// ```
+        @JavaMethod
+        open func parse(_ arg0: String) -> MediaType!
+    }
 }

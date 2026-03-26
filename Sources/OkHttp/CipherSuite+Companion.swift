@@ -3,25 +3,25 @@ import SwiftJava
 import SwiftJavaJNICore
 
 extension CipherSuite {
-  @JavaClass("okhttp3.CipherSuite$Companion")
-  open class Companion: JavaObject {
-    /// Java method `forJavaName`.
+    @JavaClass("okhttp3.CipherSuite$Companion")
+    open class Companion: JavaObject {
+        /// Java method `forJavaName`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public final synchronized okhttp3.CipherSuite okhttp3.CipherSuite$Companion.forJavaName(java.lang.String)
+        /// ```
+        @JavaMethod
+        open func forJavaName(_ arg0: String) -> CipherSuite!
+    }
+}
+extension JavaClass<CipherSuite.Companion> {
+    /// Java method `access$init`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public final synchronized okhttp3.CipherSuite okhttp3.CipherSuite$Companion.forJavaName(java.lang.String)
+    /// public static final okhttp3.CipherSuite okhttp3.CipherSuite$Companion.access$init(okhttp3.CipherSuite$Companion,java.lang.String,int)
     /// ```
-  @JavaMethod
-  open func forJavaName(_ arg0: String) -> CipherSuite!
-  }
-}
-extension JavaClass<CipherSuite.Companion> {
-  /// Java method `access$init`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public static final okhttp3.CipherSuite okhttp3.CipherSuite$Companion.access$init(okhttp3.CipherSuite$Companion,java.lang.String,int)
-  /// ```
-@JavaStaticMethod
-  public func access$init(_ arg0: CipherSuite.Companion?, _ arg1: String, _ arg2: Int32) -> CipherSuite!
+    @JavaStaticMethod
+    public func access$init(_ arg0: CipherSuite.Companion?, _ arg1: String, _ arg2: Int32) -> CipherSuite!
 }

@@ -3,15 +3,15 @@ import SwiftJava
 import SwiftJavaJNICore
 
 extension CacheControl {
-  @JavaClass("okhttp3.CacheControl$Companion")
-  open class Companion: JavaObject {
-    /// Java method `parse`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.CacheControl okhttp3.CacheControl$Companion.parse(okhttp3.Headers)
-    /// ```
-  @JavaMethod
-  open func parse(_ arg0: Headers?) -> CacheControl!
-  }
+    @JavaClass("okhttp3.CacheControl$Companion")
+    open class Companion: JavaObject {
+        /// Java method `parse`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public final okhttp3.CacheControl okhttp3.CacheControl$Companion.parse(okhttp3.Headers)
+        /// ```
+        @JavaMethod
+        open func parse(_ arg0: Headers?) -> CacheControl!
+    }
 }

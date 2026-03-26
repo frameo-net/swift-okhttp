@@ -4,8 +4,8 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.EventListener")
 open class EventListener: JavaObject {
-  @JavaMethod
-  @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
+    @JavaMethod
+    @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
     /// Java method `callStart`.
     ///
@@ -13,8 +13,8 @@ open class EventListener: JavaObject {
     /// ```java
     /// public void okhttp3.EventListener.callStart(okhttp3.Call)
     /// ```
-  @JavaMethod
-  open func callStart(_ arg0: Call?)
+    @JavaMethod
+    open func callStart(_ arg0: Call?)
 
     /// Java method `proxySelectStart`.
     ///
@@ -22,8 +22,8 @@ open class EventListener: JavaObject {
     /// ```java
     /// public void okhttp3.EventListener.proxySelectStart(okhttp3.Call,okhttp3.HttpUrl)
     /// ```
-  @JavaMethod
-  open func proxySelectStart(_ arg0: Call?, _ arg1: HttpUrl?)
+    @JavaMethod
+    open func proxySelectStart(_ arg0: Call?, _ arg1: HttpUrl?)
 
     /// Java method `dnsStart`.
     ///
@@ -31,8 +31,8 @@ open class EventListener: JavaObject {
     /// ```java
     /// public void okhttp3.EventListener.dnsStart(okhttp3.Call,java.lang.String)
     /// ```
-  @JavaMethod
-  open func dnsStart(_ arg0: Call?, _ arg1: String)
+    @JavaMethod
+    open func dnsStart(_ arg0: Call?, _ arg1: String)
 
     /// Java method `secureConnectStart`.
     ///
@@ -40,8 +40,8 @@ open class EventListener: JavaObject {
     /// ```java
     /// public void okhttp3.EventListener.secureConnectStart(okhttp3.Call)
     /// ```
-  @JavaMethod
-  open func secureConnectStart(_ arg0: Call?)
+    @JavaMethod
+    open func secureConnectStart(_ arg0: Call?)
 
     /// Java method `secureConnectEnd`.
     ///
@@ -49,8 +49,8 @@ open class EventListener: JavaObject {
     /// ```java
     /// public void okhttp3.EventListener.secureConnectEnd(okhttp3.Call,okhttp3.Handshake)
     /// ```
-  @JavaMethod
-  open func secureConnectEnd(_ arg0: Call?, _ arg1: Handshake?)
+    @JavaMethod
+    open func secureConnectEnd(_ arg0: Call?, _ arg1: Handshake?)
 
     /// Java method `connectionAcquired`.
     ///
@@ -58,8 +58,8 @@ open class EventListener: JavaObject {
     /// ```java
     /// public void okhttp3.EventListener.connectionAcquired(okhttp3.Call,okhttp3.Connection)
     /// ```
-  @JavaMethod
-  open func connectionAcquired(_ arg0: Call?, _ arg1: Connection?)
+    @JavaMethod
+    open func connectionAcquired(_ arg0: Call?, _ arg1: Connection?)
 
     /// Java method `connectionReleased`.
     ///
@@ -67,8 +67,8 @@ open class EventListener: JavaObject {
     /// ```java
     /// public void okhttp3.EventListener.connectionReleased(okhttp3.Call,okhttp3.Connection)
     /// ```
-  @JavaMethod
-  open func connectionReleased(_ arg0: Call?, _ arg1: Connection?)
+    @JavaMethod
+    open func connectionReleased(_ arg0: Call?, _ arg1: Connection?)
 
     /// Java method `requestHeadersEnd`.
     ///
@@ -76,8 +76,8 @@ open class EventListener: JavaObject {
     /// ```java
     /// public void okhttp3.EventListener.requestHeadersEnd(okhttp3.Call,okhttp3.Request)
     /// ```
-  @JavaMethod
-  open func requestHeadersEnd(_ arg0: Call?, _ arg1: Request?)
+    @JavaMethod
+    open func requestHeadersEnd(_ arg0: Call?, _ arg1: Request?)
 
     /// Java method `requestBodyStart`.
     ///
@@ -85,8 +85,8 @@ open class EventListener: JavaObject {
     /// ```java
     /// public void okhttp3.EventListener.requestBodyStart(okhttp3.Call)
     /// ```
-  @JavaMethod
-  open func requestBodyStart(_ arg0: Call?)
+    @JavaMethod
+    open func requestBodyStart(_ arg0: Call?)
 
     /// Java method `requestBodyEnd`.
     ///
@@ -94,8 +94,8 @@ open class EventListener: JavaObject {
     /// ```java
     /// public void okhttp3.EventListener.requestBodyEnd(okhttp3.Call,long)
     /// ```
-  @JavaMethod
-  open func requestBodyEnd(_ arg0: Call?, _ arg1: Int64)
+    @JavaMethod
+    open func requestBodyEnd(_ arg0: Call?, _ arg1: Int64)
 
     /// Java method `responseHeadersEnd`.
     ///
@@ -103,8 +103,8 @@ open class EventListener: JavaObject {
     /// ```java
     /// public void okhttp3.EventListener.responseHeadersEnd(okhttp3.Call,okhttp3.Response)
     /// ```
-  @JavaMethod
-  open func responseHeadersEnd(_ arg0: Call?, _ arg1: Response?)
+    @JavaMethod
+    open func responseHeadersEnd(_ arg0: Call?, _ arg1: Response?)
 
     /// Java method `responseBodyStart`.
     ///
@@ -112,8 +112,8 @@ open class EventListener: JavaObject {
     /// ```java
     /// public void okhttp3.EventListener.responseBodyStart(okhttp3.Call)
     /// ```
-  @JavaMethod
-  open func responseBodyStart(_ arg0: Call?)
+    @JavaMethod
+    open func responseBodyStart(_ arg0: Call?)
 
     /// Java method `responseBodyEnd`.
     ///
@@ -121,8 +121,8 @@ open class EventListener: JavaObject {
     /// ```java
     /// public void okhttp3.EventListener.responseBodyEnd(okhttp3.Call,long)
     /// ```
-  @JavaMethod
-  open func responseBodyEnd(_ arg0: Call?, _ arg1: Int64)
+    @JavaMethod
+    open func responseBodyEnd(_ arg0: Call?, _ arg1: Int64)
 
     /// Java method `callEnd`.
     ///
@@ -130,8 +130,8 @@ open class EventListener: JavaObject {
     /// ```java
     /// public void okhttp3.EventListener.callEnd(okhttp3.Call)
     /// ```
-  @JavaMethod
-  open func callEnd(_ arg0: Call?)
+    @JavaMethod
+    open func callEnd(_ arg0: Call?)
 
     /// Java method `canceled`.
     ///
@@ -139,8 +139,8 @@ open class EventListener: JavaObject {
     /// ```java
     /// public void okhttp3.EventListener.canceled(okhttp3.Call)
     /// ```
-  @JavaMethod
-  open func canceled(_ arg0: Call?)
+    @JavaMethod
+    open func canceled(_ arg0: Call?)
 
     /// Java method `cacheHit`.
     ///
@@ -148,8 +148,8 @@ open class EventListener: JavaObject {
     /// ```java
     /// public void okhttp3.EventListener.cacheHit(okhttp3.Call,okhttp3.Response)
     /// ```
-  @JavaMethod
-  open func cacheHit(_ arg0: Call?, _ arg1: Response?)
+    @JavaMethod
+    open func cacheHit(_ arg0: Call?, _ arg1: Response?)
 
     /// Java method `cacheMiss`.
     ///
@@ -157,8 +157,8 @@ open class EventListener: JavaObject {
     /// ```java
     /// public void okhttp3.EventListener.cacheMiss(okhttp3.Call)
     /// ```
-  @JavaMethod
-  open func cacheMiss(_ arg0: Call?)
+    @JavaMethod
+    open func cacheMiss(_ arg0: Call?)
 
     /// Java method `requestHeadersStart`.
     ///
@@ -166,8 +166,8 @@ open class EventListener: JavaObject {
     /// ```java
     /// public void okhttp3.EventListener.requestHeadersStart(okhttp3.Call)
     /// ```
-  @JavaMethod
-  open func requestHeadersStart(_ arg0: Call?)
+    @JavaMethod
+    open func requestHeadersStart(_ arg0: Call?)
 
     /// Java method `responseHeadersStart`.
     ///
@@ -175,8 +175,8 @@ open class EventListener: JavaObject {
     /// ```java
     /// public void okhttp3.EventListener.responseHeadersStart(okhttp3.Call)
     /// ```
-  @JavaMethod
-  open func responseHeadersStart(_ arg0: Call?)
+    @JavaMethod
+    open func responseHeadersStart(_ arg0: Call?)
 
     /// Java method `satisfactionFailure`.
     ///
@@ -184,8 +184,8 @@ open class EventListener: JavaObject {
     /// ```java
     /// public void okhttp3.EventListener.satisfactionFailure(okhttp3.Call,okhttp3.Response)
     /// ```
-  @JavaMethod
-  open func satisfactionFailure(_ arg0: Call?, _ arg1: Response?)
+    @JavaMethod
+    open func satisfactionFailure(_ arg0: Call?, _ arg1: Response?)
 
     /// Java method `cacheConditionalHit`.
     ///
@@ -193,13 +193,13 @@ open class EventListener: JavaObject {
     /// ```java
     /// public void okhttp3.EventListener.cacheConditionalHit(okhttp3.Call,okhttp3.Response)
     /// ```
-  @JavaMethod
-  open func cacheConditionalHit(_ arg0: Call?, _ arg1: Response?)
+    @JavaMethod
+    open func cacheConditionalHit(_ arg0: Call?, _ arg1: Response?)
 }
 extension JavaClass<EventListener> {
-  @JavaStaticField(isFinal: true)
-  public var Companion: EventListener.Companion!
+    @JavaStaticField(isFinal: true)
+    public var Companion: EventListener.Companion!
 
-  @JavaStaticField(isFinal: true)
-  public var NONE: EventListener!
+    @JavaStaticField(isFinal: true)
+    public var NONE: EventListener!
 }

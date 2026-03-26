@@ -4,8 +4,8 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.ConnectionPool")
 open class ConnectionPool: JavaObject {
-  @JavaMethod
-  @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
+    @JavaMethod
+    @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
     /// Java method `evictAll`.
     ///
@@ -13,8 +13,8 @@ open class ConnectionPool: JavaObject {
     /// ```java
     /// public final void okhttp3.ConnectionPool.evictAll()
     /// ```
-  @JavaMethod
-  open func evictAll()
+    @JavaMethod
+    open func evictAll()
 
     /// Java method `connectionCount`.
     ///
@@ -22,8 +22,8 @@ open class ConnectionPool: JavaObject {
     /// ```java
     /// public final int okhttp3.ConnectionPool.connectionCount()
     /// ```
-  @JavaMethod
-  open func connectionCount() -> Int32
+    @JavaMethod
+    open func connectionCount() -> Int32
 
     /// Java method `idleConnectionCount`.
     ///
@@ -31,6 +31,6 @@ open class ConnectionPool: JavaObject {
     /// ```java
     /// public final int okhttp3.ConnectionPool.idleConnectionCount()
     /// ```
-  @JavaMethod
-  open func idleConnectionCount() -> Int32
+    @JavaMethod
+    open func idleConnectionCount() -> Int32
 }

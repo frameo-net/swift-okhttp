@@ -4,21 +4,21 @@ import SwiftJavaJNICore
 
 @JavaInterface("okhttp3.Connection")
 public struct Connection {
-  /// Java method `handshake`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract okhttp3.Handshake okhttp3.Connection.handshake()
-  /// ```
-@JavaMethod
-  public func handshake() -> Handshake!
+    /// Java method `handshake`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public abstract okhttp3.Handshake okhttp3.Connection.handshake()
+    /// ```
+    @JavaMethod
+    public func handshake() -> Handshake!
 
-  /// Java method `route`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract okhttp3.Route okhttp3.Connection.route()
-  /// ```
-@JavaMethod
-  public func route() -> Route!
+    /// Java method `route`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public abstract okhttp3.Route okhttp3.Connection.route()
+    /// ```
+    @JavaMethod
+    public func route() -> Route!
 }

@@ -4,8 +4,8 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.WebSocketListener")
 open class WebSocketListener: JavaObject {
-  @JavaMethod
-  @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
+    @JavaMethod
+    @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
     /// Java method `onFailure`.
     ///
@@ -13,8 +13,8 @@ open class WebSocketListener: JavaObject {
     /// ```java
     /// public void okhttp3.WebSocketListener.onFailure(okhttp3.WebSocket,java.lang.Throwable,okhttp3.Response)
     /// ```
-  @JavaMethod
-  open func onFailure(_ arg0: WebSocket?, _ arg1: Throwable?, _ arg2: Response?)
+    @JavaMethod
+    open func onFailure(_ arg0: WebSocket?, _ arg1: Throwable?, _ arg2: Response?)
 
     /// Java method `onOpen`.
     ///
@@ -22,8 +22,8 @@ open class WebSocketListener: JavaObject {
     /// ```java
     /// public void okhttp3.WebSocketListener.onOpen(okhttp3.WebSocket,okhttp3.Response)
     /// ```
-  @JavaMethod
-  open func onOpen(_ arg0: WebSocket?, _ arg1: Response?)
+    @JavaMethod
+    open func onOpen(_ arg0: WebSocket?, _ arg1: Response?)
 
     /// Java method `onMessage`.
     ///
@@ -31,8 +31,8 @@ open class WebSocketListener: JavaObject {
     /// ```java
     /// public void okhttp3.WebSocketListener.onMessage(okhttp3.WebSocket,java.lang.String)
     /// ```
-  @JavaMethod
-  open func onMessage(_ arg0: WebSocket?, _ arg1: String)
+    @JavaMethod
+    open func onMessage(_ arg0: WebSocket?, _ arg1: String)
 
     /// Java method `onClosing`.
     ///
@@ -40,8 +40,8 @@ open class WebSocketListener: JavaObject {
     /// ```java
     /// public void okhttp3.WebSocketListener.onClosing(okhttp3.WebSocket,int,java.lang.String)
     /// ```
-  @JavaMethod
-  open func onClosing(_ arg0: WebSocket?, _ arg1: Int32, _ arg2: String)
+    @JavaMethod
+    open func onClosing(_ arg0: WebSocket?, _ arg1: Int32, _ arg2: String)
 
     /// Java method `onClosed`.
     ///
@@ -49,6 +49,6 @@ open class WebSocketListener: JavaObject {
     /// ```java
     /// public void okhttp3.WebSocketListener.onClosed(okhttp3.WebSocket,int,java.lang.String)
     /// ```
-  @JavaMethod
-  open func onClosed(_ arg0: WebSocket?, _ arg1: Int32, _ arg2: String)
+    @JavaMethod
+    open func onClosed(_ arg0: WebSocket?, _ arg1: Int32, _ arg2: String)
 }

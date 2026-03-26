@@ -7,9 +7,9 @@ open class OkHttp: JavaObject {
 
 }
 extension JavaClass<OkHttp> {
-  @JavaStaticField(isFinal: true)
-  public var INSTANCE: OkHttp!
+    @JavaStaticField(isFinal: true)
+    public var INSTANCE: OkHttp!
 
-  @JavaStaticField(isFinal: true)
-  public var VERSION: String
+    @JavaStaticField(isFinal: true)
+    public var VERSION: String
 }

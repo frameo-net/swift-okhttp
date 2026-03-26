@@ -3,36 +3,36 @@ import SwiftJava
 import SwiftJavaJNICore
 
 extension CertificatePinner {
-  @JavaClass("okhttp3.CertificatePinner$Builder")
-  open class Builder: JavaObject {
-  @JavaMethod
-  @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
+    @JavaClass("okhttp3.CertificatePinner$Builder")
+    open class Builder: JavaObject {
+        @JavaMethod
+        @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
-    /// Java method `getPins`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.util.List<okhttp3.CertificatePinner$Pin> okhttp3.CertificatePinner$Builder.getPins()
-    /// ```
-  @JavaMethod
-  open func getPins() -> List<CertificatePinner.Pin>!
+        /// Java method `getPins`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public final java.util.List<okhttp3.CertificatePinner$Pin> okhttp3.CertificatePinner$Builder.getPins()
+        /// ```
+        @JavaMethod
+        open func getPins() -> List<CertificatePinner.Pin>!
 
-    /// Java method `add`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.CertificatePinner$Builder okhttp3.CertificatePinner$Builder.add(java.lang.String,java.lang.String...)
-    /// ```
-  @JavaMethod
-  open func add(_ arg0: String, _ arg1: [String]) -> CertificatePinner.Builder!
+        /// Java method `add`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public final okhttp3.CertificatePinner$Builder okhttp3.CertificatePinner$Builder.add(java.lang.String,java.lang.String...)
+        /// ```
+        @JavaMethod
+        open func add(_ arg0: String, _ arg1: [String]) -> CertificatePinner.Builder!
 
-    /// Java method `build`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final okhttp3.CertificatePinner okhttp3.CertificatePinner$Builder.build()
-    /// ```
-  @JavaMethod
-  open func build() -> CertificatePinner!
-  }
+        /// Java method `build`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public final okhttp3.CertificatePinner okhttp3.CertificatePinner$Builder.build()
+        /// ```
+        @JavaMethod
+        open func build() -> CertificatePinner!
+    }
 }

@@ -4,8 +4,8 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.RequestBody")
 open class RequestBody: JavaObject {
-  @JavaMethod
-  @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
+    @JavaMethod
+    @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
     /// Java method `contentType`.
     ///
@@ -13,8 +13,8 @@ open class RequestBody: JavaObject {
     /// ```java
     /// public abstract okhttp3.MediaType okhttp3.RequestBody.contentType()
     /// ```
-  @JavaMethod
-  open func contentType() -> MediaType!
+    @JavaMethod
+    open func contentType() -> MediaType!
 
     /// Java method `contentLength`.
     ///
@@ -22,8 +22,8 @@ open class RequestBody: JavaObject {
     /// ```java
     /// public long okhttp3.RequestBody.contentLength() throws java.io.IOException
     /// ```
-  @JavaMethod
-  open func contentLength() throws -> Int64
+    @JavaMethod
+    open func contentLength() throws -> Int64
 
     /// Java method `isDuplex`.
     ///
@@ -31,8 +31,8 @@ open class RequestBody: JavaObject {
     /// ```java
     /// public boolean okhttp3.RequestBody.isDuplex()
     /// ```
-  @JavaMethod
-  open func isDuplex() -> Bool
+    @JavaMethod
+    open func isDuplex() -> Bool
 
     /// Java method `isOneShot`.
     ///
@@ -40,12 +40,12 @@ open class RequestBody: JavaObject {
     /// ```java
     /// public boolean okhttp3.RequestBody.isOneShot()
     /// ```
-  @JavaMethod
-  open func isOneShot() -> Bool
+    @JavaMethod
+    open func isOneShot() -> Bool
 }
 extension JavaClass<RequestBody> {
-  @JavaStaticField(isFinal: true)
-  public var Companion: RequestBody.Companion!
+    @JavaStaticField(isFinal: true)
+    public var Companion: RequestBody.Companion!
 
     /// Java method `create`.
     ///
@@ -53,8 +53,8 @@ extension JavaClass<RequestBody> {
     /// ```java
     /// public static final okhttp3.RequestBody okhttp3.RequestBody.create(byte[])
     /// ```
-  @JavaStaticMethod
-  public func create(_ arg0: [Int8]) -> RequestBody!
+    @JavaStaticMethod
+    public func create(_ arg0: [Int8]) -> RequestBody!
 
     /// Java method `create`.
     ///
@@ -62,8 +62,8 @@ extension JavaClass<RequestBody> {
     /// ```java
     /// public static final okhttp3.RequestBody okhttp3.RequestBody.create(byte[],okhttp3.MediaType)
     /// ```
-  @JavaStaticMethod
-  public func create(_ arg0: [Int8], _ arg1: MediaType?) -> RequestBody!
+    @JavaStaticMethod
+    public func create(_ arg0: [Int8], _ arg1: MediaType?) -> RequestBody!
 
     /// Java method `create`.
     ///
@@ -71,8 +71,8 @@ extension JavaClass<RequestBody> {
     /// ```java
     /// public static final okhttp3.RequestBody okhttp3.RequestBody.create(byte[],okhttp3.MediaType,int)
     /// ```
-  @JavaStaticMethod
-  public func create(_ arg0: [Int8], _ arg1: MediaType?, _ arg2: Int32) -> RequestBody!
+    @JavaStaticMethod
+    public func create(_ arg0: [Int8], _ arg1: MediaType?, _ arg2: Int32) -> RequestBody!
 
     /// Java method `create`.
     ///
@@ -80,8 +80,8 @@ extension JavaClass<RequestBody> {
     /// ```java
     /// public static final okhttp3.RequestBody okhttp3.RequestBody.create(okhttp3.MediaType,java.io.File)
     /// ```
-  @JavaStaticMethod
-  public func create(_ arg0: MediaType?, _ arg1: File?) -> RequestBody!
+    @JavaStaticMethod
+    public func create(_ arg0: MediaType?, _ arg1: File?) -> RequestBody!
 
     /// Java method `create`.
     ///
@@ -89,8 +89,8 @@ extension JavaClass<RequestBody> {
     /// ```java
     /// public static final okhttp3.RequestBody okhttp3.RequestBody.create(okhttp3.MediaType,byte[],int)
     /// ```
-  @JavaStaticMethod
-  public func create(_ arg0: MediaType?, _ arg1: [Int8], _ arg2: Int32) -> RequestBody!
+    @JavaStaticMethod
+    public func create(_ arg0: MediaType?, _ arg1: [Int8], _ arg2: Int32) -> RequestBody!
 
     /// Java method `create`.
     ///
@@ -98,8 +98,8 @@ extension JavaClass<RequestBody> {
     /// ```java
     /// public static final okhttp3.RequestBody okhttp3.RequestBody.create(okhttp3.MediaType,byte[])
     /// ```
-  @JavaStaticMethod
-  public func create(_ arg0: MediaType?, _ arg1: [Int8]) -> RequestBody!
+    @JavaStaticMethod
+    public func create(_ arg0: MediaType?, _ arg1: [Int8]) -> RequestBody!
 
     /// Java method `create`.
     ///
@@ -107,8 +107,8 @@ extension JavaClass<RequestBody> {
     /// ```java
     /// public static final okhttp3.RequestBody okhttp3.RequestBody.create(okhttp3.MediaType,java.lang.String)
     /// ```
-  @JavaStaticMethod
-  public func create(_ arg0: MediaType?, _ arg1: String) -> RequestBody!
+    @JavaStaticMethod
+    public func create(_ arg0: MediaType?, _ arg1: String) -> RequestBody!
 
     /// Java method `create`.
     ///
@@ -116,8 +116,8 @@ extension JavaClass<RequestBody> {
     /// ```java
     /// public static final okhttp3.RequestBody okhttp3.RequestBody.create(java.io.File,okhttp3.MediaType)
     /// ```
-  @JavaStaticMethod
-  public func create(_ arg0: File?, _ arg1: MediaType?) -> RequestBody!
+    @JavaStaticMethod
+    public func create(_ arg0: File?, _ arg1: MediaType?) -> RequestBody!
 
     /// Java method `create`.
     ///
@@ -125,8 +125,8 @@ extension JavaClass<RequestBody> {
     /// ```java
     /// public static final okhttp3.RequestBody okhttp3.RequestBody.create(byte[],okhttp3.MediaType,int,int)
     /// ```
-  @JavaStaticMethod
-  public func create(_ arg0: [Int8], _ arg1: MediaType?, _ arg2: Int32, _ arg3: Int32) -> RequestBody!
+    @JavaStaticMethod
+    public func create(_ arg0: [Int8], _ arg1: MediaType?, _ arg2: Int32, _ arg3: Int32) -> RequestBody!
 
     /// Java method `create`.
     ///
@@ -134,8 +134,8 @@ extension JavaClass<RequestBody> {
     /// ```java
     /// public static final okhttp3.RequestBody okhttp3.RequestBody.create(java.lang.String,okhttp3.MediaType)
     /// ```
-  @JavaStaticMethod
-  public func create(_ arg0: String, _ arg1: MediaType?) -> RequestBody!
+    @JavaStaticMethod
+    public func create(_ arg0: String, _ arg1: MediaType?) -> RequestBody!
 
     /// Java method `create`.
     ///
@@ -143,6 +143,6 @@ extension JavaClass<RequestBody> {
     /// ```java
     /// public static final okhttp3.RequestBody okhttp3.RequestBody.create(okhttp3.MediaType,byte[],int,int)
     /// ```
-  @JavaStaticMethod
-  public func create(_ arg0: MediaType?, _ arg1: [Int8], _ arg2: Int32, _ arg3: Int32) -> RequestBody!
+    @JavaStaticMethod
+    public func create(_ arg0: MediaType?, _ arg1: [Int8], _ arg2: Int32, _ arg3: Int32) -> RequestBody!
 }

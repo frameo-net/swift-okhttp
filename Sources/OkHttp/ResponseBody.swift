@@ -4,8 +4,8 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.ResponseBody", implements: Closeable.self)
 open class ResponseBody: JavaObject {
-  @JavaMethod
-  @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
+    @JavaMethod
+    @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
     /// Java method `contentType`.
     ///
@@ -13,8 +13,8 @@ open class ResponseBody: JavaObject {
     /// ```java
     /// public abstract okhttp3.MediaType okhttp3.ResponseBody.contentType()
     /// ```
-  @JavaMethod
-  open func contentType() -> MediaType!
+    @JavaMethod
+    open func contentType() -> MediaType!
 
     /// Java method `contentLength`.
     ///
@@ -22,8 +22,8 @@ open class ResponseBody: JavaObject {
     /// ```java
     /// public abstract long okhttp3.ResponseBody.contentLength()
     /// ```
-  @JavaMethod
-  open func contentLength() -> Int64
+    @JavaMethod
+    open func contentLength() -> Int64
 
     /// Java method `byteStream`.
     ///
@@ -31,8 +31,8 @@ open class ResponseBody: JavaObject {
     /// ```java
     /// public final java.io.InputStream okhttp3.ResponseBody.byteStream()
     /// ```
-  @JavaMethod
-  open func byteStream() -> InputStream!
+    @JavaMethod
+    open func byteStream() -> InputStream!
 
     /// Java method `bytes`.
     ///
@@ -40,8 +40,8 @@ open class ResponseBody: JavaObject {
     /// ```java
     /// public final byte[] okhttp3.ResponseBody.bytes() throws java.io.IOException
     /// ```
-  @JavaMethod
-  open func bytes() throws -> [Int8]
+    @JavaMethod
+    open func bytes() throws -> [Int8]
 
     /// Java method `source`.
     ///
@@ -49,8 +49,8 @@ open class ResponseBody: JavaObject {
     /// ```java
     /// public abstract okio.BufferedSource okhttp3.ResponseBody.source()
     /// ```
-  @JavaMethod
-  open func source() -> BufferedSource!
+    @JavaMethod
+    open func source() -> BufferedSource!
 
     /// Java method `close`.
     ///
@@ -58,8 +58,8 @@ open class ResponseBody: JavaObject {
     /// ```java
     /// public void okhttp3.ResponseBody.close()
     /// ```
-  @JavaMethod
-  open func close()
+    @JavaMethod
+    open func close()
 
     /// Java method `string`.
     ///
@@ -67,12 +67,12 @@ open class ResponseBody: JavaObject {
     /// ```java
     /// public final java.lang.String okhttp3.ResponseBody.string() throws java.io.IOException
     /// ```
-  @JavaMethod
-  open func string() throws -> String
+    @JavaMethod
+    open func string() throws -> String
 }
 extension JavaClass<ResponseBody> {
-  @JavaStaticField(isFinal: true)
-  public var Companion: ResponseBody.Companion!
+    @JavaStaticField(isFinal: true)
+    public var Companion: ResponseBody.Companion!
 
     /// Java method `create`.
     ///
@@ -80,8 +80,8 @@ extension JavaClass<ResponseBody> {
     /// ```java
     /// public static final okhttp3.ResponseBody okhttp3.ResponseBody.create(okhttp3.MediaType,byte[])
     /// ```
-  @JavaStaticMethod
-  public func create(_ arg0: MediaType?, _ arg1: [Int8]) -> ResponseBody!
+    @JavaStaticMethod
+    public func create(_ arg0: MediaType?, _ arg1: [Int8]) -> ResponseBody!
 
     /// Java method `create`.
     ///
@@ -89,8 +89,8 @@ extension JavaClass<ResponseBody> {
     /// ```java
     /// public static final okhttp3.ResponseBody okhttp3.ResponseBody.create(okhttp3.MediaType,java.lang.String)
     /// ```
-  @JavaStaticMethod
-  public func create(_ arg0: MediaType?, _ arg1: String) -> ResponseBody!
+    @JavaStaticMethod
+    public func create(_ arg0: MediaType?, _ arg1: String) -> ResponseBody!
 
     /// Java method `create`.
     ///
@@ -98,8 +98,8 @@ extension JavaClass<ResponseBody> {
     /// ```java
     /// public static final okhttp3.ResponseBody okhttp3.ResponseBody.create(okhttp3.MediaType,long,okio.BufferedSource)
     /// ```
-  @JavaStaticMethod
-  public func create(_ arg0: MediaType?, _ arg1: Int64, _ arg2: BufferedSource?) -> ResponseBody!
+    @JavaStaticMethod
+    public func create(_ arg0: MediaType?, _ arg1: Int64, _ arg2: BufferedSource?) -> ResponseBody!
 
     /// Java method `create`.
     ///
@@ -107,8 +107,8 @@ extension JavaClass<ResponseBody> {
     /// ```java
     /// public static final okhttp3.ResponseBody okhttp3.ResponseBody.create(java.lang.String,okhttp3.MediaType)
     /// ```
-  @JavaStaticMethod
-  public func create(_ arg0: String, _ arg1: MediaType?) -> ResponseBody!
+    @JavaStaticMethod
+    public func create(_ arg0: String, _ arg1: MediaType?) -> ResponseBody!
 
     /// Java method `create`.
     ///
@@ -116,8 +116,8 @@ extension JavaClass<ResponseBody> {
     /// ```java
     /// public static final okhttp3.ResponseBody okhttp3.ResponseBody.create(byte[],okhttp3.MediaType)
     /// ```
-  @JavaStaticMethod
-  public func create(_ arg0: [Int8], _ arg1: MediaType?) -> ResponseBody!
+    @JavaStaticMethod
+    public func create(_ arg0: [Int8], _ arg1: MediaType?) -> ResponseBody!
 
     /// Java method `create`.
     ///
@@ -125,6 +125,6 @@ extension JavaClass<ResponseBody> {
     /// ```java
     /// public static final okhttp3.ResponseBody okhttp3.ResponseBody.create(okio.BufferedSource,okhttp3.MediaType,long)
     /// ```
-  @JavaStaticMethod
-  public func create(_ arg0: BufferedSource?, _ arg1: MediaType?, _ arg2: Int64) -> ResponseBody!
+    @JavaStaticMethod
+    public func create(_ arg0: BufferedSource?, _ arg1: MediaType?, _ arg2: Int64) -> ResponseBody!
 }

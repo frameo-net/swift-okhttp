@@ -3,8 +3,8 @@ import SwiftJava
 import SwiftJavaJNICore
 
 extension MultipartReader {
-  @JavaClass("okhttp3.MultipartReader$Companion")
-  open class Companion: JavaObject {
+    @JavaClass("okhttp3.MultipartReader$Companion")
+    open class Companion: JavaObject {
 
-  }
+    }
 }

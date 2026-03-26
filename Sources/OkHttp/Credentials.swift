@@ -7,8 +7,8 @@ open class Credentials: JavaObject {
 
 }
 extension JavaClass<Credentials> {
-  @JavaStaticField(isFinal: true)
-  public var INSTANCE: Credentials!
+    @JavaStaticField(isFinal: true)
+    public var INSTANCE: Credentials!
 
     /// Java method `basic$default`.
     ///
@@ -16,8 +16,9 @@ extension JavaClass<Credentials> {
     /// ```java
     /// public static java.lang.String okhttp3.Credentials.basic$default(java.lang.String,java.lang.String,java.nio.charset.Charset,int,java.lang.Object)
     /// ```
-  @JavaStaticMethod
-  public func basic$default(_ arg0: String, _ arg1: String, _ arg2: Charset?, _ arg3: Int32, _ arg4: JavaObject?) -> String
+    @JavaStaticMethod
+    public func basic$default(_ arg0: String, _ arg1: String, _ arg2: Charset?, _ arg3: Int32, _ arg4: JavaObject?)
+        -> String
 
     /// Java method `basic`.
     ///
@@ -25,8 +26,8 @@ extension JavaClass<Credentials> {
     /// ```java
     /// public static final java.lang.String okhttp3.Credentials.basic(java.lang.String,java.lang.String)
     /// ```
-  @JavaStaticMethod
-  public func basic(_ arg0: String, _ arg1: String) -> String
+    @JavaStaticMethod
+    public func basic(_ arg0: String, _ arg1: String) -> String
 
     /// Java method `basic`.
     ///
@@ -34,6 +35,6 @@ extension JavaClass<Credentials> {
     /// ```java
     /// public static final java.lang.String okhttp3.Credentials.basic(java.lang.String,java.lang.String,java.nio.charset.Charset)
     /// ```
-  @JavaStaticMethod
-  public func basic(_ arg0: String, _ arg1: String, _ arg2: Charset?) -> String
+    @JavaStaticMethod
+    public func basic(_ arg0: String, _ arg1: String, _ arg2: Charset?) -> String
 }

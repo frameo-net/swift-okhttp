@@ -4,52 +4,52 @@ import SwiftJavaJNICore
 
 @JavaClass("okhttp3.Handshake")
 open class Handshake: JavaObject {
-  /// Java method `cipherSuite`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.CipherSuite okhttp3.Handshake.cipherSuite()
-  /// ```
-@JavaMethod
-  open func cipherSuite() -> CipherSuite!
+    /// Java method `cipherSuite`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.CipherSuite okhttp3.Handshake.cipherSuite()
+    /// ```
+    @JavaMethod
+    open func cipherSuite() -> CipherSuite!
 
-  /// Java method `-deprecated_cipherSuite`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final okhttp3.CipherSuite okhttp3.Handshake.-deprecated_cipherSuite()
-  /// ```
-@JavaMethod
-  open func `-deprecated_cipherSuite`() -> CipherSuite!
+    /// Java method `-deprecated_cipherSuite`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final okhttp3.CipherSuite okhttp3.Handshake.-deprecated_cipherSuite()
+    /// ```
+    @JavaMethod
+    open func `-deprecated_cipherSuite`() -> CipherSuite!
 
-  /// Java method `equals`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public boolean okhttp3.Handshake.equals(java.lang.Object)
-  /// ```
-@JavaMethod
-  open override func equals(_ arg0: JavaObject?) -> Bool
+    /// Java method `equals`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public boolean okhttp3.Handshake.equals(java.lang.Object)
+    /// ```
+    @JavaMethod
+    open override func equals(_ arg0: JavaObject?) -> Bool
 
-  /// Java method `toString`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public java.lang.String okhttp3.Handshake.toString()
-  /// ```
-@JavaMethod
-  open override func toString() -> String
+    /// Java method `toString`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public java.lang.String okhttp3.Handshake.toString()
+    /// ```
+    @JavaMethod
+    open override func toString() -> String
 
-  /// Java method `hashCode`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public int okhttp3.Handshake.hashCode()
-  /// ```
-@JavaMethod
-  open override func hashCode() -> Int32
+    /// Java method `hashCode`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public int okhttp3.Handshake.hashCode()
+    /// ```
+    @JavaMethod
+    open override func hashCode() -> Int32
 }
 extension JavaClass<Handshake> {
-  @JavaStaticField(isFinal: true)
-  public var Companion: Handshake.Companion!
+    @JavaStaticField(isFinal: true)
+    public var Companion: Handshake.Companion!
 }

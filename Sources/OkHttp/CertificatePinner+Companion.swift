@@ -3,8 +3,8 @@ import SwiftJava
 import SwiftJavaJNICore
 
 extension CertificatePinner {
-  @JavaClass("okhttp3.CertificatePinner$Companion")
-  open class Companion: JavaObject {
+    @JavaClass("okhttp3.CertificatePinner$Companion")
+    open class Companion: JavaObject {
 
-  }
+    }
 }
