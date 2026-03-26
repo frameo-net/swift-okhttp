@@ -10,6 +10,6 @@ plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
 
-rootProject.name = "swift-openapi-okhttp"
+rootProject.name = "swift-okhttp"
 include("lib")
 include("SampleApp:app")
