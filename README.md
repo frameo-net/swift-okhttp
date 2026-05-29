@@ -26,7 +26,8 @@ macOS or Linux), which is how the [`SampleApp`](SampleApp) runs.
 ## Requirements
 
 - Swift 6.2+
-- A Java runtime with OkHttp `4.12.0` on the classpath:
+- A Java runtime with the matching OkHttp version on the classpath (see
+  [Choosing the OkHttp version](#choosing-the-okhttp-version)):
   - **Android** — the primary target; OkHttp ships as a standard `implementation` dependency.
   - **Desktop/server JVM** — a JDK (the [`SampleApp`](SampleApp) targets JDK 21) with OkHttp on the classpath.
 - iOS, watchOS, and tvOS are **not** supported — they cannot host a Java runtime.
@@ -54,6 +55,30 @@ macOS or Linux), which is how the [`SampleApp`](SampleApp) runs.
     ]
 )
 ```
+
+## Choosing the OkHttp version
+
+swift-okhttp ships wrappers for two OkHttp major versions, selected with a
+SwiftPM **package trait**:
+
+| Build                              | OkHttp version | Runtime jar you must provide |
+| ---------------------------------- | -------------- | ---------------------------- |
+| default (no trait)                 | **5.x** (`5.3.2`) | `com.squareup.okhttp3:okhttp:5.x` |
+| `OkHttp4` trait enabled            | **4.x** (`4.12.0`) | `com.squareup.okhttp3:okhttp:4.x` |
+
+OkHttp 5 is the default. To use OkHttp 4 instead, enable the `OkHttp4` trait on
+the dependency:
+
+```swift
+.package(url: "https://github.com/madsodgaard/swift-okhttp", from: "0.1.0", traits: ["OkHttp4"])
+```
+
+> [!IMPORTANT]
+> The trait only chooses which **Swift wrappers** compile. The actual OkHttp
+> **jar** comes from your runtime classpath (e.g. your Android/Gradle
+> dependency), which SwiftPM cannot control. The trait and the jar **must
+> match** — pairing the `OkHttp4` trait with a 5.x jar (or vice versa) compiles
+> fine but fails at runtime with `NoSuchMethodError`/`ClassNotFoundException`.
 
 ## Usage
 
@@ -93,15 +118,31 @@ normal JVM dependency.
 
 ## Regenerating the wrappers
 
-The Swift wrappers in `Sources/OkHttp` are committed and checked in. To
-regenerate them (e.g. to bump the OkHttp version in `Sources/OkHttp/swift-java.config`):
+The Swift wrappers are committed and checked in, one set per OkHttp version:
+
+```
+Sources/OkHttp/
+  OkHttp.swift            # hand-written; keeps the target non-empty
+  swift-java.v4.config    # class list + OkHttp 4 dependency
+  swift-java.v5.config    # class list + OkHttp 5 dependency
+  v4/*.v4.swift           # generated, guarded by #if OkHttp4
+  v5/*.v5.swift           # generated, guarded by #if !OkHttp4
+```
+
+To regenerate (e.g. to bump an OkHttp version in the relevant
+`swift-java.v*.config`):
 
 ```bash
 ./scripts/generate-wrappers.sh
 ```
 
-This resolves the classpath and runs `swift-java wrap-java`. Note the script
-includes a post-processing step that removes a duplicate `close()` declaration.
+The script is the single source of truth: you can delete `Sources/OkHttp/v4`
+and `Sources/OkHttp/v5` entirely, run it, and the project compiles again. For
+each version it resolves the classpath, runs `swift-java wrap-java`, applies the
+necessary post-processing (removing a duplicate `close()` and the synthetic
+`access$…$cp` accessors), then wraps each file in its trait `#if` guard and
+writes it into the versioned directory. Do not hand-edit the generated files —
+add any fix to the script instead.
 
 ## License
 
