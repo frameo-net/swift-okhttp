@@ -11,5 +11,4 @@ plugins {
 }
 
 rootProject.name = "swift-okhttp"
-include("lib")
 include("SampleApp:app")

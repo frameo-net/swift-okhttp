@@ -37,9 +37,9 @@ repositories {
 dependencies {
     // The generated sources are now part of the compilation, so no explicit file dependency is needed.
 
-    // Add a dependency on your OkHttpCallback helper library from the 'lib' project
-    // Note: You must include the 'lib' project in your root settings.gradle.kts file.
-    implementation(project(":lib"))
+    // OkHttp must be on the classpath at runtime, since the Swift wrappers call
+    // into it over JNI.
+    implementation(libs.okhttp)
 
     implementation("org.swift.swiftkit:swiftkit-core:1.0-SNAPSHOT")
 
