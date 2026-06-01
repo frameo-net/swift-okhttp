@@ -1,0 +1,27 @@
+name: Lint
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+on:
+  pull_request:
+    branches:
+        - main
+
+jobs:
+  format-check:
+    name: Format check
+    runs-on: ubuntu-latest
+    container:
+      image: "swift:6.2-noble"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          submodules: true
+      - name: Mark the workspace as safe
+        # https://github.com/actions/checkout/issues/766
+        run: git config --global --add safe.directory ${GITHUB_WORKSPACE}
+      - name: Run format check
+        run: bash .github/workflows/scripts/check-swift-format.sh

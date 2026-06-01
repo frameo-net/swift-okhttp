@@ -1,0 +1,30 @@
+name: Test
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+on:
+  pull_request:
+    branches:
+        - main
+  push: 
+    branches: 
+        - main
+
+jobs:
+  linux:
+    name: Test on Linux - ${{ matrix.swift-image }}
+    strategy:
+      matrix:
+        swift-image:
+          - "swift:6.2"
+          - "swift:6.3"
+    runs-on: ubuntu-latest
+    container: ${{ matrix.swift-image }}
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Test
+      run: |
+        swift test
+
+  
