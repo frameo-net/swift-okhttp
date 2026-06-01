@@ -84,6 +84,7 @@ generate() {
         # unique within the single OkHttp target (SwiftPM names object files by
         # basename and rejects collisions).
         {
+            echo "// swift-format-ignore-file"
             echo "$guard"
             cat "$f"
             echo "#endif"

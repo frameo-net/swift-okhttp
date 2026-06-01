@@ -17,7 +17,7 @@ let package = Package(
             name: "OpenAPIOkHttp",
             targets: ["OpenAPIOkHttp"]
         ),
-        .library(name: "OkHttp", targets: ["OkHttp"])
+        .library(name: "OkHttp", targets: ["OkHttp"]),
     ],
     // Selects which OkHttp major version the generated wrappers target. The
     // default (no trait enabled) is OkHttp 5, the latest. Enable the `OkHttp4`
@@ -30,14 +30,14 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/swiftlang/swift-java", from: "0.3.0"),
-        .package(url: "https://github.com/apple/swift-openapi-runtime", from: "1.11.0", traits: [])
+        .package(url: "https://github.com/apple/swift-openapi-runtime", from: "1.11.0", traits: []),
     ],
     targets: [
         .target(
             name: "OpenAPIOkHttp",
             dependencies: [
                 "OkHttp",
-                .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime")
+                .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
             ]
         ),
         .target(
@@ -53,7 +53,7 @@ let package = Package(
                 "OkHttp.swift-java.classpath",
             ],
             swiftSettings: [
-                .swiftLanguageMode(.v5),
+                .swiftLanguageMode(.v5)
             ]
         ),
         .testTarget(

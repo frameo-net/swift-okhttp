@@ -30,4 +30,3 @@ public func run() async {
         fflush(stdout)
     }
 }
-
