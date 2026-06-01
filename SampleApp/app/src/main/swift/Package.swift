@@ -18,7 +18,11 @@ let package = Package(
         .package(name: "swift-okhttp", path: "../../../../../"),
         .package(url: "https://github.com/apple/swift-openapi-generator", from: "1.6.0"),
         .package(url: "https://github.com/apple/swift-openapi-runtime", from: "1.11.0"),
-        .package(url: "https://github.com/swiftlang/swift-java", branch: "main"),
+        .package(url: "https://github.com/swiftlang/swift-java", from: "0.3.0"),
+        // swift-java 0.3.0's build tool (SwiftJavaTool) uses swift-subprocess
+        // APIs that were removed in 0.5.0, so constrain it to the 0.4.x line it
+        // was built against.
+        .package(url: "https://github.com/swiftlang/swift-subprocess.git", "0.4.0" ..< "0.5.0"),
     ],
     targets: [
         .target(

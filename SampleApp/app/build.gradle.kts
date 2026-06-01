@@ -6,18 +6,25 @@ plugins {
 
 // Define properties for the Swift build
 val swiftProjectDir = file("src/main/swift")
-val swiftArch = "arm64-apple-macosx"
-val swiftBuildDir = swiftProjectDir.resolve(".build/${swiftArch}/debug")
 val swiftLibraryName = "SampleLib"
 
-// Custom task to build the Swift part of the project
+// Custom task to build the Swift part of the project. SwiftPM selects the host
+// triple automatically, so this builds correctly on both macOS and Linux.
 val buildSwift = tasks.register<Exec>("buildSwift") {
     group = "build"
     description = "Builds the Swift library and generates Java bindings."
     workingDir(swiftProjectDir)
-    // Using --triple ensures a consistent build architecture and output path
     commandLine("swift", "build")
 }
+
+// Ask SwiftPM where it puts build products on this host rather than hardcoding
+// a triple. This directory holds the compiled dynamic library
+// (libSampleLib.dylib on macOS, libSampleLib.so on Linux) — i.e. what
+// System.loadLibrary needs on java.library.path.
+val swiftBinPath: Provider<String> = providers.exec {
+    workingDir(swiftProjectDir)
+    commandLine("swift", "build", "--show-bin-path")
+}.standardOutput.asText.map { it.trim() }
 
 // Path to the directory where the swift-java plugin generates .java files, as you provided.
 val swiftGeneratedJavaSourcesDir = swiftProjectDir.resolve(".build/plugins/outputs/swift/$swiftLibraryName/destination/JExtractSwiftPlugin/src/generated")
@@ -56,15 +63,21 @@ java {
 application {
     // Define the main class for the application.
     mainClass = "org.example.App"
-
-    // Set the java.library.path to where the compiled .dylib file is located
-    // This allows System.loadLibrary to find your Swift code.
-    applicationDefaultJvmArgs = listOf("-Djava.library.path=${swiftBuildDir}")
 }
 
 // Ensure the Swift code is built before the Java code is compiled
 tasks.named("compileJava").configure {
     dependsOn(buildSwift)
+}
+
+// Point java.library.path at the SwiftPM output directory (resolved per host)
+// so System.loadLibrary can find the compiled Swift library when the app runs.
+tasks.named<JavaExec>("run") {
+    dependsOn(buildSwift)
+    val binPath = swiftBinPath
+    doFirst {
+        systemProperty("java.library.path", binPath.get())
+    }
 }
 
 tasks.named<Test>("test") {
