@@ -63,6 +63,9 @@ jobs:
           ./gradlew :SwiftKitCore:publishToMavenLocal --no-daemon --console=plain
 
       - name: Run SampleApp end-to-end against mock server
+        # The container runs `run:` steps with sh by default; this script uses
+        # bashisms (set -o pipefail, trap), so force bash explicitly.
+        shell: bash
         env:
           SAMPLE_SERVER_URL: http://127.0.0.1:8080
         run: |
