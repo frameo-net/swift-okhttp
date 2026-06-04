@@ -1,12 +1,13 @@
 name: Lint
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.ref }}-ci
   cancel-in-progress: true
 on:
   pull_request:
     branches:
-        - main
+      - main
+  workflow_dispatch:
 
 jobs:
   format-check:

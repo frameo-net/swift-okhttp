@@ -5,10 +5,10 @@ concurrency:
 on:
   pull_request:
     branches:
-        - main
+      - main
   push:
     branches:
-        - main
+      - main
 
 jobs:
   linux:
@@ -20,17 +20,17 @@ jobs:
           - "swift:6.2"
           - "swift:6.3"
         traits:
-          - ""          # default == OkHttp 5
+          - "" # default == OkHttp 5
           - "OkHttp4"
     runs-on: ubuntu-latest
     container: ${{ matrix.swift-image }}
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-    - name: Build
-      run: swift build ${{ matrix.traits != '' && format('--traits {0}', matrix.traits) || '' }}
-    - name: Test
-      run: swift test ${{ matrix.traits != '' && format('--traits {0}', matrix.traits) || '' }}
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build
+        run: swift build ${{ matrix.traits != '' && format('--traits {0}', matrix.traits) || '' }}
+      - name: Test
+        run: swift test ${{ matrix.traits != '' && format('--traits {0}', matrix.traits) || '' }}
 
   end-to-end:
     name: SampleApp end-to-end (Linux)
