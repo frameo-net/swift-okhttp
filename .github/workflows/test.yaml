@@ -1,0 +1,88 @@
+name: Test
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+on:
+  pull_request:
+    branches:
+        - main
+  push:
+    branches:
+        - main
+
+jobs:
+  linux:
+    name: Swift ${{ matrix.swift-image }} - ${{ matrix.traits == '' && 'OkHttp5 (default)' || matrix.traits }}
+    strategy:
+      fail-fast: false
+      matrix:
+        swift-image:
+          - "swift:6.2"
+          - "swift:6.3"
+        traits:
+          - ""          # default == OkHttp 5
+          - "OkHttp4"
+    runs-on: ubuntu-latest
+    container: ${{ matrix.swift-image }}
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Build
+      run: swift build ${{ matrix.traits != '' && format('--traits {0}', matrix.traits) || '' }}
+    - name: Test
+      run: swift test ${{ matrix.traits != '' && format('--traits {0}', matrix.traits) || '' }}
+
+  end-to-end:
+    name: SampleApp end-to-end (Linux)
+    runs-on: ubuntu-latest
+    container:
+      image: "swift:6.3.1-noble"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 25
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: "25"
+
+      - name: Install mock-server dependencies
+        run: |
+          apt-get update
+          DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends python3 curl
+
+      - name: Resolve Swift packages
+        working-directory: SampleApp/app/src/main/swift
+        run: swift package resolve
+
+      - name: Publish SwiftKitCore to mavenLocal
+        working-directory: SampleApp/app/src/main/swift/.build/checkouts/swift-java
+        run: |
+          chmod +x gradlew
+          ./gradlew :SwiftKitCore:publishToMavenLocal --no-daemon --console=plain
+
+      - name: Run SampleApp end-to-end against mock server
+        # The container runs `run:` steps with sh by default; this script uses
+        # bashisms (set -o pipefail, trap), so force bash explicitly.
+        shell: bash
+        env:
+          SAMPLE_SERVER_URL: http://127.0.0.1:8080
+        run: |
+          set -euo pipefail
+          python3 SampleApp/scripts/mock-httpbin.py 8080 &
+          MOCK_PID=$!
+          trap 'kill "$MOCK_PID" 2>/dev/null || true' EXIT
+          # Wait for the mock server to accept connections.
+          for _ in $(seq 1 50); do
+            if curl -sf http://127.0.0.1:8080/get >/dev/null; then break; fi
+            sleep 0.2
+          done
+          # buildSwift (JNI codegen) needs JAVA_HOME; setup-java exported JDK 25.
+          ./gradlew :SampleApp:app:run --no-daemon --no-configuration-cache --console=plain 2>&1 | tee run.log
+          # App.java always exits 0, so assert on its output instead.
+          grep -q "Response successful!" run.log
+          if grep -q "Failed with" run.log; then
+            echo "::error::SampleApp reported an HTTP request failure"
+            exit 1
+          fi

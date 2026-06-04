@@ -1,0 +1,35 @@
+openapi: 3.0.3
+info:
+  title: HttpBin Test API
+  description: Minimal OpenAPI spec for testing a GET request against httpbin
+  version: 1.0.0
+
+servers:
+  - url: https://httpbin.org
+
+paths:
+  /get:
+    get:
+      summary: Simple GET request
+      description: Returns the request data sent to httpbin
+      operationId: getRequest
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  args:
+                    type: object
+                    additionalProperties:
+                      type: string
+                  headers:
+                    type: object
+                    additionalProperties:
+                      type: string
+                  origin:
+                    type: string
+                  url:
+                    type: string
