@@ -48,6 +48,7 @@ let package = Package(
                 .product(name: "JavaUtil", package: "swift-java"),
             ],
             exclude: [
+                "swift-java.config",
                 "swift-java.v4.config",
                 "swift-java.v5.config",
                 "OkHttp.swift-java.classpath",
