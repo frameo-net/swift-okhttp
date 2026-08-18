@@ -29,7 +29,7 @@ let package = Package(
         .trait(name: "OkHttp4"),
     ],
     dependencies: [
-        .package(url: "https://github.com/swiftlang/swift-java", from: "0.3.0"),
+        .package(url: "https://github.com/swiftlang/swift-java", from: "0.4.0"),
         .package(url: "https://github.com/apple/swift-openapi-runtime", from: "1.11.0", traits: []),
     ],
     targets: [
@@ -43,7 +43,11 @@ let package = Package(
         .target(
             name: "OkHttp",
             dependencies: [
-                .product(name: "SwiftJava", package: "swift-java"),
+                // Despite the name, `SwiftJavaStatic` is swift-java's
+                // *automatic*-linkage product: it declares the same targets as
+                // `SwiftJava` (SwiftJava + SwiftJavaRuntimeSupport) but without an
+                // explicit `type:`, so SwiftPM lets the consumer choose linkage.
+                .product(name: "SwiftJavaStatic", package: "swift-java"),
                 .product(name: "JavaIO", package: "swift-java"),
                 .product(name: "JavaUtil", package: "swift-java"),
             ],

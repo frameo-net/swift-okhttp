@@ -60,7 +60,9 @@ jobs:
         working-directory: SampleApp/app/src/main/swift/.build/checkouts/swift-java
         run: |
           chmod +x gradlew
-          ./gradlew :SwiftKitCore:publishToMavenLocal --no-daemon --console=plain
+          ./gradlew :SwiftKitCore:publishToMavenLocal \
+            -PswiftkitVersion=1.0-SNAPSHOT \
+            --no-daemon --console=plain
 
       - name: Run SampleApp end-to-end against mock server
         # The container runs `run:` steps with sh by default; this script uses
