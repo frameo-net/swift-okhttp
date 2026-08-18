@@ -1,5 +1,5 @@
 generate:
   - types
   - client
-accessModifier: package
+accessModifier: internal
 namingStrategy: idiomatic

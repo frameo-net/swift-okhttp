@@ -33,7 +33,8 @@ let package = Package(
                 .product(name: "SwiftJava", package: "swift-java"),
             ],
             swiftSettings: [
-                .swiftLanguageMode(.v5)
+                .swiftLanguageMode(.v5),
+                .enableUpcomingFeature("InternalImportsByDefault"),
             ],
             plugins: [
                 .plugin(name: "JExtractSwiftPlugin", package: "swift-java"),
