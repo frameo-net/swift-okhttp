@@ -42,7 +42,7 @@ public struct OkHttpClientTransport: ClientTransport {
         operationID: String
     ) async throws -> (HTTPResponse, HTTPBody?) {
         let httpRequest = try await Self.convertRequest(request, body: body, baseURL: baseURL)
-        let call = self.configuration.client.newCall(httpRequest)
+        nonisolated(unsafe) let call = self.configuration.client.newCall(httpRequest)
         return try await withTaskCancellationHandler {
             return try await withCheckedThrowingContinuation { continuation in
                 Self.dispatchQueue.async {
