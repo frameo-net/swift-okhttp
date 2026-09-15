@@ -19,6 +19,7 @@ jobs:
         swift-image:
           - "swift:6.2"
           - "swift:6.3"
+          - "swift:6.4"
         traits:
           - "" # default == OkHttp 5
           - "OkHttp4"
@@ -36,7 +37,7 @@ jobs:
     name: SampleApp end-to-end (Linux)
     runs-on: ubuntu-latest
     container:
-      image: "swift:6.3.1-noble"
+      image: "swift:6.4-noble"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
